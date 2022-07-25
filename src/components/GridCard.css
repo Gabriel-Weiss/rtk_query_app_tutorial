@@ -1,0 +1,19 @@
+
+.grid-card {
+  position: relative;
+  font-size: large;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: solid;
+  border-color: var(--mainColor);
+}
+
+.container-item {
+  position: absolute;
+  box-sizing: content-box;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
