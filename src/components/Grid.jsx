@@ -3,7 +3,6 @@ import './Grid.css'
 import Spinner from './Spinner';
 import { useGetRestaurantsQuery, useAddRestaurantMutation } from '../redux/restaurantsApi';
 import GridCard from './GridCard';
-import AddButton from './AddButton';
 
 export default function Grid() {
 
@@ -24,7 +23,8 @@ export default function Grid() {
     <main>
       <div className='add-item '>
         <input type="text" value={restaurant} onChange={e => setRestaurant(e.target.value)} />
-        <AddButton handleAddRestaurant={handleAddRestaurant} />
+        {/* <AddButton handleAddRestaurant={handleAddRestaurant} /> */}
+        <button className='add-btn' onClick={handleAddRestaurant}>Add Item</button>
       </div>
       <div className="container">
         {data.map(restaurant => (

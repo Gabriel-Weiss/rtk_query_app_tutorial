@@ -30,23 +30,20 @@ const GridCard = ({ restaurant }) => {
   }
 
   return (
-    <Link to={`/restaurants/${restaurant.id}`}>
-      <div className='grid-card'>
-        <div className='container-item' key={restaurant.id}>
+    <div className='grid-card'>
+      <div className='container-item' key={restaurant.id}>
+        <Link to={`/restaurants/${restaurant.id}`}>
           <h5 className="card-body card-title">{restaurant.name}</h5>
           <p className="card-body card-text">
-            {restaurant.ratings
-              ? restaurant.ratings.average
-              : ''
-            }
+            {restaurant.ratings ? 'Rating: ' + restaurant.ratings.average : 'Rating: -'}
           </p>
           <p className="card-body card-text">Price level: {handlePriceLevel(restaurant.price_level)}</p>
-          <div className="card-body card-footer">
-            <button onClick={() => handleDeleteResturant(restaurant.id)}>Delete</button>
-          </div>
+        </Link>
+        <div className="card-body card-footer">
+          <button onClick={() => handleDeleteResturant(restaurant.id)}>Delete</button>
         </div>
       </div>
-    </Link>
+    </div>
   )
 }
 

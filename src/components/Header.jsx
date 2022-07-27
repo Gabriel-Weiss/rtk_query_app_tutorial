@@ -1,33 +1,25 @@
-import React, { useRef } from 'react'
-import './Header.css'
-import { GiFoodTruck } from "react-icons/gi";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { BiUpArrow } from "react-icons/bi";
+import React from 'react'
+import './Header.css';
+import { MdOutlineNoFood } from "react-icons/md";
+import { MdSearch } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const navRef = useRef();
-
-  const showHeader = () => {
-    navRef.current.classList.toggle('responsive_nav')
-  }
 
   return (
-    <header>
-      <h3><GiFoodTruck /></h3>
-      <nav className="top_nav" ref={navRef}>
-        <Link to={'/'}>Home</Link>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <button className='nav-btn nav-close-btn' onClick={showHeader}>
-          <BiUpArrow />
-        </button>
-      </nav>
-      <button className='nav-btn' onClick={showHeader}>
-        <GiHamburgerMenu />
-      </button>
-    </header>
+    <div className='header_container'>
+      <div className='header_icon'><MdOutlineNoFood /></div>
+      <ul className="header_nav">
+        <Link className='list_item' to={'/'} > Home    </Link>
+        <Link className='list_item' to={'/'} > News    </Link>
+        <Link className='list_item' to={'/'} > Contact </Link>
+        <Link className='list_item' to={'/'} > About   </Link>
+      </ul>
+      <div className='header_search'>
+        <input type="text" className="header_input" placeholder='Search' />
+        <i className="search_icon" aria-hidden="true"><MdSearch /></i>
+      </div>
+    </div>
   )
 }
 

@@ -1,17 +1,12 @@
 .spinner_div {
   display: flex;
-  align-items: center;
   justify-content: center;
-  box-sizing: border-box;
-  min-height: max-content;
-  margin: 0;
-  padding: 0;
+  padding: 10em;
 }
 
 .loader {
   border: 16px solid #f3f3f3;
   border-top: 16px solid #3498db;
-  margin-top: 200px;
   border-radius: 50%;
   width: 120px;
   height: 120px;
