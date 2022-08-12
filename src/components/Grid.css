@@ -1,12 +1,22 @@
-.add-item {
+.input-bar {
   display: flex;
   position: sticky;
-  top: 0;
-  background: var(--textColor);
+  flex-flow: row wrap;
   justify-content: center;
+  align-content: center;
+  top: 0;
+
+  background: var(--textColor);
   border-top: solid var(--mainColor);
   border-bottom: solid var(--mainColor);
   padding: 5px 0 5px 0;
+}
+
+.input-item {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+  margin: 0 10px;
 }
 
 .container {

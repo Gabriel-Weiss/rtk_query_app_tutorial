@@ -3,6 +3,7 @@ import './Grid.css'
 import Spinner from './Spinner';
 import { useGetRestaurantsQuery, useAddRestaurantMutation } from '../redux/restaurantsApi';
 import GridCard from './GridCard';
+import { MdSearch } from "react-icons/md";
 
 export default function Grid() {
 
@@ -21,10 +22,15 @@ export default function Grid() {
 
   return (
     <main>
-      <div className='add-item '>
-        <input type="text" value={restaurant} onChange={e => setRestaurant(e.target.value)} />
-        {/* <AddButton handleAddRestaurant={handleAddRestaurant} /> */}
-        <button className='add-btn' onClick={handleAddRestaurant}>Add Item</button>
+      <div className='input-bar'>
+        <div className='search-item input-item'>
+          <input type="text" className="header_input" placeholder='Search' />
+          <i className="search_icon" aria-hidden="true"><MdSearch /></i>
+        </div>
+        <div className="add-item input-item">
+          <input type="text" value={restaurant} onChange={e => setRestaurant(e.target.value)} />
+          <button className='add-btn' onClick={handleAddRestaurant}>Add Item</button>
+        </div>
       </div>
       <div className="container">
         {data.map(restaurant => (

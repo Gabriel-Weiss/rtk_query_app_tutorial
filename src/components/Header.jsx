@@ -1,7 +1,6 @@
 import React from 'react'
 import './Header.css';
 import { MdOutlineNoFood } from "react-icons/md";
-import { MdSearch } from "react-icons/md";
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -15,10 +14,6 @@ const Header = () => {
         <Link className='list_item' to={'/'} > Contact </Link>
         <Link className='list_item' to={'/'} > About   </Link>
       </ul>
-      <div className='header_search'>
-        <input type="text" className="header_input" placeholder='Search' />
-        <i className="search_icon" aria-hidden="true"><MdSearch /></i>
-      </div>
     </div>
   )
 }
