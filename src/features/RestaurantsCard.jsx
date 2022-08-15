@@ -1,9 +1,10 @@
 import React from 'react';
-import './GridCard.css';
-import { useDeleteRestaurantMutation } from '../redux/restaurantsApi';
+import './css/GridCard.css';
 import { Link } from 'react-router-dom';
+import { useDeleteRestaurantMutation } from '../redux/restaurants/restaurantsApiSlice';
+import { handlePriceLevel } from '../utils/functions';
 
-const GridCard = ({ restaurant }) => {
+const RestaurantsCard = ({ restaurant }) => {
 
   const [deleteRestaurant] = useDeleteRestaurantMutation();
   // const [updateRestaurant] = useUpdateRestaurantMutation();
@@ -16,22 +17,9 @@ const GridCard = ({ restaurant }) => {
     await deleteRestaurant(id).unwrap();
   }
 
-  const handlePriceLevel = (level) => {
-    switch (level) {
-      case 1:
-        return 'low';
-      case 2:
-        return 'medium';
-      case 3:
-        return 'high';
-      default:
-        return 'no level';
-    }
-  }
-
   return (
     <div className='grid-card'>
-      <div className='container-item' key={restaurant.id}>
+      <div className='container-item'>
         <Link to={`/restaurants/${restaurant.id}`}>
           <h5 className="card-body card-title">{restaurant.name}</h5>
           <p className="card-body card-text">
@@ -47,4 +35,4 @@ const GridCard = ({ restaurant }) => {
   )
 }
 
-export default GridCard
+export default RestaurantsCard

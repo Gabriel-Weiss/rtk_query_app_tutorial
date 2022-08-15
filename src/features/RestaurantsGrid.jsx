@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import './Grid.css'
-import Spinner from './Spinner';
-import { useGetRestaurantsQuery, useAddRestaurantMutation } from '../redux/restaurantsApi';
-import GridCard from './GridCard';
+import './css/Grid.css'
+import Spinner from '../components/Spinner';
 import { MdSearch } from "react-icons/md";
+import RestaurantsCard from './RestaurantsCard';
+import { useAddRestaurantMutation, useGetRestaurantsQuery } from '../redux/restaurants/restaurantsApiSlice';
 
-export default function Grid() {
+export default function RestaurantsGrid() {
 
   const [restaurant, setRestaurant] = useState('');
   const { data = [], isLoading } = useGetRestaurantsQuery();
@@ -34,7 +34,7 @@ export default function Grid() {
       </div>
       <div className="container">
         {data.map(restaurant => (
-          <GridCard
+          <RestaurantsCard
             key={restaurant.id}
             restaurant={restaurant} />
         ))}
