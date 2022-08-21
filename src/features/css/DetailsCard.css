@@ -1,9 +1,48 @@
-.item-content {
+section {
+  margin: 2em;
+}
+
+.content-border {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   border: solid var(--mainColor);
   border-radius: 5px;
+}
+
+.item-content {
+  display: block;
+  position: relative;
   padding: 5px;
 }
 
-section {
-  margin: 2em;
+.options-btn {
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.back-icon {
+  margin: 0;
+  font-size: 4rem;
+  color: var(--mainColor);
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: relative;
+  right: 7px;
+  cursor: pointer;
+}
+
+.edit-icon svg {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  border: 3.5px solid var(--mainColor);
+  border-radius: 25px;
+  left: 15px;
+  top: 3px;
+  padding: 5px;
 }

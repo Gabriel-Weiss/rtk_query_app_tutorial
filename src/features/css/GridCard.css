@@ -11,3 +11,7 @@ p .card-body {
   display: flex;
   align-items: flex-end;
 }
+
+.card-footer button {
+  width: 200px;
+}

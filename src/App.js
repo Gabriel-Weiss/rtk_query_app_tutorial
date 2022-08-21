@@ -9,6 +9,7 @@ import RestaurantDetails from "./features/RestaurantDetails";
 import NotFound from "./components/NotFound";
 import MarketDetails from "./features/MarketDetails";
 import AddRestaurantForm from "./features/AddRestaurantForm";
+import EditRestaurantForm from "./features/EditRestaurantForm";
 import AddMarketForm from "./features/AddMarketForm";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="magazine" element={<MarketsGrid />} />
         <Route path="restaurants/:id" element={<RestaurantDetails />} />
         <Route path="restaurants/add" element={<AddRestaurantForm />} />
+        <Route path="restaurants/edit/:id" element={<EditRestaurantForm />} />
         <Route path="magazine/:id" element={<MarketDetails />} />
         <Route path="magazine/add" element={<AddMarketForm />} />
         <Route path="*" element={<NotFound />} />

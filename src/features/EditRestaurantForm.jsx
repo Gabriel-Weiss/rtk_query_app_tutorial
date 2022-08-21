@@ -1,20 +1,22 @@
 import React from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import "./css/AddForm.css";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useAddRestaurantMutation } from "../redux/restaurants/restaurantsApiSlice";
-import { useNavigate } from "react-router-dom";
+import {
+  useGetRestaurantQuery,
+  useUpdateRestaurantMutation,
+} from "../redux/restaurants/restaurantsApiSlice";
 
-const AddRestaurantForm = () => {
-  let navigateTo = useNavigate();
-  const [addRestaurant] = useAddRestaurantMutation();
+const EditRetaurantForm = () => {
+  let id = useParams();
+  const navigateTo = useNavigate();
+
+  const { data: restaurant } = useGetRestaurantQuery(id);
+  const [editRestaurant] = useUpdateRestaurantMutation(id);
 
   const formik = useFormik({
-    initialValues: {
-      name: "",
-      price_level: "",
-      avg_delivery_time: "",
-    },
+    initialValues: restaurant,
     validationSchema: Yup.object({
       name: Yup.string().required("* Numele localului este obligatoriu"),
       price_level: Yup.number().required("* Cimpul este obligatoriu"),
@@ -22,8 +24,9 @@ const AddRestaurantForm = () => {
     }),
     onSubmit: async (values) => {
       try {
-        await addRestaurant(values).unwrap();
-        navigateTo(-1);
+        await editRestaurant(values).unwrap();
+        //TODO: solve invalidation cache problem
+        navigateTo(`/restaurants/${restaurant.id}`);
       } catch (error) {
         console.error("Nu s-a putut salva intrarea", error);
         alert("Nu s-a putut salva intrarea");
@@ -64,4 +67,4 @@ const AddRestaurantForm = () => {
   );
 };
 
-export default AddRestaurantForm;
+export default EditRetaurantForm;
