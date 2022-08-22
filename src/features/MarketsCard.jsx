@@ -14,7 +14,7 @@ const MarketsCard = ({ market }) => {
   return (
     <div className="grid-card">
       <div className="container-item">
-        <Link to={`/magazine/${market.id}`}>
+        <Link to={`/markets/${market.id}`}>
           <h5 className="card-body card-title">{market.name}</h5>
           <p className="card-body card-text">
             Price level: {handlePriceLevel(market.price_level)}

@@ -11,6 +11,7 @@ import MarketDetails from "./features/MarketDetails";
 import AddRestaurantForm from "./features/AddRestaurantForm";
 import EditRestaurantForm from "./features/EditRestaurantForm";
 import AddMarketForm from "./features/AddMarketForm";
+import EditMarketForm from "./features/EditMarketForm";
 
 function App() {
   return (
@@ -18,13 +19,14 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="markets" element={<MarketsGrid />}></Route>
+        <Route path="markets/:id" element={<MarketDetails />} />
+        <Route path="markets/add" element={<AddMarketForm />} />
+        <Route path="markets/edit/:id" element={<EditMarketForm />} />
         <Route path="restaurants" element={<RestaurantsGrid />} />
-        <Route path="magazine" element={<MarketsGrid />} />
         <Route path="restaurants/:id" element={<RestaurantDetails />} />
         <Route path="restaurants/add" element={<AddRestaurantForm />} />
         <Route path="restaurants/edit/:id" element={<EditRestaurantForm />} />
-        <Route path="magazine/:id" element={<MarketDetails />} />
-        <Route path="magazine/add" element={<AddMarketForm />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

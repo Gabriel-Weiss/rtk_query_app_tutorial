@@ -8,10 +8,9 @@ import { IoCaretBackCircleOutline } from "react-icons/io5";
 import { RiPencilLine } from "react-icons/ri";
 
 const RestaurantDetails = () => {
-  let id = useParams();
+  const id = useParams();
   const navigateTo = useNavigate();
   const { data: restaurant, isFetching, isSuccess } = useGetRestaurantQuery(id);
-  console.log(restaurant);
 
   let content;
   if (isFetching) {

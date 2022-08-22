@@ -1,21 +1,38 @@
-import React from 'react'
-import './css/Header.css';
+import React from "react";
+import "./css/Header.css";
 import { MdOutlineNoFood } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Header = () => {
-
   return (
-    <div className='header_container'>
-      <div className='header_icon'><MdOutlineNoFood /></div>
+    <div className="header_container">
+      <div className="header_icon">
+        <MdOutlineNoFood />
+      </div>
+      <div className="list_item">
+        <Link to={`/restaurants`}>Restaurante</Link>
+        <Link to={`/markets`}>Magazine</Link>
+      </div>
       <ul className="header_nav">
-        <Link className='list_item' to={'/'} > Home    </Link>
-        <Link className='list_item' to={'/'} > News    </Link>
-        <Link className='list_item' to={'/'} > Contact </Link>
-        <Link className='list_item' to={'/'} > About   </Link>
+        <Link className="list_item" to={"/"}>
+          {" "}
+          Home{" "}
+        </Link>
+        <Link className="list_item" to={"/"}>
+          {" "}
+          News{" "}
+        </Link>
+        <Link className="list_item" to={"/"}>
+          {" "}
+          Contact{" "}
+        </Link>
+        <Link className="list_item" to={"/"}>
+          {" "}
+          About{" "}
+        </Link>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

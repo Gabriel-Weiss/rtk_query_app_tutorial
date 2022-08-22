@@ -3,49 +3,53 @@ import { apiSlice } from "../apiSlice";
 export const restaurantsApiSlice = apiSlice.injectEndpoints({
   endpoints: (build) => ({
     getRestaurants: build.query({
-      query: () => 'restaurants',
-      transformResponse: response => response.sort((a, b) => b.id - a.id),
+      query: () => "restaurants",
+      transformResponse: (response) => response.sort((a, b) => b.id - a.id),
       providesTags: (result = [], error, arg) => [
-        'Restaurants',
-        ...result.map(({id}) => ({type: 'Restaurants', id}))
+        "Restaurants",
+        ...result.map(({ id }) => ({ type: "Restaurants", id })),
       ],
     }),
     getRestaurant: build.query({
-      query: restaurant => ({
-        url: `restaurants/${restaurant.id}`
+      query: (restaurant) => ({
+        url: `restaurants/${restaurant.id}`,
       }),
-      providesTags: (result, error, arg) => [{ type: 'Restaurants', id: arg }]
+      providesTags: (result, error, arg) => [
+        { type: "Restaurants", id: arg.id },
+      ],
     }),
     addRestaurant: build.mutation({
-      query: restaurant => ({
-        url: 'restaurants',
-        method: 'POST',
-        body: restaurant
+      query: (restaurant) => ({
+        url: "restaurants",
+        method: "POST",
+        body: restaurant,
       }),
-      invalidatesTags: ['Restaurants'],
+      invalidatesTags: ["Restaurants"],
     }),
     updateRestaurant: build.mutation({
-      query: restaurant => ({
+      query: (restaurant) => ({
         url: `restaurants/${restaurant.id}`,
-        method: 'PATCH',
-        body: restaurant
+        method: "PATCH",
+        body: restaurant,
       }),
-      invalidatesTags: (result, error, arg) => [{ type: 'Restaurants', id: arg.id}],
+      invalidatesTags: (result, error, arg) => [
+        { type: "Restaurants", id: arg.id },
+      ],
     }),
     deleteRestaurant: build.mutation({
-      query: id => ({
+      query: (id) => ({
         url: `restaurants/${id}`,
-        method: 'DELETE'
+        method: "DELETE",
       }),
-      invalidatesTags: ['Restaurants'],
+      invalidatesTags: ["Restaurants"],
     }),
-  })
-})
+  }),
+});
 
-export const { 
-  useGetRestaurantsQuery, 
-  useAddRestaurantMutation, 
-  useUpdateRestaurantMutation, 
+export const {
+  useGetRestaurantsQuery,
+  useAddRestaurantMutation,
+  useUpdateRestaurantMutation,
   useDeleteRestaurantMutation,
   useGetRestaurantQuery,
-} = restaurantsApiSlice
+} = restaurantsApiSlice;

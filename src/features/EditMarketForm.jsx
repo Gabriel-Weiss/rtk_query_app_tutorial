@@ -4,19 +4,19 @@ import "./css/AddForm.css";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import {
-  useGetRestaurantQuery,
-  useUpdateRestaurantMutation,
-} from "../redux/restaurants/restaurantsApiSlice";
+  useGetMarketQuery,
+  useUpdateMarketMutation,
+} from "../redux/markets/marketsApiSlice";
 
-const EditRetaurantForm = () => {
+const EditMarketForm = () => {
   let id = useParams();
   const navigateTo = useNavigate();
 
-  const { data: restaurant } = useGetRestaurantQuery(id);
-  const [editRestaurant] = useUpdateRestaurantMutation(id);
+  const { data: market } = useGetMarketQuery(id);
+  const [editMarket] = useUpdateMarketMutation(id);
 
   const formik = useFormik({
-    initialValues: restaurant,
+    initialValues: market,
     validationSchema: Yup.object({
       name: Yup.string().required("* Numele localului este obligatoriu"),
       price_level: Yup.number().required("* Cimpul este obligatoriu"),
@@ -24,8 +24,8 @@ const EditRetaurantForm = () => {
     }),
     onSubmit: async (values) => {
       try {
-        await editRestaurant(values).unwrap();
-        navigateTo(`/restaurants/${values.id}`);
+        await editMarket(values).unwrap();
+        navigateTo(`/markets/${values.id}`);
       } catch (error) {
         console.error("Nu s-a putut salva intrarea", error);
         alert("Nu s-a putut salva intrarea");
@@ -35,7 +35,7 @@ const EditRetaurantForm = () => {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="name">Restaurant Name</label>
+      <label htmlFor="name">Market Name</label>
       <input id="name" type="text" {...formik.getFieldProps("name")} />
       {formik.touched.name && formik.errors.name ? (
         <div>{formik.errors.name}</div>
@@ -66,4 +66,4 @@ const EditRetaurantForm = () => {
   );
 };
 
-export default EditRetaurantForm;
+export default EditMarketForm;

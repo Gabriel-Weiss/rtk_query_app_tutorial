@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/Grid.css";
 import Spinner from "../components/Spinner";
 import { MdSearch } from "react-icons/md";
@@ -23,7 +23,7 @@ const MarketsGrid = () => {
           </i>
         </div>
         <div className="add-item input-item">
-          <Link to="/magazine/add">Add Market</Link>
+          <Link to="/markets/add">Add Market</Link>
         </div>
       </div>
       <div className="container">
