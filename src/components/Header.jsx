@@ -6,29 +6,29 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="header_container">
-      <div className="header_icon">
-        <MdOutlineNoFood />
-      </div>
-      <div className="list_item">
-        <Link to={`/restaurants`}>Restaurante</Link>
-        <Link to={`/markets`}>Magazine</Link>
+      <div className="list-item-right">
+        <div className="header_icon">
+          <MdOutlineNoFood />
+        </div>
+        <Link className="list_item" to={`/restaurants`}>
+          Restaurante
+        </Link>
+        <Link className="list_item" to={`/markets`}>
+          Magazine
+        </Link>
       </div>
       <ul className="header_nav">
         <Link className="list_item" to={"/"}>
-          {" "}
-          Home{" "}
+          Home
         </Link>
         <Link className="list_item" to={"/"}>
-          {" "}
-          News{" "}
+          News
         </Link>
         <Link className="list_item" to={"/"}>
-          {" "}
-          Contact{" "}
+          Contact
         </Link>
         <Link className="list_item" to={"/"}>
-          {" "}
-          About{" "}
+          About
         </Link>
       </ul>
     </div>

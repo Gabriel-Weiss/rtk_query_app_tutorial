@@ -21,9 +21,10 @@ const AddRestaurantForm = () => {
       avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
     }),
     onSubmit: async (values) => {
+      values.price_level = parseInt(values.price_level);
       try {
         await addRestaurant(values).unwrap();
-        navigateTo(-1);
+        navigateTo(`/restaurants`);
       } catch (error) {
         console.error("Nu s-a putut salva intrarea", error);
         alert("Nu s-a putut salva intrarea");
@@ -33,33 +34,47 @@ const AddRestaurantForm = () => {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="name">Restaurant Name</label>
-      <input id="name" type="text" {...formik.getFieldProps("name")} />
-      {formik.touched.name && formik.errors.name ? (
-        <div>{formik.errors.name}</div>
-      ) : null}
+      <div className="input-group">
+        <label htmlFor="name">Restaurant Name</label>
+        <input id="name" type="text" {...formik.getFieldProps("name")} />
+        {formik.touched.name && formik.errors.name ? (
+          <div className="error-message">{formik.errors.name}</div>
+        ) : null}
+      </div>
 
-      <label htmlFor="price_level">Price Level</label>
-      <input
-        id="price_level"
-        type="number"
-        {...formik.getFieldProps("price_level")}
-      />
-      {formik.touched.price_level && formik.errors.price_level ? (
-        <div>{formik.errors.price_level}</div>
-      ) : null}
+      <div className="input-group">
+        <label htmlFor="price_level">Price Level</label>
+        <select
+          id="price_level"
+          type="number"
+          name="price_level"
+          {...formik.getFieldProps("price_level")}
+        >
+          <option value="">Select level</option>
+          <option value="1">Low</option>
+          <option value="2">Medium</option>
+          <option value="3">High</option>
+        </select>
+        {formik.touched.price_level && formik.errors.price_level ? (
+          <div className="error-message">{formik.errors.price_level}</div>
+        ) : null}
+      </div>
 
-      <label htmlFor="avg_delivery_time">Average Delivery Time</label>
-      <input
-        id="avg_delivery_time"
-        type="number"
-        {...formik.getFieldProps("avg_delivery_time")}
-      />
-      {formik.touched.avg_delivery_time && formik.errors.avg_delivery_time ? (
-        <div>{formik.errors.avg_delivery_time}</div>
-      ) : null}
-
-      <button type="submit">Salveaza</button>
+      <div className="input-group">
+        <label htmlFor="avg_delivery_time">Average Delivery Time</label>
+        <input
+          id="avg_delivery_time"
+          type="number"
+          step={10}
+          {...formik.getFieldProps("avg_delivery_time")}
+        />
+        {formik.touched.avg_delivery_time && formik.errors.avg_delivery_time ? (
+          <div className="error-message">{formik.errors.avg_delivery_time}</div>
+        ) : null}
+      </div>
+      <button className="add-btn" type="submit">
+        Salveaza
+      </button>
     </form>
   );
 };

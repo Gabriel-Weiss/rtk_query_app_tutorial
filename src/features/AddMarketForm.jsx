@@ -22,7 +22,7 @@ const AddMarketForm = () => {
     onSubmit: async (values) => {
       try {
         await addMarket(values).unwrap();
-        navigateTo(-1);
+        navigateTo(`/markets`);
       } catch (error) {
         console.error("Nu s-a putut salva intrarea", error);
         alert("Nu s-a putut salva intrarea");

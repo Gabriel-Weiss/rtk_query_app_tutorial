@@ -9,6 +9,7 @@ div.header_container {
 
 .header_icon {
   font-size: xx-large;
+  padding-right: 1rem;
 }
 
 .header_icon:hover {
@@ -26,7 +27,12 @@ div.header_container {
 .list_item:hover {
   background-color: var(--mainColorLight);
   border-radius: 3px;
-  color:rgb(153, 51, 255);
+  color: rgb(153, 51, 255);
+}
+
+.list-item-right {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header_search {
