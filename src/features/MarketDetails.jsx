@@ -22,7 +22,7 @@ const MarketDetails = () => {
             <h2>{market.name}</h2>
             <h2>
               {market.ratings
-                ? "Rating: " + market.ratings
+                ? "Rating: " + market.ratings.average
                 : "Rating: no rating"}
             </h2>
             <h2>Products: {market.format_cuisines}</h2>
@@ -40,7 +40,13 @@ const MarketDetails = () => {
             </div>
           </div>
         </article>
-        <div className="item-products">Products</div>
+        <div className="item-products">
+          {market.products ? (
+            market.products.map((product) => <p key={product}>{product}</p>)
+          ) : (
+            <p>No Products</p>
+          )}
+        </div>
       </section>
     );
   }

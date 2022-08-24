@@ -14,15 +14,16 @@ const RestaurantsCard = ({ restaurant }) => {
   return (
     <div className="grid-card">
       <div className="container-item">
-        <Link to={`/restaurants/${restaurant.id}`}>
-          <h5 className="card-body card-title">{restaurant.name}</h5>
+        <Link className="container-list" to={`/restaurants/${restaurant.id}`}>
+          <h3 className="card-body card-title">{restaurant.name}</h3>
+          <p className="card-body card-text">{restaurant.format_cuisines}</p>
+          <p className="card-body card-text">
+            Price level: {handlePriceLevel(restaurant.price_level)}
+          </p>
           <p className="card-body card-text">
             {restaurant.ratings
               ? "Rating: " + restaurant.ratings.average
-              : "Rating: -"}
-          </p>
-          <p className="card-body card-text">
-            Price level: {handlePriceLevel(restaurant.price_level)}
+              : "Rating: no rating"}
           </p>
         </Link>
         <div className="card-body card-footer">

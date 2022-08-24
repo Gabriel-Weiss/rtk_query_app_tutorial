@@ -14,13 +14,18 @@ const MarketsCard = ({ market }) => {
   return (
     <div className="grid-card">
       <div className="container-item">
-        <Link to={`/markets/${market.id}`}>
-          <h5 className="card-body card-title">{market.name}</h5>
+        <Link className="container-list" to={`/markets/${market.id}`}>
+          <h3 className="card-body card-title">{market.name}</h3>
           <p className="card-body card-text">
             Price level: {handlePriceLevel(market.price_level)}
           </p>
           <p className="card-body card-text">
             Products: {market.format_cuisines}
+          </p>
+          <p className="card-body card-text">
+            {market.ratings
+              ? "Rating: " + market.ratings.average
+              : "Rating: no rating"}
           </p>
         </Link>
         <div className="card-body card-footer">

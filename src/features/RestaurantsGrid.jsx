@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/Grid.css";
 import Spinner from "../components/Spinner";
 import { MdSearch } from "react-icons/md";
@@ -23,7 +23,9 @@ export default function RestaurantsGrid() {
           </i>
         </div>
         <div className="add-item input-item">
-          <Link to="/restaurants/add">Add Restaurant</Link>
+          <Link className="add-itme-link" to="/restaurants/add">
+            Add Restaurant
+          </Link>
         </div>
       </div>
       <div className="container">

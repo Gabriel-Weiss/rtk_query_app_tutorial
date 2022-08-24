@@ -23,7 +23,9 @@ const MarketsGrid = () => {
           </i>
         </div>
         <div className="add-item input-item">
-          <Link to="/markets/add">Add Market</Link>
+          <Link className="add-itme-link" to="/markets/add">
+            Add Market
+          </Link>
         </div>
       </div>
       <div className="container">

@@ -44,7 +44,13 @@ const RestaurantDetails = () => {
             </div>
           </div>
         </article>
-        <div className="item-foods">Foods</div>
+        <div className="item-products">
+          {restaurant.products ? (
+            restaurant.products.map((product) => <p key={product}>{product}</p>)
+          ) : (
+            <p>No Products</p>
+          )}
+        </div>
       </section>
     );
   }

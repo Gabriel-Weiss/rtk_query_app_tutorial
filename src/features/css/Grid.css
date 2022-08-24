@@ -19,6 +19,15 @@
   margin: 0 10px;
 }
 
+.add-itme-link {
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+
+.add-itme-link:hover {
+  cursor: pointer;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -7,6 +7,7 @@ const Home = () => {
         marginTop: "2rem",
         marginLeft: "2rem",
         fontSize: "4rem",
+        color: "black",
       }}
     >
       Content
@@ -14,6 +15,7 @@ const Home = () => {
         style={{
           marginTop: "0",
           fontSize: "3rem",
+          color: "black",
         }}
       >
         <i>To be added</i>

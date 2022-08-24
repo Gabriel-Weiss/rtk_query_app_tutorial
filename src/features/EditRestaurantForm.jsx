@@ -23,11 +23,11 @@ const EditRetaurantForm = () => {
       avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
     }),
     onSubmit: async (values) => {
+      values.price_level = parseInt(values.price_level);
       try {
         await editRestaurant(values).unwrap();
         navigateTo(`/restaurants/${values.id}`);
       } catch (error) {
-        console.error("Nu s-a putut salva intrarea", error);
         alert("Nu s-a putut salva intrarea");
       }
     },
