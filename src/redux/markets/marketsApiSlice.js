@@ -41,6 +41,13 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ["Markets"],
     }),
+    addProduct: builder.mutation({
+      query: ({ marketId, product }) => ({
+        url: `markets/${marketId}`,
+        method: "POST",
+        body: { product },
+      }),
+    }),
   }),
 });
 

@@ -1,0 +1,508 @@
+{
+  "foods": [
+    {
+      "id": 1,
+      "category": "Pizza",
+      "name": "Pizza Asorti de carne",
+      "quantity": 510,
+      "price": 105
+    },
+    {
+      "id": 2,
+      "category": "Pizza",
+      "name": "Pizza Don Cezar",
+      "quantity": 490,
+      "price": 103
+    },
+    {
+      "id": 3,
+      "category": "Pizza",
+      "name": "Pizza Appetitosso",
+      "quantity": 460,
+      "price": 105
+    },
+    {
+      "id": 4,
+      "category": "Pizza",
+      "name": "Pizza Tuna",
+      "quantity": 410,
+      "price": 99
+    },
+    {
+      "id": 5,
+      "category": "Pizza",
+      "name": "Pizza Presto",
+      "quantity": 500,
+      "price": 99
+    },
+    {
+      "id": 6,
+      "category": "Pizza",
+      "name": "Pizza Gustoso",
+      "quantity": 520,
+      "price": 99
+    },
+    {
+      "id": 7,
+      "category": "Pizza",
+      "name": "Pizza Quattro formaggi",
+      "quantity": 400,
+      "price": 97
+    },
+    {
+      "id": 8,
+      "category": "Pizza",
+      "name": "Pizza Diavola",
+      "quantity": 420,
+      "price": 97
+    },
+    {
+      "id": 9,
+      "category": "Pizza",
+      "name": "Pizza Vegetariana",
+      "quantity": 440,
+      "price": 95
+    },
+    {
+      "id": 10,
+      "category": "Pizza",
+      "name": "Pizza Bianca",
+      "quantity": 450,
+      "price": 105
+    },
+    {
+      "id": 11,
+      "category": "Pizza",
+      "name": "Pizza Classica",
+      "quantity": 430,
+      "price": 95
+    },
+    {
+      "id": 12,
+      "category": "Burger",
+      "name": "Dublu Big Tasty",
+      "quantity": 490,
+      "price": 120
+    },
+    {
+      "id": 13,
+      "category": "Burger",
+      "name": "Dublu McRoyal",
+      "quantity": 303,
+      "price": 85
+    },
+    {
+      "id": 14,
+      "category": "Burger",
+      "name": "Dublu Filet-O-Fish",
+      "quantity": 200,
+      "price": 60
+    },
+    {
+      "id": 15,
+      "category": "Burger",
+      "name": "Triplu Cheeseburger",
+      "quantity": 216,
+      "price": 65
+    },
+    {
+      "id": 16,
+      "category": "Burger",
+      "name": "Big Tasty",
+      "quantity": 341,
+      "price": 85
+    },
+    {
+      "id": 17,
+      "category": "Burger",
+      "name": "Big Tasty Bacon",
+      "quantity": 335,
+      "price": 95
+    },
+    {
+      "id": 18,
+      "category": "Burger",
+      "name": "McRoyal Bacon",
+      "quantity": 210,
+      "price": 70
+    },
+    {
+      "id": 19,
+      "category": "Burger",
+      "name": "Big Mac Bacon",
+      "quantity": 229,
+      "price": 70
+    },
+    {
+      "id": 20,
+      "category": "Burger",
+      "name": "Big Tasty Chicken",
+      "quantity": 305,
+      "price": 80
+    },
+    {
+      "id": 21,
+      "category": "Burger",
+      "name": "Big Mac",
+      "quantity": 217,
+      "price": 60
+    },
+    {
+      "id": 22,
+      "category": "Burger",
+      "name": "McRoyal Deluxe",
+      "quantity": 239,
+      "price": 70
+    },
+    {
+      "id": 23,
+      "category": "Burger",
+      "name": "McRoyal",
+      "quantity": 190,
+      "price": 60
+    },
+    {
+      "id": 24,
+      "category": "Burger",
+      "name": "Cheeseburger",
+      "quantity": 119,
+      "price": 25
+    },
+    {
+      "id": 25,
+      "category": "Burger",
+      "name": "McChicken",
+      "quantity": 181,
+      "price": 60
+    },
+    {
+      "id": 26,
+      "category": "Burger",
+      "name": "Dublu cheeseburger",
+      "quantity": 171,
+      "price": 50
+    },
+    {
+      "id": 27,
+      "category": "Burger",
+      "name": "McPuișor",
+      "quantity": 109,
+      "price": 25
+    },
+    {
+      "id": 28,
+      "category": "Burger",
+      "name": "Cheeseburger Fresh",
+      "quantity": 140,
+      "price": 37
+    },
+    {
+      "id": 29,
+      "category": "Burger",
+      "name": "Filet-o-fish",
+      "quantity": 137,
+      "price": 48
+    },
+    {
+      "id": 30,
+      "category": "Burger",
+      "name": "Hamburger",
+      "quantity": 105,
+      "price": 22
+    },
+    {
+      "id": 31,
+      "category": "Burger",
+      "name": "Dublu McPuișor",
+      "quantity": 300,
+      "price": 43
+    },
+    {
+      "id": 32,
+      "category": "Kebab",
+      "name": "Kebab de pui",
+      "quantity": 300,
+      "price": 55
+    },
+    {
+      "id": 33,
+      "category": "Kebab",
+      "name": "Kebab de pui (mare)",
+      "quantity": 400,
+      "price": 65
+    },
+    {
+      "id": 34,
+      "category": "Kebab",
+      "name": "Kebab arab de pui",
+      "quantity": 500,
+      "price": 85
+    },
+    {
+      "id": 35,
+      "category": "Kebab",
+      "name": "Kebab arab de vita",
+      "quantity": 600,
+      "price": 100
+    },
+    {
+      "id": 36,
+      "category": "Kebab",
+      "name": "Kebab de vita mic",
+      "quantity": 300,
+      "price": 70
+    },
+    {
+      "id": 37,
+      "category": "Kebab",
+      "name": "Kebab de vita mare",
+      "quantity": 400,
+      "price": 90
+    },
+    {
+      "id": 38,
+      "category": "Sushi",
+      "name": "Hot Red Fish roll 8 buc.",
+      "quantity": 300,
+      "price": 149
+    },
+    {
+      "id": 39,
+      "category": "Sushi",
+      "name": "Philadelphia roll 8 buc.",
+      "quantity": 250,
+      "price": 119
+    },
+    {
+      "id": 40,
+      "category": "Sushi",
+      "name": "Tokugawa roll 8 buc.",
+      "quantity": 230,
+      "price": 119
+    },
+    {
+      "id": 41,
+      "category": "Sushi",
+      "name": "Yasai roll 8 buc.",
+      "quantity": 215,
+      "price": 119
+    },
+    {
+      "id": 42,
+      "category": "Sushi",
+      "name": "Canada roll 8 buc.",
+      "quantity": 240,
+      "price": 149
+    },
+    {
+      "id": 43,
+      "category": "Sushi",
+      "name": "Tokio roll 8 buc.",
+      "quantity": 255,
+      "price": 144
+    },
+    {
+      "id": 44,
+      "category": "Sushi",
+      "name": "Moscow 8 buc.",
+      "quantity": 260,
+      "price": 219
+    },
+    {
+      "id": 45,
+      "category": "Sushi",
+      "name": "Sensei maki 8 buc.",
+      "quantity": 240,
+      "price": 119
+    },
+    {
+      "id": 46,
+      "category": "Sushi",
+      "name": "California roll 8 buc.",
+      "quantity": 240,
+      "price": 149
+    },
+    {
+      "id": 47,
+      "category": "Sushi",
+      "name": "Sakura roll 8 buc.",
+      "quantity": 320,
+      "price": 219
+    },
+    {
+      "id": 48,
+      "category": "Sushi",
+      "name": "Okinawa 8 buc. ",
+      "quantity": 260,
+      "price": 119
+    },
+    {
+      "id": 49,
+      "category": "Sushi",
+      "name": "Magura sake 8 buc.",
+      "quantity": 245,
+      "price": 209
+    },
+    {
+      "id": 50,
+      "category": "Sushi",
+      "name": "Takara 8 buc.",
+      "quantity": 250,
+      "price": 229
+    },
+    {
+      "id": 51,
+      "category": "Sushi",
+      "name": "Maguro maki 8 buc.",
+      "quantity": 150,
+      "price": 109
+    },
+    {
+      "id": 52,
+      "category": "Sushi",
+      "name": "Futo maki 8 buc.",
+      "quantity": 320,
+      "price": 159
+    },
+    {
+      "id": 53,
+      "category": "Sushi",
+      "name": "Iceberg maki 8 buc.",
+      "quantity": 200,
+      "price": 129
+    },
+    {
+      "id": 54,
+      "category": "Sushi",
+      "name": "Sygun maki 8 buc.",
+      "quantity": 200,
+      "price": 219
+    },
+    {
+      "id": 55,
+      "category": "Sushi",
+      "name": "Sake maki 8 buc.",
+      "quantity": 150,
+      "price": 99
+    },
+    {
+      "id": 56,
+      "category": "Sushi",
+      "name": "Ebi maki 8 buc.",
+      "quantity": 150,
+      "price": 109
+    },
+    {
+      "id": 57,
+      "category": "Sushi",
+      "name": "Unagi maki 6 buc.",
+      "quantity": 170,
+      "price": 119
+    },
+    {
+      "id": 58,
+      "category": "Sushi",
+      "name": "Philadelphia with unagi roll 8 buc.",
+      "quantity": 280,
+      "price": 159
+    },
+    {
+      "id": 59,
+      "category": "Sushi",
+      "name": "Alaska roll 8 buc.",
+      "quantity": 240,
+      "price": 175
+    },
+    {
+      "id": 60,
+      "category": "Sushi",
+      "name": "Avocado roll 8 buc.",
+      "quantity": 220,
+      "price": 109
+    },
+    {
+      "id": 61,
+      "category": "Sushi",
+      "name": "Chuka roll 8 buc.",
+      "quantity": 240,
+      "price": 149
+    },
+    {
+      "id": 62,
+      "category": "Sushi",
+      "name": "Roll Philadelphia Chuka 10 buc.",
+      "quantity": 270,
+      "price": 119
+    },
+    {
+      "id": 63,
+      "category": "Sushi",
+      "name": "Ikura roll 8 buc. ",
+      "quantity": 240,
+      "price": 169
+    },
+    {
+      "id": 64,
+      "category": "Carne",
+      "name": "File de pui Pesto",
+      "quantity": 250,
+      "price": 130
+    },
+    {
+      "id": 65,
+      "category": "Carne",
+      "name": "Friptură de pui în sos asiatic",
+      "quantity": 250,
+      "price": 120
+    },
+    {
+      "id": 66,
+      "category": "Carne",
+      "name": "Pulpe de rață confit",
+      "quantity": 200,
+      "price": 130
+    },
+    {
+      "id": 67,
+      "category": "Carne",
+      "name": "Steak de porc",
+      "quantity": 250,
+      "price": 120
+    },
+    {
+      "id": 68,
+      "category": "Carne",
+      "name": "Steak de vită",
+      "quantity": 250,
+      "price": 120
+    },
+    {
+      "id": 69,
+      "category": "Carne",
+      "name": "Carnati din Munchen",
+      "quantity": 250,
+      "price": 80
+    },
+    {
+      "id": 70,
+      "category": "Carne",
+      "name": "Costite de porc la gratar",
+      "quantity": 450,
+      "price": 150
+    },
+    {
+      "id": 71,
+      "category": "Carne",
+      "name": "Carnati de pui",
+      "quantity": 250,
+      "price": 80
+    },
+    {
+      "id": 72,
+      "category": "Carne",
+      "name": "Carnati bavarezi",
+      "quantity": 250,
+      "price": 80
+    }
+  ]
+}

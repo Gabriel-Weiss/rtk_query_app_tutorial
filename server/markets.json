@@ -1,0 +1,2481 @@
+{
+  "markets": [
+    {
+      "name": "OkFlora",
+      "id": 1,
+      "info": "Pentru a vă încânta pe Dvs. și pe cei dragi cu buchete interesante, vă rugăm ca atunci când comandați orice poziție, să comandați în prealabil în 2 ore.",
+      "cuisines": [
+        {
+          "id": 28,
+          "name": "flori"
+        }
+      ],
+      "format_cuisines": "flori",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 3,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 501,
+          "name": "OkFlora str. Pușkin 44",
+          "address": {
+            "id": 310190,
+            "street": "Pușkin",
+            "number": "44",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0264937,
+            "longitude": 28.8392539,
+            "nav_string": "Moldova Chisinau Pușkin 44",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Pușkin 44",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 10,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": null,
+            "approximate_address": false
+          },
+          "phonenumber": "+37322862121",
+          "provider_id": 439,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:00:38.990380+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "okflora",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Buket Floral Studio",
+      "id": 2,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 28,
+          "name": "flori"
+        }
+      ],
+      "format_cuisines": "flori",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 447,
+          "name": "Buket Floral Studio - str. Calea Moșilor 9/1",
+          "address": {
+            "id": 268979,
+            "street": "str. Calea Moșilor",
+            "number": "9/1",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.029383,
+            "longitude": 28.856261,
+            "nav_string": "Moldova Chisinau str. Calea Moșilor 9/1",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "str. Calea Moșilor 9/1",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": null,
+            "approximate_address": false
+          },
+          "phonenumber": "+37360226611",
+          "provider_id": 379,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:00:38.990380+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "buket-floral-studio",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "ROGOB FOODMART",
+      "id": 3,
+      "info": "Dacă doriți să primiți produse feliate, vă rugăm să indicați acest punct în comentariul comenzii",
+      "cuisines": [
+        {
+          "id": 177,
+          "name": "carne"
+        }
+      ],
+      "format_cuisines": "carne",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 744,
+          "name": "ROGOB FOODMART Bd. Decebal 91",
+          "address": {
+            "id": 403816,
+            "street": "Bd. Decebal",
+            "number": "91",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.9940511,
+            "longitude": 28.8596637,
+            "nav_string": "Moldova Chisinau Bd. Decebal 91",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Bd. Decebal 91",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 10,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360541119",
+          "provider_id": 625,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 746,
+          "name": "ROGOB FOODMART Str. Mihai Viteazu 12/1",
+          "address": {
+            "id": 403842,
+            "street": "Str. Mihai Viteazu",
+            "number": "12/1",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0376336,
+            "longitude": 28.8270979,
+            "nav_string": "Moldova Chisinau Str. Mihai Viteazu 12/1",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Mihai Viteazu 12/1",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 25,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              },
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": 20,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360218594",
+          "provider_id": 625,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 745,
+          "name": "ROGOB FOODMART Șos. Hîncești 60/4",
+          "address": {
+            "id": 403838,
+            "street": "Șos. Hîncești",
+            "number": "60/4",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0031554,
+            "longitude": 28.8170068,
+            "nav_string": "Moldova Chisinau Șos. Hîncești 60/4",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Șos. Hîncești 60/4",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37369509573",
+          "provider_id": 625,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": {
+        "count": 12,
+        "average": 5,
+        "comments_count": 12
+      },
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T08:30:33.348759+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "rogob-foodmart",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "eshop",
+      "eshop_content": true
+    },
+    {
+      "name": "Hair-Shop.md",
+      "id": 4,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 234,
+          "name": "Beauty"
+        }
+      ],
+      "format_cuisines": "Beauty",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 3,
+      "avg_delivery_time": 66,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 778,
+          "name": "Hair Shop str. Alblișoara 4",
+          "address": {
+            "id": 431169,
+            "street": "Str.Albișoara",
+            "number": "4",
+            "apartment": "1011",
+            "entrance": null,
+            "floor": 1,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.014631,
+            "longitude": 28.854433,
+            "nav_string": "Moldova Chisinau Str.Albișoara 4",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str.Albișoara 4",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 10,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37367665665",
+          "provider_id": 645,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T10:00:36.283245+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "hair-shopmd",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "eshop",
+      "eshop_content": true
+    },
+    {
+      "name": "JEJU Beauty Bar",
+      "id": 5,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 234,
+          "name": "Beauty"
+        }
+      ],
+      "format_cuisines": "Beauty",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 3,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 777,
+          "name": "JEJU Beauty Bar Bd. Moscovei 1/3 (раб)",
+          "address": {
+            "id": 429277,
+            "street": "Bd. Moscovei",
+            "number": "1/3",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0446514,
+            "longitude": 28.8601415,
+            "nav_string": "Moldova Chisinau Bd. Moscovei 1/3",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Bd. Moscovei 1/3",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379333445",
+          "provider_id": 653,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 776,
+          "name": "JEJU Beauty Bar Str. Ștefan cel Mare 119 (раб)",
+          "address": {
+            "id": 429271,
+            "street": "Str. Ștefan cel Mare",
+            "number": "119",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.029374,
+            "longitude": 28.824524,
+            "nav_string": "Moldova Chisinau Str. Ștefan cel Mare 119",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Ștefan cel Mare 119",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379320744",
+          "provider_id": 653,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:00:38.990380+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "jeju-beauty-bar",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Spa Master",
+      "id": 6,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 234,
+          "name": "Beauty"
+        }
+      ],
+      "format_cuisines": "Beauty",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": true,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 829,
+          "name": "Spa Master Strada Bulgară 101",
+          "address": {
+            "id": 443388,
+            "street": "Strada Bulgară",
+            "number": "101",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0209916,
+            "longitude": 28.8438994,
+            "nav_string": "Moldova Chisinau Strada Bulgară 101",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Strada Bulgară 101",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37362166292",
+          "provider_id": 662,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T16:30:38.775859+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "spa-master",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Moldflowers",
+      "id": 7,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 28,
+          "name": "flori"
+        }
+      ],
+      "format_cuisines": "flori",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 3,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 903,
+          "name": "MoldFlowers Bd. Dacia 27",
+          "address": {
+            "id": 472846,
+            "street": "Bd. Dacia",
+            "number": "27",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.9860462,
+            "longitude": 28.8579749,
+            "nav_string": "Moldova Chisinau Bd. Dacia 27",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Bd. Dacia 27",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37367207207",
+          "provider_id": 723,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T08:00:32.814412+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "moldflowers",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Pro Maestro",
+      "id": 8,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 235,
+          "name": "Alcool"
+        }
+      ],
+      "format_cuisines": "Alcool",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 924,
+          "name": "Pro Maestro Str. Transnistria 6",
+          "address": {
+            "id": 485524,
+            "street": "Str. Transnistria",
+            "number": "6",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0253239,
+            "longitude": 28.8950164,
+            "nav_string": "Moldova Chisinau Str. Transnistria 6",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Transnistria 6",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37378028528",
+          "provider_id": 747,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T17:00:39.142680+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "pro-maestro",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Estel",
+      "id": 9,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 234,
+          "name": "Beauty"
+        },
+        {
+          "id": 243,
+          "name": "Produse de îngrijire a părului"
+        }
+      ],
+      "format_cuisines": "Beauty • Produse de îngrijire a părului",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 985,
+          "name": "Estel str.Voluntarilor 15",
+          "address": {
+            "id": 496961,
+            "street": "Str. Voluntarilor",
+            "number": "15",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0032459,
+            "longitude": 28.8944287,
+            "nav_string": "Moldova Chisinau Str. Voluntarilor 15",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Voluntarilor 15",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 30,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360024499",
+          "provider_id": 804,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T17:00:39.142680+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "estel",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "eshop",
+      "eshop_content": true
+    },
+    {
+      "name": "Surprise",
+      "id": 10,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 28,
+          "name": "flori"
+        }
+      ],
+      "format_cuisines": "flori",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 976,
+          "name": "Surprise Str. Dacia 50",
+          "address": {
+            "id": 494139,
+            "street": "Str. Dacia",
+            "number": "50",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.9769043,
+            "longitude": 28.8683187,
+            "nav_string": "Moldova Chisinau Str. Dacia 50",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Dacia 50",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379663643",
+          "provider_id": 806,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T15:00:38.945194+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "surprise",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Fitmin",
+      "id": 11,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 242,
+          "name": "Hrană pentru animale"
+        }
+      ],
+      "format_cuisines": "Hrană pentru animale",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 991,
+          "name": "Fitmin str.Ankara 6",
+          "address": {
+            "id": 500465,
+            "street": "str. Ankara",
+            "number": "6",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0665655,
+            "longitude": 28.83491,
+            "nav_string": "Moldova Chisinau str. Ankara 6",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "str. Ankara 6",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 20,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37368635949",
+          "provider_id": 812,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T17:00:39.142680+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "showcase_image": null,
+      "background_image": null,
+      "slug": "fitmin",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Surprize de Vis",
+      "id": 12,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 28,
+          "name": "flori"
+        }
+      ],
+      "format_cuisines": "flori",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": true,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1076,
+          "name": "Surprise de Vis  Str. Vasile Alecsandri 143",
+          "address": {
+            "id": 534673,
+            "street": "Str. Vasile Alecsandri",
+            "number": "143",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.02735,
+            "longitude": 28.84682,
+            "nav_string": "Moldova Chisinau Str. Vasile Alecsandri 143",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Vasile Alecsandri 143",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360090082",
+          "provider_id": 900,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T10:00:36.283245+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "showcase_image": null,
+      "background_image": null,
+      "slug": "surprize-de-vis",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Bon appetit",
+      "id": 13,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 194,
+          "name": "Brutărie"
+        },
+        {
+          "id": 37,
+          "name": "deserturi"
+        },
+        {
+          "id": 193,
+          "name": "Plăcinte"
+        }
+      ],
+      "format_cuisines": "Brutărie • deserturi • Plăcinte",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 1,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1123,
+          "name": "Bon Appetit Str. Voluntarilor 16",
+          "address": {
+            "id": 541195,
+            "street": "Str. Voluntarilor",
+            "number": "16",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.00309,
+            "longitude": 28.89473,
+            "nav_string": "Moldova Chisinau Str. Voluntarilor 16",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Voluntarilor 16",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360001730",
+          "provider_id": 941,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T12:02:29.613926+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "bon-appetit",
+      "is_market": false,
+      "provider_type": "restaurant",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "CASA DEL TABACO",
+      "id": 14,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 232,
+          "name": "18+"
+        }
+      ],
+      "format_cuisines": "18+",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 51,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": true,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1230,
+          "name": "Casa del Tabaco Str. Tiraspol 5",
+          "address": {
+            "id": 600162,
+            "street": "Str. Tiraspol",
+            "number": "5",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.012543,
+            "longitude": 28.856147,
+            "nav_string": "Moldova Chisinau Str. Tiraspol 5",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Tiraspol 5",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              },
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379889555",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1222,
+          "name": "Casa del Tabaco Str. Traian 1/3",
+          "address": {
+            "id": 591822,
+            "street": "Str. Traian",
+            "number": "1/3",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.98523,
+            "longitude": 28.85641,
+            "nav_string": "Moldova Chisinau Str. Traian 1/3",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Traian 1/3",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379779555",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1221,
+          "name": "Casa del Tabaco Str. Ginta Latină 17/3",
+          "address": {
+            "id": 591820,
+            "street": "Str. Ginta Latină",
+            "number": "17/3",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.03721,
+            "longitude": 28.89087,
+            "nav_string": "Moldova Chisinau Str. Ginta Latină 17/3",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Ginta Latină 17/3",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379797985",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1220,
+          "name": "Casa del Tabaco Str. Calea Mosilor 2/1",
+          "address": {
+            "id": 591815,
+            "street": "str. Calea Mosilor",
+            "number": "2/1",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.02519,
+            "longitude": 28.86428,
+            "nav_string": "Moldova Chisinau str. Calea Mosilor 2/1",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "str. Calea Mosilor 2/1",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37378797988",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1219,
+          "name": "Casa del Tabaco Str. Mitropolit Varlaam 58",
+          "address": {
+            "id": 591803,
+            "street": "Str. Mitropolit Varlaam",
+            "number": "58",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.021782,
+            "longitude": 28.841849,
+            "nav_string": "Moldova Chisinau Str. Mitropolit Varlaam 58",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Mitropolit Varlaam 58",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37378787845",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1140,
+          "name": "Casa del Tabaco Str. Columna 170",
+          "address": {
+            "id": 551896,
+            "street": "Str. Columna",
+            "number": "170",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.037393,
+            "longitude": 28.820227,
+            "nav_string": "Moldova Chisinau Str. Columna 170",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Columna 170",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              },
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": -5,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379944004",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1138,
+          "name": "Casa del Tabaco Str. Lev Tolstoi 24/1, Magazin Nr.1",
+          "address": {
+            "id": 551894,
+            "street": "str. Lev Tolstoi",
+            "number": "24/1",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.01018,
+            "longitude": 28.84216,
+            "nav_string": "Moldova Chisinau str. Lev Tolstoi 24/1",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "str. Lev Tolstoi 24/1",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 20,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              },
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 10,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379944047",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1137,
+          "name": "Casa del Tabaco Str. Calea Iesilor 10, Fourchette",
+          "address": {
+            "id": 551893,
+            "street": "Str. Calea Iesilor",
+            "number": "10",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.040312,
+            "longitude": 28.804483,
+            "nav_string": "Moldova Chisinau Str. Calea Iesilor 10",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Calea Iesilor 10",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": -5,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379944017",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1136,
+          "name": "Casa del Tabaco Str. Moscova 19 Fourchette",
+          "address": {
+            "id": 551891,
+            "street": "Str. Moscova",
+            "number": "19",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0559,
+            "longitude": 28.86427,
+            "nav_string": "Moldova Chisinau Str. Moscova 19",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Moscova 19",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": -5,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379944016",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1135,
+          "name": "Casa del Tabaco Str. Tighina 49/4",
+          "address": {
+            "id": 551890,
+            "street": "Str. Tighina",
+            "number": "49/4",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.01656,
+            "longitude": 28.84219,
+            "nav_string": "Moldova Chisinau Str. Tighina 49/4",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Tighina 49/4",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37368006332",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        },
+        {
+          "id": 1134,
+          "name": "Casa del Tabaco Str. Arborilor 21 et. 1",
+          "address": {
+            "id": 551889,
+            "street": "Str. Arborilor",
+            "number": "21",
+            "apartment": null,
+            "entrance": null,
+            "floor": 1,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.00456,
+            "longitude": 28.84061,
+            "nav_string": "Moldova Chisinau Str. Arborilor 21",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Arborilor 21",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              },
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379944019",
+          "provider_id": 949,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T10:00:36.283245+03:00",
+      "has_adult_products": true,
+      "straus_delivering": true,
+      "showcase_image": null,
+      "background_image": null,
+      "slug": "casa-del-tabaco",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Mr.Verde",
+      "id": 15,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 40,
+          "name": "salată"
+        }
+      ],
+      "format_cuisines": "salată",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 1,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1182,
+          "name": "Mr.Verde Sos. Hincesti 138/1",
+          "address": {
+            "id": 560263,
+            "street": "Șos. Hîncești",
+            "number": "138/1",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.993368,
+            "longitude": 28.789779,
+            "nav_string": "Moldova Chisinau Șos. Hîncești 138/1",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Șos. Hîncești 138/1",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37378462340",
+          "provider_id": 989,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:30:30.657416+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "mrverde",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "CAP Casa Mare",
+      "id": 16,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 233,
+          "name": "Produse alimentare"
+        }
+      ],
+      "format_cuisines": "Produse alimentare",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": true,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1199,
+          "name": "CAP Casa Mare Str. Alba Iulia 75/10",
+          "address": {
+            "id": 569135,
+            "street": "Str. Alba Iulia",
+            "number": "75/10",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.03701,
+            "longitude": 28.76501,
+            "nav_string": "Moldova Chisinau Str. Alba Iulia 75/10",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Alba Iulia 75/10",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37368528288",
+          "provider_id": 1005,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T17:00:39.142680+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "cap-casa-mare",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "George Standard",
+      "id": 17,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 177,
+          "name": "carne"
+        },
+        {
+          "id": 25,
+          "name": "Produse alimentare"
+        },
+        {
+          "id": 233,
+          "name": "Produse alimentare"
+        },
+        {
+          "id": 247,
+          "name": "Peste"
+        }
+      ],
+      "format_cuisines": "carne • Produse alimentare • Produse alimentare • Peste",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 62,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1217,
+          "name": "George Standart Șos.Hîncești 58",
+          "address": {
+            "id": 591317,
+            "street": "Șos.Hîncești",
+            "number": "58",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.0034258,
+            "longitude": 28.8180933,
+            "nav_string": "Moldova Chisinau Șos.Hîncești 58",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Șos.Hîncești 58",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360343409",
+          "provider_id": 1046,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:30:30.657416+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "george-standard",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Cavavin",
+      "id": 18,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 232,
+          "name": "18+"
+        },
+        {
+          "id": 235,
+          "name": "Alcool"
+        },
+        {
+          "id": 126,
+          "name": "vin"
+        }
+      ],
+      "format_cuisines": "18+ • Alcool • vin",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 3,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1317,
+          "name": "Cavavin Str. Vlaicu Pârcălab 45",
+          "address": {
+            "id": 622310,
+            "street": "Str. Vlaicu Pârcălab",
+            "number": "45",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.021629,
+            "longitude": 28.831332,
+            "nav_string": "Moldova Chisinau Str. Vlaicu Pârcălab 45",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Vlaicu Pârcălab 45",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360122221",
+          "provider_id": 1063,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T10:00:36.283245+03:00",
+      "has_adult_products": true,
+      "straus_delivering": true,
+      "slug": "cavavin",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "eshop",
+      "eshop_content": true
+    },
+    {
+      "name": "Arena Fruct",
+      "id": 19,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 256,
+          "name": "Fructe"
+        },
+        {
+          "id": 257,
+          "name": "Legume"
+        }
+      ],
+      "format_cuisines": "Fructe • Legume",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 1,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": true,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1272,
+          "name": "Arena fruct Str. Calea Basarabiei 42",
+          "address": {
+            "id": 612542,
+            "street": "Str. Calea Basarabiei",
+            "number": "42",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.98618,
+            "longitude": 28.899448,
+            "nav_string": "Moldova Chisinau Str. Calea Basarabiei 42",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Calea Basarabiei 42",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37369193515",
+          "provider_id": 1103,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:00:38.990380+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "showcase_image": null,
+      "background_image": null,
+      "slug": "arena-fruct",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Ahmad Tea",
+      "id": 20,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 181,
+          "name": "ceai"
+        }
+      ],
+      "format_cuisines": "ceai",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": true,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1274,
+          "name": "Ahmad Tea Str. Codrilor 16 (DepoConstruct)",
+          "address": {
+            "id": 614926,
+            "street": "Str. Codrilor",
+            "number": "16",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.038396,
+            "longitude": 28.75666,
+            "nav_string": "Moldova Chisinau Str. Codrilor 16",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Codrilor 16",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37369920140",
+          "provider_id": 1106,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T17:00:39.142680+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "ahmad-tea",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Magazin OM",
+      "id": 21,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 259,
+          "name": "Mărfuri din India"
+        }
+      ],
+      "format_cuisines": "Mărfuri din India",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1318,
+          "name": "Magazin OM Str. Tighina 47",
+          "address": {
+            "id": 622904,
+            "street": "Str. Tighina",
+            "number": "47",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.01581,
+            "longitude": 28.84063,
+            "nav_string": "Moldova Chisinau Str. Tighina 47",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Tighina 47",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37379117555",
+          "provider_id": 1147,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T11:00:34.682076+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "magazin-om",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Cumătrița",
+      "id": 22,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 177,
+          "name": "carne"
+        },
+        {
+          "id": 233,
+          "name": "Produse alimentare"
+        }
+      ],
+      "format_cuisines": "carne • Produse alimentare",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": false,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1333,
+          "name": "Cumatrita Str. Alba Iulia 202",
+          "address": {
+            "id": 636639,
+            "street": "Str. Alba Iulia",
+            "number": "202",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.04163,
+            "longitude": 28.76466,
+            "nav_string": "Moldova Chisinau Str. Alba Iulia 202",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Alba Iulia 202",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37368441051",
+          "provider_id": 1161,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T08:00:41.500030+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "cumatrita",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Evar",
+      "id": 23,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 260,
+          "name": "Magazin"
+        },
+        {
+          "id": 261,
+          "name": "Detergenți"
+        }
+      ],
+      "format_cuisines": "Magazin • Detergenți",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": true,
+      "card_payments_active": true,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1344,
+          "name": "Evar Str. Uzinelor 100/1",
+          "address": {
+            "id": 652113,
+            "street": "Str. Uzinelor",
+            "number": "100/1",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 46.99545,
+            "longitude": 28.90042,
+            "nav_string": "Moldova Chisinau Str. Uzinelor 100/1",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Uzinelor 100/1",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 1,
+                "name": "Botanica",
+                "delivery_time_penalty": -5,
+                "region_fill_color": "#ff0000",
+                "is_default": false,
+                "sequence": 0
+              },
+              {
+                "id": 4,
+                "name": "Riscani",
+                "delivery_time_penalty": 0,
+                "region_fill_color": "#00ff00",
+                "is_default": false,
+                "sequence": 3
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360222211",
+          "provider_id": 1171,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T17:00:39.142680+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "evar",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Autentico",
+      "id": 24,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 234,
+          "name": "Beauty"
+        },
+        {
+          "id": 260,
+          "name": "Magazin"
+        },
+        {
+          "id": 243,
+          "name": "Produse de îngrijire a părului"
+        }
+      ],
+      "format_cuisines": "Beauty • Magazin • Produse de îngrijire a părului",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 2,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": true,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1382,
+          "name": "Autentico Str. Puskin 32",
+          "address": {
+            "id": 657457,
+            "street": "Str. Puskin",
+            "number": "32",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.02524,
+            "longitude": 28.83696,
+            "nav_string": "Moldova Chisinau Str. Puskin 32",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Puskin 32",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": -5,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37369332677",
+          "provider_id": 1210,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T09:30:30.657416+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "autentico",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Kvadrat",
+      "id": 25,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 236,
+          "name": "Bere"
+        },
+        {
+          "id": 260,
+          "name": "Magazin"
+        }
+      ],
+      "format_cuisines": "Bere • Magazin",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 1,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": true,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1384,
+          "name": "Kvadrat Str. M.Eminescu 30",
+          "address": {
+            "id": 657825,
+            "street": "Str. M. Eminescu",
+            "number": "30",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.01782,
+            "longitude": 28.83171,
+            "nav_string": "Moldova Chisinau Str. M. Eminescu 30",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. M. Eminescu 30",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 2,
+                "name": "Centru",
+                "delivery_time_penalty": 20,
+                "region_fill_color": "#ff6600",
+                "is_default": false,
+                "sequence": 1
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37367234753",
+          "provider_id": 1212,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T13:33:12.740358+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "kvadrat",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    },
+    {
+      "name": "Viking Beer",
+      "id": 26,
+      "info": null,
+      "cuisines": [
+        {
+          "id": 260,
+          "name": "Magazin"
+        },
+        {
+          "id": 121,
+          "name": "gustări"
+        },
+        {
+          "id": 236,
+          "name": "Bere"
+        }
+      ],
+      "format_cuisines": "Magazin • gustări • Bere",
+      "delivery_time": 40,
+      "discount": null,
+      "partial_discount": null,
+      "price_level": 1,
+      "avg_delivery_time": 60,
+      "is_overloaded": 0,
+      "is_on_pause": false,
+      "has_promo": false,
+      "is_new": true,
+      "card_payments_active": false,
+      "limit_delivery_area": 0,
+      "provider_branches": [
+        {
+          "id": 1386,
+          "name": "Viking Beer Str.Dacilor 24",
+          "address": {
+            "id": 661120,
+            "street": "Str. Dacilor",
+            "number": "24",
+            "apartment": null,
+            "entrance": null,
+            "floor": null,
+            "entrance_code": null,
+            "is_private_building": false,
+            "latitude": 47.02666,
+            "longitude": 28.77807,
+            "nav_string": "Moldova Chisinau Str. Dacilor 24",
+            "city": "Chisinau",
+            "country": "Moldova",
+            "nav_string_display": "Str. Dacilor 24",
+            "geocoding_source": null,
+            "delivery_region_data": [
+              {
+                "id": 3,
+                "name": "Buiucani",
+                "delivery_time_penalty": 30,
+                "region_fill_color": "#ffff00",
+                "is_default": false,
+                "sequence": 2
+              }
+            ],
+            "comment": "",
+            "approximate_address": false
+          },
+          "phonenumber": "+37360077076",
+          "provider_id": 1213,
+          "delivery_area_geo_json": null,
+          "visible_to_client": true
+        }
+      ],
+      "ratings": null,
+      "restaurant_delivers": false,
+      "modified": "2022-08-12T12:33:19.626485+03:00",
+      "has_adult_products": false,
+      "straus_delivering": true,
+      "slug": "viking-beer",
+      "is_market": true,
+      "provider_type": "market",
+      "provider_page_type": "gallery",
+      "eshop_content": false
+    }
+  ]
+}

@@ -37,7 +37,7 @@ const AddMarketForm = () => {
         <label htmlFor="name">Market Name</label>
         <input id="name" type="text" {...formik.getFieldProps("name")} />
         {formik.touched.name && formik.errors.name ? (
-          <div>{formik.errors.name}</div>
+          <div className="error-message">{formik.errors.name}</div>
         ) : null}
       </div>
 
@@ -55,7 +55,7 @@ const AddMarketForm = () => {
           <option value="3">High</option>
         </select>
         {formik.touched.price_level && formik.errors.price_level ? (
-          <div>{formik.errors.price_level}</div>
+          <div className="error-message">{formik.errors.price_level}</div>
         ) : null}
       </div>
 
@@ -67,7 +67,7 @@ const AddMarketForm = () => {
           {...formik.getFieldProps("avg_delivery_time")}
         />
         {formik.touched.avg_delivery_time && formik.errors.avg_delivery_time ? (
-          <div>{formik.errors.avg_delivery_time}</div>
+          <div className="error-message">{formik.errors.avg_delivery_time}</div>
         ) : null}
       </div>
 

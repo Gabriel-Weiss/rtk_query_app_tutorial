@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./css/DetailsCard.css";
 import Spinner from "../components/Spinner";
 import { useGetMarketQuery } from "../redux/markets/marketsApiSlice";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import { RiPencilLine } from "react-icons/ri";
 import { IoCaretBackCircleOutline } from "react-icons/io5";
 
@@ -40,12 +42,39 @@ const MarketDetails = () => {
             </div>
           </div>
         </article>
-        <div className="item-products">
-          {market.products ? (
-            market.products.map((product) => <p key={product}>{product}</p>)
-          ) : (
-            <p>No Products</p>
-          )}
+        <div className="products-container">
+          <div className="add-product-form">
+            <aside>
+              <Formik
+                initialValues={{ title: "", price: "" }}
+                validationSchema={Yup.object({
+                  title: Yup.string().required("Required"),
+                  price: Yup.number().required("Required"),
+                })}
+                onSubmit={(values) => {
+                  alert(JSON.stringify(values, null, 2));
+                }}
+              >
+                <Form className="add-product-inputs">
+                  <label htmlFor="title">Title</label>
+                  <Field name="title" type="text" />
+                  <ErrorMessage className="error-message" name="title" />
+                  <label htmlFor="price">Price</label>
+                  <Field name="price" type="number" />
+                  <ErrorMessage className="error-message" name="price" />
+
+                  <button type="submit">Submit</button>
+                </Form>
+              </Formik>
+            </aside>
+          </div>
+          <div className="products-list">
+            {market.products ? (
+              market.products.map((product) => <p key={product}>{product}</p>)
+            ) : (
+              <p>No Products</p>
+            )}
+          </div>
         </div>
       </section>
     );
