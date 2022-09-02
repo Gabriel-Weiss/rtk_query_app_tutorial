@@ -11,8 +11,8 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
       ],
     }),
     getMarket: builder.query({
-      query: (market) => ({
-        url: `markets/${market.id}`,
+      query: ({ id }) => ({
+        url: `markets/${id}`,
       }),
       providesTags: (result, error, arg) => [{ type: "Markets", id: arg.id }],
     }),
@@ -20,7 +20,10 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
       query: (market) => ({
         url: "markets",
         method: "POST",
-        body: market,
+        body: {
+          ...market,
+          modified: new Date().toLocaleString(),
+        },
       }),
       invalidatesTags: ["Markets"],
     }),
@@ -28,7 +31,10 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
       query: (market) => ({
         url: `markets/${market.id}`,
         method: "PATCH",
-        body: market,
+        body: {
+          ...market,
+          modified: new Date().toLocaleString(),
+        },
       }),
       invalidatesTags: (result, error, arg) => [
         { type: "Markets", id: arg.id },
@@ -40,13 +46,6 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
         method: "DELETE",
       }),
       invalidatesTags: ["Markets"],
-    }),
-    addProduct: builder.mutation({
-      query: ({ marketId, product }) => ({
-        url: `markets/${marketId}`,
-        method: "POST",
-        body: { product },
-      }),
     }),
   }),
 });

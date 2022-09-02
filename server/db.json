@@ -305,7 +305,7 @@
       ],
       "ratings": {
         "count": 1216,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 1216
       },
       "restaurant_delivers": false,
@@ -443,7 +443,7 @@
       ],
       "ratings": {
         "count": 740,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 740
       },
       "restaurant_delivers": false,
@@ -454,7 +454,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -578,7 +577,7 @@
       ],
       "ratings": {
         "count": 39,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 39
       },
       "restaurant_delivers": false,
@@ -589,7 +588,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -684,7 +682,7 @@
       ],
       "ratings": {
         "count": 22,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 22
       },
       "restaurant_delivers": false,
@@ -695,7 +693,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -782,7 +779,7 @@
       ],
       "ratings": {
         "count": 54,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 54
       },
       "restaurant_delivers": false,
@@ -793,7 +790,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -879,7 +875,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -962,7 +957,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -973,7 +968,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1064,7 +1058,7 @@
       ],
       "ratings": {
         "count": 85,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 85
       },
       "restaurant_delivers": false,
@@ -1075,7 +1069,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1162,7 +1155,7 @@
       ],
       "ratings": {
         "count": 16,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 16
       },
       "restaurant_delivers": false,
@@ -1173,7 +1166,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1256,7 +1248,7 @@
       ],
       "ratings": {
         "count": 10,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 10
       },
       "restaurant_delivers": false,
@@ -1267,7 +1259,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1387,7 +1378,7 @@
       ],
       "ratings": {
         "count": 66,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 66
       },
       "restaurant_delivers": true,
@@ -1398,7 +1389,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1493,7 +1483,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -1504,7 +1494,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1591,7 +1580,7 @@
       ],
       "ratings": {
         "count": 21,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 21
       },
       "restaurant_delivers": false,
@@ -1602,7 +1591,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1792,7 +1780,7 @@
       ],
       "ratings": {
         "count": 185,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 185
       },
       "restaurant_delivers": false,
@@ -1803,7 +1791,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1931,7 +1918,7 @@
       ],
       "ratings": {
         "count": 75,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 75
       },
       "restaurant_delivers": false,
@@ -1942,7 +1929,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -1975,7 +1961,7 @@
       "format_cuisines": "clătite • steak • pui • frigărui",
       "delivery_time": 90,
       "discount": null,
-      "partial_discount": 20.0,
+      "partial_discount": 20,
       "price_level": 2,
       "avg_delivery_time": 66,
       "is_overloaded": 0,
@@ -2025,7 +2011,7 @@
       ],
       "ratings": {
         "count": 9,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 9
       },
       "restaurant_delivers": false,
@@ -2036,7 +2022,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2126,7 +2111,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2209,7 +2193,7 @@
       ],
       "ratings": {
         "count": 10,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 10
       },
       "restaurant_delivers": false,
@@ -2220,7 +2204,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2377,7 +2360,7 @@
       ],
       "ratings": {
         "count": 47,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 47
       },
       "restaurant_delivers": false,
@@ -2388,7 +2371,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2471,7 +2453,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -2482,7 +2464,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2565,7 +2546,7 @@
       ],
       "ratings": {
         "count": 76,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 76
       },
       "restaurant_delivers": true,
@@ -2576,7 +2557,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2609,7 +2589,7 @@
       "format_cuisines": "sushi • fructe de mare • pasta • steak",
       "delivery_time": 60,
       "discount": null,
-      "partial_discount": 10.0,
+      "partial_discount": 10,
       "price_level": 2,
       "avg_delivery_time": 64,
       "is_overloaded": 0,
@@ -2659,7 +2639,7 @@
       ],
       "ratings": {
         "count": 23,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 23
       },
       "restaurant_delivers": false,
@@ -2670,7 +2650,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2749,7 +2728,7 @@
       ],
       "ratings": {
         "count": 22,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 22
       },
       "restaurant_delivers": false,
@@ -2760,7 +2739,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2792,7 +2770,7 @@
       ],
       "format_cuisines": "pizza • clătite • steak • pui",
       "delivery_time": 60,
-      "discount": 10.0,
+      "discount": 10,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 70,
@@ -2843,7 +2821,7 @@
       ],
       "ratings": {
         "count": 25,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 25
       },
       "restaurant_delivers": false,
@@ -2854,7 +2832,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2937,7 +2914,7 @@
       ],
       "ratings": {
         "count": 27,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 27
       },
       "restaurant_delivers": false,
@@ -2948,7 +2925,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -2985,7 +2961,7 @@
       "format_cuisines": "mic dejun • pasta • steak • salată • deserturi",
       "delivery_time": 60,
       "discount": null,
-      "partial_discount": 30.0,
+      "partial_discount": 30,
       "price_level": 2,
       "avg_delivery_time": 58,
       "is_overloaded": 0,
@@ -3191,7 +3167,7 @@
       ],
       "ratings": {
         "count": 27,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 27
       },
       "restaurant_delivers": false,
@@ -3202,7 +3178,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3285,7 +3260,7 @@
       ],
       "ratings": {
         "count": 14,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 14
       },
       "restaurant_delivers": false,
@@ -3296,7 +3271,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3379,7 +3353,7 @@
       ],
       "ratings": {
         "count": 35,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 35
       },
       "restaurant_delivers": false,
@@ -3390,7 +3364,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3465,7 +3438,7 @@
       ],
       "ratings": {
         "count": 42,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 42
       },
       "restaurant_delivers": false,
@@ -3476,7 +3449,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3559,7 +3531,7 @@
       ],
       "ratings": {
         "count": 20,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 20
       },
       "restaurant_delivers": false,
@@ -3570,7 +3542,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3649,7 +3620,7 @@
       ],
       "ratings": {
         "count": 50,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 50
       },
       "restaurant_delivers": false,
@@ -3660,7 +3631,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3743,7 +3713,7 @@
       ],
       "ratings": {
         "count": 18,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 18
       },
       "restaurant_delivers": false,
@@ -3754,7 +3724,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3832,7 +3801,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3903,7 +3871,7 @@
       ],
       "ratings": {
         "count": 57,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 57
       },
       "restaurant_delivers": false,
@@ -3914,7 +3882,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -3997,7 +3964,7 @@
       ],
       "ratings": {
         "count": 9,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 9
       },
       "restaurant_delivers": false,
@@ -4008,7 +3975,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4091,7 +4057,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -4102,7 +4068,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4345,7 +4310,7 @@
       ],
       "ratings": {
         "count": 26,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 26
       },
       "restaurant_delivers": false,
@@ -4356,7 +4321,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4439,7 +4403,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -4450,7 +4414,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4525,7 +4488,7 @@
       ],
       "ratings": {
         "count": 11,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 11
       },
       "restaurant_delivers": false,
@@ -4536,7 +4499,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4623,7 +4585,7 @@
       ],
       "ratings": {
         "count": 11,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 11
       },
       "restaurant_delivers": false,
@@ -4634,7 +4596,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4725,7 +4686,7 @@
       ],
       "ratings": {
         "count": 24,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 24
       },
       "restaurant_delivers": false,
@@ -4736,7 +4697,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4893,7 +4853,7 @@
       ],
       "ratings": {
         "count": 17,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 17
       },
       "restaurant_delivers": false,
@@ -4904,7 +4864,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -4994,7 +4953,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5085,7 +5043,7 @@
       ],
       "ratings": {
         "count": 28,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 28
       },
       "restaurant_delivers": false,
@@ -5098,7 +5056,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5181,7 +5138,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -5192,7 +5149,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5275,7 +5231,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -5286,7 +5242,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5369,7 +5324,7 @@
       ],
       "ratings": {
         "count": 13,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 13
       },
       "restaurant_delivers": false,
@@ -5380,7 +5335,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5463,7 +5417,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -5474,7 +5428,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5557,7 +5510,7 @@
       ],
       "ratings": {
         "count": 8,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 8
       },
       "restaurant_delivers": false,
@@ -5568,7 +5521,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5651,7 +5603,7 @@
       ],
       "ratings": {
         "count": 13,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 13
       },
       "restaurant_delivers": false,
@@ -5662,7 +5614,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5752,7 +5703,6 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false,
       "products": [],
       "count": null,
       "score": null,
@@ -5920,7 +5870,7 @@
       ],
       "ratings": {
         "count": 8,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 8
       },
       "restaurant_delivers": false,
@@ -6102,7 +6052,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -6203,7 +6153,7 @@
       ],
       "ratings": {
         "count": 30,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 30
       },
       "restaurant_delivers": false,
@@ -6250,7 +6200,7 @@
       "format_cuisines": "Bucătărie Grecească • steak • pui • frigărui • pasta",
       "delivery_time": 60,
       "discount": null,
-      "partial_discount": 20.0,
+      "partial_discount": 20,
       "price_level": 2,
       "avg_delivery_time": 59,
       "is_overloaded": 0,
@@ -6300,7 +6250,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -6393,7 +6343,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -6482,7 +6432,7 @@
       ],
       "ratings": {
         "count": 12,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 12
       },
       "restaurant_delivers": false,
@@ -6690,7 +6640,7 @@
       ],
       "format_cuisines": "bere • vin • gustări",
       "delivery_time": 40,
-      "discount": 5.0,
+      "discount": 5,
       "partial_discount": null,
       "price_level": 1,
       "avg_delivery_time": 44,
@@ -6783,7 +6733,7 @@
       ],
       "format_cuisines": "sushi • supă • gustări",
       "delivery_time": 40,
-      "discount": 10.0,
+      "discount": 10,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 68,
@@ -6834,7 +6784,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -6877,7 +6827,7 @@
       "format_cuisines": "pizza • sushi • pasta • salată",
       "delivery_time": 80,
       "discount": null,
-      "partial_discount": 25.0,
+      "partial_discount": 25,
       "price_level": 2,
       "avg_delivery_time": 61,
       "is_overloaded": 0,
@@ -6927,7 +6877,7 @@
       ],
       "ratings": {
         "count": 75,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 75
       },
       "restaurant_delivers": false,
@@ -7012,7 +6962,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -7105,7 +7055,7 @@
       ],
       "ratings": {
         "count": 25,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 25
       },
       "restaurant_delivers": false,
@@ -7206,7 +7156,7 @@
       ],
       "ratings": {
         "count": 9,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 9
       },
       "restaurant_delivers": false,
@@ -7299,7 +7249,7 @@
       ],
       "ratings": {
         "count": 9,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 9
       },
       "restaurant_delivers": false,
@@ -7380,7 +7330,7 @@
       ],
       "ratings": {
         "count": 22,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 22
       },
       "restaurant_delivers": false,
@@ -7481,7 +7431,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -7640,7 +7590,7 @@
       ],
       "ratings": {
         "count": 16,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 16
       },
       "restaurant_delivers": false,
@@ -7733,7 +7683,7 @@
       ],
       "ratings": {
         "count": 24,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 24
       },
       "restaurant_delivers": false,
@@ -7826,7 +7776,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -7919,7 +7869,7 @@
       ],
       "ratings": {
         "count": 84,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 84
       },
       "restaurant_delivers": false,
@@ -7962,7 +7912,7 @@
       "format_cuisines": "pizza • pasta • salată • băutură",
       "delivery_time": 40,
       "discount": null,
-      "partial_discount": 20.0,
+      "partial_discount": 20,
       "price_level": 2,
       "avg_delivery_time": 60,
       "is_overloaded": 0,
@@ -8012,7 +7962,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -8182,7 +8132,7 @@
       ],
       "ratings": {
         "count": 9,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 9
       },
       "restaurant_delivers": false,
@@ -8298,7 +8248,7 @@
       "format_cuisines": "Вurger • salată • supă",
       "delivery_time": 40,
       "discount": null,
-      "partial_discount": 10.0,
+      "partial_discount": 10,
       "price_level": 1,
       "avg_delivery_time": 61,
       "is_overloaded": 0,
@@ -8356,7 +8306,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -8627,7 +8577,7 @@
       ],
       "ratings": {
         "count": 12,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 12
       },
       "restaurant_delivers": false,
@@ -8843,7 +8793,7 @@
       ],
       "format_cuisines": "clătite • salată • supă • Pranz",
       "delivery_time": 40,
-      "discount": 20.0,
+      "discount": 20,
       "partial_discount": null,
       "price_level": 1,
       "avg_delivery_time": 68,
@@ -8894,7 +8844,7 @@
       ],
       "ratings": {
         "count": 11,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 11
       },
       "restaurant_delivers": false,
@@ -8936,7 +8886,7 @@
       ],
       "format_cuisines": "pizza • sushi • steak • pui",
       "delivery_time": 60,
-      "discount": 30.0,
+      "discount": 30,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 61,
@@ -8987,7 +8937,7 @@
       ],
       "ratings": {
         "count": 187,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 187
       },
       "restaurant_delivers": false,
@@ -9496,7 +9446,7 @@
       ],
       "ratings": {
         "count": 122,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 122
       },
       "restaurant_delivers": false,
@@ -9585,7 +9535,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -9666,7 +9616,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -10039,7 +9989,7 @@
       ],
       "format_cuisines": "sushi",
       "delivery_time": 40,
-      "discount": 20.0,
+      "discount": 20,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 57,
@@ -10090,7 +10040,7 @@
       ],
       "ratings": {
         "count": 28,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 28
       },
       "restaurant_delivers": false,
@@ -10183,7 +10133,7 @@
       ],
       "ratings": {
         "count": 12,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 12
       },
       "restaurant_delivers": false,
@@ -10301,7 +10251,7 @@
       ],
       "ratings": {
         "count": 36,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 36
       },
       "restaurant_delivers": false,
@@ -10419,7 +10369,7 @@
       ],
       "ratings": {
         "count": 12,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 12
       },
       "restaurant_delivers": false,
@@ -10597,7 +10547,7 @@
       ],
       "ratings": {
         "count": 10,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 10
       },
       "restaurant_delivers": false,
@@ -10822,7 +10772,7 @@
       "format_cuisines": "vin • divin • carne • deserturi",
       "delivery_time": 40,
       "discount": null,
-      "partial_discount": 10.0,
+      "partial_discount": 10,
       "price_level": 2,
       "avg_delivery_time": 60,
       "is_overloaded": 0,
@@ -10961,7 +10911,7 @@
       ],
       "ratings": {
         "count": 23,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 23
       },
       "restaurant_delivers": false,
@@ -11042,7 +10992,7 @@
       ],
       "ratings": {
         "count": 49,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 49
       },
       "restaurant_delivers": false,
@@ -11321,7 +11271,7 @@
       ],
       "ratings": {
         "count": 11,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 11
       },
       "restaurant_delivers": false,
@@ -11414,7 +11364,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -11677,7 +11627,7 @@
       ],
       "ratings": {
         "count": 26,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 26
       },
       "restaurant_delivers": false,
@@ -12313,7 +12263,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -12634,7 +12584,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -12770,7 +12720,7 @@
       "format_cuisines": "mic dejun • carne • salată • sushi • deserturi",
       "delivery_time": 40,
       "discount": null,
-      "partial_discount": 20.0,
+      "partial_discount": 20,
       "price_level": 2,
       "avg_delivery_time": 62,
       "is_overloaded": 0,
@@ -12865,7 +12815,7 @@
       ],
       "ratings": {
         "count": 11,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 11
       },
       "restaurant_delivers": false,
@@ -12958,7 +12908,7 @@
       ],
       "ratings": {
         "count": 8,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 8
       },
       "restaurant_delivers": false,
@@ -13147,7 +13097,7 @@
       ],
       "ratings": {
         "count": 9,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 9
       },
       "restaurant_delivers": false,
@@ -13520,7 +13470,7 @@
       ],
       "ratings": {
         "count": 22,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 22
       },
       "restaurant_delivers": false,
@@ -13686,7 +13636,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -13856,7 +13806,7 @@
       ],
       "ratings": {
         "count": 10,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 10
       },
       "restaurant_delivers": false,
@@ -14204,7 +14154,7 @@
       ],
       "ratings": {
         "count": 8,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 8
       },
       "restaurant_delivers": false,
@@ -14293,7 +14243,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -14799,7 +14749,7 @@
       ],
       "ratings": {
         "count": 14,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 14
       },
       "restaurant_delivers": false,
@@ -14981,7 +14931,7 @@
       ],
       "ratings": {
         "count": 26,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 26
       },
       "restaurant_delivers": false,
@@ -15438,7 +15388,7 @@
       ],
       "ratings": {
         "count": 14,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 14
       },
       "restaurant_delivers": false,
@@ -15539,7 +15489,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -15636,7 +15586,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -15725,7 +15675,7 @@
       ],
       "ratings": {
         "count": 18,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 18
       },
       "restaurant_delivers": false,
@@ -15767,7 +15717,7 @@
       ],
       "format_cuisines": "fructe de mare • pasta • salată • sushi",
       "delivery_time": 40,
-      "discount": 10.0,
+      "discount": 10,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 60,
@@ -16047,7 +15997,7 @@
       "format_cuisines": "Barbecue • Вurger • gustări • carne • nachos • Bere",
       "delivery_time": 40,
       "discount": null,
-      "partial_discount": 10.0,
+      "partial_discount": 10,
       "price_level": 2,
       "avg_delivery_time": 56,
       "is_overloaded": 0,
@@ -16194,7 +16144,7 @@
       ],
       "ratings": {
         "count": 33,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 33
       },
       "restaurant_delivers": false,
@@ -16287,7 +16237,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -16376,7 +16326,7 @@
       ],
       "ratings": {
         "count": 7,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 7
       },
       "restaurant_delivers": false,
@@ -16608,7 +16558,7 @@
       ],
       "format_cuisines": "gustări • pasta • pizza • salată • supă",
       "delivery_time": 40,
-      "discount": 10.0,
+      "discount": 10,
       "partial_discount": null,
       "price_level": 3,
       "avg_delivery_time": 58,
@@ -17205,7 +17155,7 @@
       ],
       "ratings": {
         "count": 6,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 6
       },
       "restaurant_delivers": false,
@@ -17723,7 +17673,7 @@
       ],
       "ratings": {
         "count": 29,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 29
       },
       "restaurant_delivers": false,
@@ -18133,7 +18083,7 @@
       ],
       "ratings": {
         "count": 31,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 31
       },
       "restaurant_delivers": false,
@@ -18315,7 +18265,7 @@
       ],
       "ratings": {
         "count": 8,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 8
       },
       "restaurant_delivers": false,
@@ -18843,7 +18793,7 @@
       ],
       "format_cuisines": "pizza • sushi",
       "delivery_time": 80,
-      "discount": 20.0,
+      "discount": 20,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 60,
@@ -18894,7 +18844,7 @@
       ],
       "ratings": {
         "count": 5,
-        "average": 5.0,
+        "average": 5,
         "comments_count": 5
       },
       "restaurant_delivers": false,
@@ -19474,7 +19424,7 @@
       ],
       "format_cuisines": "carne • pasta • pizza • salată • supă",
       "delivery_time": 80,
-      "discount": 10.0,
+      "discount": 10,
       "partial_discount": null,
       "price_level": 2,
       "avg_delivery_time": 80,
@@ -20963,7 +20913,7 @@
       "format_cuisines": "pizza • vin",
       "delivery_time": 40,
       "discount": null,
-      "partial_discount": 15.0,
+      "partial_discount": 15,
       "price_level": 3,
       "avg_delivery_time": 60,
       "is_overloaded": 0,
@@ -21306,7 +21256,7 @@
       ],
       "format_cuisines": "bere • vin • gustări",
       "delivery_time": 40,
-      "discount": 5.0,
+      "discount": 5,
       "partial_discount": null,
       "price_level": 1,
       "avg_delivery_time": 60,
@@ -22529,7 +22479,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Buket Floral Studio",
@@ -22601,7 +22551,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "ROGOB FOODMART",
@@ -22759,7 +22709,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "eshop",
-      "eshop_content": true
+      "products": []
     },
     {
       "name": "Hair-Shop.md",
@@ -22831,7 +22781,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "eshop",
-      "eshop_content": true
+      "products": []
     },
     {
       "name": "JEJU Beauty Bar",
@@ -22940,7 +22890,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Spa Master",
@@ -23012,7 +22962,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Moldflowers",
@@ -23084,7 +23034,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Pro Maestro",
@@ -23156,7 +23106,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Estel",
@@ -23232,7 +23182,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "eshop",
-      "eshop_content": true
+      "products": []
     },
     {
       "name": "Surprise",
@@ -23304,7 +23254,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Fitmin",
@@ -23378,7 +23328,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Surprize de Vis",
@@ -23452,7 +23402,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Bon appetit",
@@ -23532,7 +23482,7 @@
       "is_market": false,
       "provider_type": "restaurant",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "CASA DEL TABACO",
@@ -24008,7 +23958,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Mr.Verde",
@@ -24080,7 +24030,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "CAP Casa Mare",
@@ -24152,7 +24102,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "George Standard",
@@ -24236,7 +24186,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Cavavin",
@@ -24316,7 +24266,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "eshop",
-      "eshop_content": true
+      "products": []
     },
     {
       "name": "Arena Fruct",
@@ -24394,7 +24344,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Ahmad Tea",
@@ -24466,7 +24416,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Magazin OM",
@@ -24538,7 +24488,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Cumătrița",
@@ -24614,7 +24564,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Evar",
@@ -24698,7 +24648,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Autentico",
@@ -24778,7 +24728,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Kvadrat",
@@ -24854,7 +24804,7 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     },
     {
       "name": "Viking Beer",
@@ -24934,189 +24884,269 @@
       "is_market": true,
       "provider_type": "market",
       "provider_page_type": "gallery",
-      "eshop_content": false
+      "products": []
     }
   ],
   "products": [
     {
       "id": 1,
+      "marketId": 1,
       "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
       "price": 109.95,
       "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
-      "rating": { "rate": 3.9, "count": 120 }
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
     },
     {
       "id": 2,
+      "marketId": 1,
       "title": "Mens Casual Premium Slim Fit T-Shirts ",
       "price": 22.3,
       "description": "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
-      "rating": { "rate": 4.1, "count": 259 }
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
     },
     {
       "id": 3,
+      "marketId": 1,
       "title": "Mens Cotton Jacket",
       "price": 55.99,
       "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
-      "rating": { "rate": 4.7, "count": 500 }
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
     },
     {
       "id": 4,
+      "marketId": 1,
       "title": "Mens Casual Slim Fit",
       "price": 15.99,
       "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
       "category": "men's clothing",
       "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
-      "rating": { "rate": 2.1, "count": 430 }
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
     },
     {
       "id": 5,
+      "marketId": 1,
       "title": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
       "price": 695,
       "description": "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
-      "rating": { "rate": 4.6, "count": 400 }
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
     },
     {
       "id": 6,
+      "marketId": 1,
       "title": "Solid Gold Petite Micropave ",
       "price": 168,
       "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
-      "rating": { "rate": 3.9, "count": 70 }
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
     },
     {
       "id": 7,
+      "marketId": 1,
       "title": "White Gold Plated Princess",
       "price": 9.99,
       "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
-      "rating": { "rate": 3, "count": 400 }
+      "rating": {
+        "rate": 3,
+        "count": 400
+      }
     },
     {
       "id": 8,
+      "marketId": 1,
       "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
       "price": 10.99,
       "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
       "category": "jewelery",
       "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg",
-      "rating": { "rate": 1.9, "count": 100 }
+      "rating": {
+        "rate": 1.9,
+        "count": 100
+      }
     },
     {
       "id": 9,
+      "marketId": 1,
       "title": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
       "price": 64,
       "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
-      "rating": { "rate": 3.3, "count": 203 }
+      "rating": {
+        "rate": 3.3,
+        "count": 203
+      }
     },
     {
       "id": 10,
+      "marketId": 1,
       "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
       "price": 109,
       "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
-      "rating": { "rate": 2.9, "count": 470 }
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
     },
     {
       "id": 11,
+      "marketId": 1,
       "title": "Silicon Power 256GB SSD 3D NAND A55 SLC Cache Performance Boost SATA III 2.5",
       "price": 109,
       "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_.jpg",
-      "rating": { "rate": 4.8, "count": 319 }
+      "rating": {
+        "rate": 4.8,
+        "count": 319
+      }
     },
     {
       "id": 12,
+      "marketId": 1,
       "title": "WD 4TB Gaming Drive Works with Playstation 4 Portable External Hard Drive",
       "price": 114,
       "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_.jpg",
-      "rating": { "rate": 4.8, "count": 400 }
+      "rating": {
+        "rate": 4.8,
+        "count": 400
+      }
     },
     {
       "id": 13,
+      "marketId": 1,
       "title": "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
       "price": 599,
       "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
-      "rating": { "rate": 2.9, "count": 250 }
+      "rating": {
+        "rate": 2.9,
+        "count": 250
+      }
     },
     {
       "id": 14,
+      "marketId": 1,
       "title": "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor (LC49HG90DMNXZA) – Super Ultrawide Screen QLED ",
       "price": 999.99,
       "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
       "category": "electronics",
       "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
-      "rating": { "rate": 2.2, "count": 140 }
+      "rating": {
+        "rate": 2.2,
+        "count": 140
+      }
     },
     {
       "id": 15,
+      "marketId": 1,
       "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
       "price": 56.99,
       "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg",
-      "rating": { "rate": 2.6, "count": 235 }
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
     },
     {
       "id": 16,
+      "marketId": 1,
       "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
       "price": 29.95,
       "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
-      "rating": { "rate": 2.9, "count": 340 }
+      "rating": {
+        "rate": 2.9,
+        "count": 340
+      }
     },
     {
       "id": 17,
+      "marketId": 1,
       "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
       "price": 39.99,
       "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg",
-      "rating": { "rate": 3.8, "count": 679 }
+      "rating": {
+        "rate": 3.8,
+        "count": 679
+      }
     },
     {
       "id": 18,
+      "marketId": 1,
       "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
       "price": 9.85,
       "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg",
-      "rating": { "rate": 4.7, "count": 130 }
+      "rating": {
+        "rate": 4.7,
+        "count": 130
+      }
     },
     {
       "id": 19,
+      "marketId": 1,
       "title": "Opna Women's Short Sleeve Moisture",
       "price": 7.95,
       "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
-      "rating": { "rate": 4.5, "count": 146 }
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      }
     },
     {
       "id": 20,
+      "marketId": 1,
       "title": "DANVOUY Womens T Shirt Casual Cotton Short",
       "price": 12.99,
       "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
       "category": "women's clothing",
       "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
-      "rating": { "rate": 3.6, "count": 145 }
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
     }
   ],
   "foods": [

@@ -35,7 +35,7 @@ input {
   font-size: 13px;
   height: 33px;
   padding: 0 0 0 15px;
-  width: 95%;
+  width: 100%;
 }
 
 select {
@@ -45,7 +45,17 @@ select {
   font-size: 13px;
   height: 33px;
   padding: 0 0 0 15px;
-  width: 101%;
+  width: 100%;
+}
+
+textarea {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 33px;
+  padding: 0 0 0 15px;
+  width: 100%;
 }
 
 .error-message {
