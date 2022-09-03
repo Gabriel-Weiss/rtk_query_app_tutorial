@@ -10,13 +10,13 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       ],
     }),
     getProduct: builder.query({
-      query: ({ id }) => ({
+      query: (id) => ({
         url: `products/${id}`,
       }),
-      providesTags: (result, error, arg) => [{ type: "Products", id: arg.id }],
+      providesTags: (result, error, arg) => [{ type: "Products", id: arg }],
     }),
     addProduct: builder.mutation({
-      query: (product, marketId) => ({
+      query: (product) => ({
         url: "products",
         method: "POST",
         body: {

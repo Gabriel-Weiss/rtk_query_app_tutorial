@@ -11,10 +11,10 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
       ],
     }),
     getMarket: builder.query({
-      query: ({ id }) => ({
+      query: (id) => ({
         url: `markets/${id}`,
       }),
-      providesTags: (result, error, arg) => [{ type: "Markets", id: arg.id }],
+      providesTags: (result, error, arg) => [{ type: "Markets", id: arg }],
     }),
     addMarket: builder.mutation({
       query: (market) => ({

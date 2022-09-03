@@ -9,7 +9,7 @@ import {
 } from "../redux/markets/marketsApiSlice";
 
 const EditMarketForm = () => {
-  let id = useParams();
+  const { id } = useParams();
   const navigateTo = useNavigate();
 
   const { data: market } = useGetMarketQuery(id);

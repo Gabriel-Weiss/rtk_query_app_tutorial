@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./css/DetailsCard.css";
 import Spinner from "../components/Spinner";
@@ -13,11 +13,15 @@ import {
 } from "../redux/products/productsApiSlice";
 
 const MarketDetails = () => {
-  const id = useParams();
+  const { id } = useParams();
   const navigateTo = useNavigate();
   const { data: market, isFetching, isSuccess } = useGetMarketQuery(id);
-  const { data: products } = useGetProductsQuery;
+  const { data: products = [] } = useGetProductsQuery();
   const [addProduct] = useAddProductMutation();
+
+  const productsInMarket = useMemo(() => {
+    return products.filter((product) => product.marketId == id);
+  }, [products]);
 
   let content;
   if (isFetching) {
@@ -94,15 +98,11 @@ const MarketDetails = () => {
             </aside>
           </div>
           <div className="products-list">
-            {products ? (
-              products.map((product) => (
-                <p key={product.id}>
-                  {product.title}: {product.price} lei
-                </p>
-              ))
-            ) : (
-              <p>No Products</p>
-            )}
+            {productsInMarket.map((product) => (
+              <p key={product.id}>
+                {product.title.substring(0, 20) + "... - " + product.price} lei
+              </p>
+            ))}
           </div>
         </div>
       </section>
