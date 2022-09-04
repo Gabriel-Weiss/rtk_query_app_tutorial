@@ -20,8 +20,8 @@ const MarketDetails = () => {
   const [addProduct] = useAddProductMutation();
 
   const productsInMarket = useMemo(() => {
-    return products.filter((product) => product.marketId == id);
-  }, [products]);
+    return products.filter((product) => product.marketId === Number(id));
+  }, [products, id]);
 
   let content;
   if (isFetching) {
@@ -74,8 +74,7 @@ const MarketDetails = () => {
                       resetForm({ values: "" });
                       console.log("fulfilled", payload);
                     })
-                    .catch((error) => console.error("rejected", error));
-                  // navigateTo(`/markets/${market.id}`);
+                    .catch((error) => console.error("rejected", error.message));
                 }}
               >
                 <Form className="add-product-inputs">
@@ -100,7 +99,7 @@ const MarketDetails = () => {
           <div className="products-list">
             {productsInMarket.map((product) => (
               <p key={product.id}>
-                {product.title.substring(0, 20) + "... - " + product.price} lei
+                {product.title.substring(0, 20)}... - {product.price} lei
               </p>
             ))}
           </div>

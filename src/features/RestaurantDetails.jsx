@@ -4,13 +4,26 @@ import Spinner from "../components/Spinner";
 import "./css/DetailsCard.css";
 import { useGetRestaurantQuery } from "../redux/restaurants/restaurantsApiSlice";
 import { handlePriceLevel } from "../utils/functions";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import * as Yup from "yup";
 import { IoCaretBackCircleOutline } from "react-icons/io5";
 import { RiPencilLine } from "react-icons/ri";
+import {
+  useAddFoodMutation,
+  useGetFoodsQuery,
+} from "../redux/foods/foodsApiSlice";
+import { useMemo } from "react";
 
 const RestaurantDetails = () => {
-  const id = useParams();
+  const { id } = useParams();
   const navigateTo = useNavigate();
   const { data: restaurant, isFetching, isSuccess } = useGetRestaurantQuery(id);
+  const { data: foods = [] } = useGetFoodsQuery();
+  const [addFood] = useAddFoodMutation();
+
+  const foodsInRestaurant = useMemo(() => {
+    return foods.filter((food) => food.restaurantId === Number(id));
+  }, [foods, id]);
 
   let content;
   if (isFetching) {
@@ -44,12 +57,65 @@ const RestaurantDetails = () => {
             </div>
           </div>
         </article>
-        <div className="item-products">
-          {restaurant.products ? (
-            restaurant.products.map((product) => <p key={product}>{product}</p>)
-          ) : (
-            <p>No Products</p>
-          )}
+        <div className="products-container">
+          <div className="add-product-form">
+            <aside>
+              <Formik
+                initialValues={{
+                  name: "",
+                  price: "",
+                  restaurantId: restaurant.id,
+                  quantity: "",
+                  category: "",
+                }}
+                validationSchema={Yup.object({
+                  name: Yup.string().required("Required"),
+                  price: Yup.number().required("Required"),
+                })}
+                onSubmit={async (values, { resetForm }) => {
+                  const { name, price, restaurantId, quantity, category } =
+                    values;
+                  await addFood({
+                    name,
+                    price,
+                    restaurantId,
+                    quantity,
+                    category,
+                  })
+                    .unwrap()
+                    .then((payload) => {
+                      resetForm({ values: "" });
+                      console.log("fulfilled", payload);
+                    })
+                    .catch((error) => console.error("rejected", error.message));
+                }}
+              >
+                <Form className="add-product-inputs">
+                  <label htmlFor="name">Name</label>
+                  <Field name="name" type="text" />
+                  <ErrorMessage className="error-message" name="name" />
+                  <label htmlFor="price">Price</label>
+                  <Field name="price" type="number" />
+                  <ErrorMessage className="error-message" name="price" />
+                  <label htmlFor="quantity">Quantity</label>
+                  <Field name="quantity" type="number" />
+                  <ErrorMessage className="error-message" name="quantity" />
+                  <label htmlFor="category">Category</label>
+                  <Field name="category" type="text" />
+                  <ErrorMessage className="error-message" name="category" />
+
+                  <button type="submit">Submit</button>
+                </Form>
+              </Formik>
+            </aside>
+          </div>
+          <div className="products-list">
+            {foodsInRestaurant.map((food) => (
+              <p key={food.id}>
+                {food.name}, {food.quantity} gr : {food.price} lei
+              </p>
+            ))}
+          </div>
         </div>
       </section>
     );

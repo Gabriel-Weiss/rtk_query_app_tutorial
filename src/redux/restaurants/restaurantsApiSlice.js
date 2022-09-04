@@ -11,12 +11,10 @@ export const restaurantsApiSlice = apiSlice.injectEndpoints({
       ],
     }),
     getRestaurant: build.query({
-      query: (restaurant) => ({
-        url: `restaurants/${restaurant.id}`,
+      query: (id) => ({
+        url: `restaurants/${id}`,
       }),
-      providesTags: (result, error, arg) => [
-        { type: "Restaurants", id: arg.id },
-      ],
+      providesTags: (result, error, arg) => [{ type: "Restaurants", id: arg }],
     }),
     addRestaurant: build.mutation({
       query: (restaurant) => ({
@@ -48,8 +46,8 @@ export const restaurantsApiSlice = apiSlice.injectEndpoints({
 
 export const {
   useGetRestaurantsQuery,
+  useGetRestaurantQuery,
   useAddRestaurantMutation,
   useUpdateRestaurantMutation,
   useDeleteRestaurantMutation,
-  useGetRestaurantQuery,
 } = restaurantsApiSlice;

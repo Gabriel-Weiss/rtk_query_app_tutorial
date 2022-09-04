@@ -9,7 +9,7 @@ import {
 } from "../redux/restaurants/restaurantsApiSlice";
 
 const EditRetaurantForm = () => {
-  let id = useParams();
+  const { id } = useParams();
   const navigateTo = useNavigate();
 
   const { data: restaurant } = useGetRestaurantQuery(id);

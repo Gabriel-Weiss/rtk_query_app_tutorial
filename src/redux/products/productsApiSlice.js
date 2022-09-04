@@ -34,7 +34,7 @@ export const productsApiSlice = apiSlice.injectEndpoints({
         url: `products/${product.id}`,
         method: "PATCH",
         body: {
-          product,
+          ...product,
         },
       }),
       invalidatesTags: (result, error, arg) => [
