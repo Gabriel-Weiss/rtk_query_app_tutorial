@@ -1,10 +1,12 @@
-import React from 'react'
-import './css/AddButton.css'
+import React from "react";
+import "./css/AddButton.css";
 
-const AddButton = ({handleAddRestaurant}) => {
+const AddButton = ({ handleClick }) => {
   return (
-    <button className='add-btn' onClick={handleAddRestaurant}>Add Item</button>
-  )
-}
+    <button className="add-btn" onClick={handleClick}>
+      Add Item
+    </button>
+  );
+};
 
-export default AddButton
+export default AddButton;

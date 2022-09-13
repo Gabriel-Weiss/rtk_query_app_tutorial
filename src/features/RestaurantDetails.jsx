@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import "./css/DetailsCard.css";
@@ -12,7 +12,6 @@ import {
   useAddFoodMutation,
   useGetFoodsQuery,
 } from "../redux/foods/foodsApiSlice";
-import { useMemo } from "react";
 
 const RestaurantDetails = () => {
   const { id } = useParams();
@@ -20,6 +19,18 @@ const RestaurantDetails = () => {
   const { data: restaurant, isFetching, isSuccess } = useGetRestaurantQuery(id);
   const { data: foods = [] } = useGetFoodsQuery();
   const [addFood] = useAddFoodMutation();
+
+  const productsDiv = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const productsP = {
+    marginTop: "30%",
+    fontSize: "22px",
+    fontStyle: "italic",
+  };
 
   const foodsInRestaurant = useMemo(() => {
     return foods.filter((food) => food.restaurantId === Number(id));
@@ -110,11 +121,17 @@ const RestaurantDetails = () => {
             </aside>
           </div>
           <div className="products-list">
-            {foodsInRestaurant.map((food) => (
-              <p key={food.id}>
-                {food.name}, {food.quantity} gr : {food.price} lei
-              </p>
-            ))}
+            {foodsInRestaurant.length ? (
+              foodsInRestaurant.map((food) => (
+                <p key={food.id}>
+                  {food.name}, {food.quantity} gr : {food.price} lei
+                </p>
+              ))
+            ) : (
+              <div style={productsDiv}>
+                <p style={productsP}>No products found</p>
+              </div>
+            )}
           </div>
         </div>
       </section>

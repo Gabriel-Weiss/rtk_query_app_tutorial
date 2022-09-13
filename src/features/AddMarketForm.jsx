@@ -1,5 +1,6 @@
 import React from "react";
-import { useFormik } from "formik";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import "./css/LoginForm.css";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { useAddMarketMutation } from "../redux/markets/marketsApiSlice";
@@ -8,71 +9,67 @@ const AddMarketForm = () => {
   let navigateTo = useNavigate();
   const [addMarket] = useAddMarketMutation();
 
-  const formik = useFormik({
-    initialValues: {
-      name: "",
-      price_level: "",
-      avg_delivery_time: "",
-    },
-    validationSchema: Yup.object({
-      name: Yup.string().required("* Numele localului este obligatoriu"),
-      price_level: Yup.number().required("* Cimpul este obligatoriu"),
-      avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
-    }),
-    onSubmit: async (values) => {
-      values.price_level = parseInt(values.price_level);
-      try {
-        await addMarket(values).unwrap();
-        navigateTo(`/markets`);
-      } catch (error) {
-        console.error("Nu s-a putut salva intrarea", error);
-        alert("Nu s-a putut salva intrarea");
-      }
-    },
-  });
-
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <div className="input-group">
-        <label htmlFor="name">Market Name</label>
-        <input id="name" type="text" {...formik.getFieldProps("name")} />
-        {formik.touched.name && formik.errors.name ? (
-          <div className="error-message">{formik.errors.name}</div>
-        ) : null}
-      </div>
+    <section className="loginFormSection">
+      <h1>Add Market</h1>
+      <Formik
+        initialValues={{
+          name: "",
+          price_level: "",
+          avg_delivery_time: "",
+        }}
+        validationSchema={Yup.object({
+          name: Yup.string().required("* Numele localului este obligatoriu"),
+          price_level: Yup.number().required("* Cimpul este obligatoriu"),
+          avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
+        })}
+        onSubmit={async (values, { resetForm }) => {
+          values.price_level = parseInt(values.price_level);
+          await addMarket(values)
+            .unwrap()
+            .then((payload) => {
+              resetForm({ values: "" });
+              console.log("fulfilled", payload);
+              navigateTo(`/markets`);
+            })
+            .catch((error) => console.error("rejected", error.message));
+        }}
+      >
+        <Form data-testid="formikForm" className="loginFormInputs">
+          <label htmlFor="name">Market Name</label>
+          <Field id="name" name="name" type="text" data-testid="name" />
+          <ErrorMessage className="error-message" name="name" />
+          <label htmlFor="price_level">Price Level</label>
+          <Field
+            as="select"
+            id="price_level"
+            type="number"
+            name="price_level"
+            data-testid="price_level"
+          >
+            <option value="">Select level</option>
+            <option value="1">Low</option>
+            <option value="2">Medium</option>
+            <option value="3">High</option>
+          </Field>
+          <ErrorMessage className="error-message" name="price_level" />
+          <label htmlFor="avg_delivery_time" step={10}>
+            Average Delivery Time
+          </label>
+          <Field
+            id="avg_delivery_time"
+            name="avg_delivery_time"
+            type="number"
+            data-testid="avg_delivery_time"
+          />
+          <ErrorMessage className="error-message" name="avg_delivery_time" />
 
-      <div className="input-group">
-        <label htmlFor="price_level">Price Level</label>
-        <select
-          id="price_level"
-          type="number"
-          name="price_level"
-          {...formik.getFieldProps("price_level")}
-        >
-          <option value="">Select level</option>
-          <option value="1">Low</option>
-          <option value="2">Medium</option>
-          <option value="3">High</option>
-        </select>
-        {formik.touched.price_level && formik.errors.price_level ? (
-          <div className="error-message">{formik.errors.price_level}</div>
-        ) : null}
-      </div>
-
-      <div className="input-group">
-        <label htmlFor="avg_delivery_time">Average Delivery Time</label>
-        <input
-          id="avg_delivery_time"
-          type="number"
-          {...formik.getFieldProps("avg_delivery_time")}
-        />
-        {formik.touched.avg_delivery_time && formik.errors.avg_delivery_time ? (
-          <div className="error-message">{formik.errors.avg_delivery_time}</div>
-        ) : null}
-      </div>
-
-      <button type="submit">Salveaza</button>
-    </form>
+          <button data-testid="addMarketButton" type="submit">
+            Salveaza
+          </button>
+        </Form>
+      </Formik>
+    </section>
   );
 };
 

@@ -3,9 +3,12 @@ import "./css/GridCard.css";
 import { Link } from "react-router-dom";
 import { useDeleteRestaurantMutation } from "../redux/restaurants/restaurantsApiSlice";
 import { handlePriceLevel } from "../utils/functions";
+import { selectUser } from "../redux/auth/authSlice";
+import { useSelector } from "react-redux";
 
 const RestaurantsCard = ({ restaurant }) => {
   const [deleteRestaurant] = useDeleteRestaurantMutation();
+  const user = useSelector(selectUser);
 
   const handleDeleteResturant = async (id) => {
     await deleteRestaurant(id).unwrap();
@@ -26,11 +29,13 @@ const RestaurantsCard = ({ restaurant }) => {
               : "Rating: no rating"}
           </p>
         </Link>
-        <div className="card-body card-footer">
-          <button onClick={() => handleDeleteResturant(restaurant.id)}>
-            Delete
-          </button>
-        </div>
+        {user && (
+          <div className="card-body card-footer">
+            <button onClick={() => handleDeleteResturant(restaurant.id)}>
+              Delete
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

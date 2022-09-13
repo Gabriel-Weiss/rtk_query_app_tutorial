@@ -27,8 +27,8 @@ const Header = () => {
         <Link className="list_item" to={"/"}>
           Contact
         </Link>
-        <Link className="list_item" to={"/"}>
-          About
+        <Link className="list_item" to={"/login"}>
+          Login
         </Link>
       </ul>
     </div>

@@ -6,6 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
+import { authApiSlice } from "./redux/auth/authApiSlice";
+
+store.dispatch(authApiSlice.endpoints.getUsers.initiate());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

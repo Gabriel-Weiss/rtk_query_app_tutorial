@@ -1,23 +1,11 @@
 import React from "react";
+import "./css/Home.css";
 
 const Home = () => {
   return (
-    <div
-      style={{
-        marginTop: "2rem",
-        marginLeft: "2rem",
-        fontSize: "4rem",
-        color: "black",
-      }}
-    >
+    <div>
       Content
-      <p
-        style={{
-          marginTop: "0",
-          fontSize: "3rem",
-          color: "black",
-        }}
-      >
+      <p>
         <i>To be added</i>
       </p>
     </div>

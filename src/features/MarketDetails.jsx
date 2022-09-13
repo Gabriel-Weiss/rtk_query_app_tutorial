@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "./css/DetailsCard.css";
 import Spinner from "../components/Spinner";
+import "./css/DetailsCard.css";
 import { useGetMarketQuery } from "../redux/markets/marketsApiSlice";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -18,6 +18,18 @@ const MarketDetails = () => {
   const { data: market, isFetching, isSuccess } = useGetMarketQuery(id);
   const { data: products = [] } = useGetProductsQuery();
   const [addProduct] = useAddProductMutation();
+
+  const productsDiv = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  };
+
+  const productsP = {
+    marginTop: "30%",
+    fontSize: "22px",
+    fontStyle: "italic",
+  };
 
   const productsInMarket = useMemo(() => {
     return products.filter((product) => product.marketId === Number(id));
@@ -97,11 +109,17 @@ const MarketDetails = () => {
             </aside>
           </div>
           <div className="products-list">
-            {productsInMarket.map((product) => (
-              <p key={product.id}>
-                {product.title.substring(0, 20)}... - {product.price} lei
-              </p>
-            ))}
+            {productsInMarket.length ? (
+              productsInMarket.map((product) => (
+                <p key={product.id}>
+                  {product.title.substring(0, 20)}... - {product.price} lei
+                </p>
+              ))
+            ) : (
+              <div style={productsDiv}>
+                <p style={productsP}>No products found</p>
+              </div>
+            )}
           </div>
         </div>
       </section>

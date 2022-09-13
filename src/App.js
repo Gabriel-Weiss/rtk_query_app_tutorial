@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Outlet } from "react-router-dom";
 
 import MarketsGrid from "./features/MarketsGrid";
 import RestaurantsGrid from "./features/RestaurantsGrid";
@@ -12,6 +12,7 @@ import AddRestaurantForm from "./features/AddRestaurantForm";
 import EditRestaurantForm from "./features/EditRestaurantForm";
 import AddMarketForm from "./features/AddMarketForm";
 import EditMarketForm from "./features/EditMarketForm";
+import Login from "./features/Login";
 
 function App() {
   return (
@@ -19,18 +20,31 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="markets" element={<MarketsGrid />}></Route>
-        <Route path="markets/:id" element={<MarketDetails />} />
-        <Route path="markets/add" element={<AddMarketForm />} />
-        <Route path="markets/edit/:id" element={<EditMarketForm />} />
-        <Route path="restaurants" element={<RestaurantsGrid />} />
-        <Route path="restaurants/:id" element={<RestaurantDetails />} />
-        <Route path="restaurants/add" element={<AddRestaurantForm />} />
-        <Route path="restaurants/edit/:id" element={<EditRestaurantForm />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="markets" element={<Markets />}>
+          <Route index element={<MarketsGrid />} />
+          <Route path=":id" element={<MarketDetails />} />
+          <Route path="add" element={<AddMarketForm />} />
+          <Route path="edit/:id" element={<EditMarketForm />} />
+        </Route>
+        <Route path="restaurants" element={<Restaurants />}>
+          <Route index element={<RestaurantsGrid />} />
+          <Route path=":id" element={<RestaurantDetails />} />
+          <Route path="add" element={<AddRestaurantForm />} />
+          <Route path="edit/:id" element={<EditRestaurantForm />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
+}
+
+function Markets() {
+  return <Outlet />;
+}
+
+function Restaurants() {
+  return <Outlet />;
 }
 
 export default App;
