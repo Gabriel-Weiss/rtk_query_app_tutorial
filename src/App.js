@@ -13,6 +13,7 @@ import EditRestaurantForm from "./features/EditRestaurantForm";
 import AddMarketForm from "./features/AddMarketForm";
 import EditMarketForm from "./features/EditMarketForm";
 import Login from "./features/Login";
+import RequireAuth from "./features/RequireAuth";
 
 function App() {
   return (
@@ -24,14 +25,18 @@ function App() {
         <Route path="markets" element={<Markets />}>
           <Route index element={<MarketsGrid />} />
           <Route path=":id" element={<MarketDetails />} />
-          <Route path="add" element={<AddMarketForm />} />
-          <Route path="edit/:id" element={<EditMarketForm />} />
+          <Route element={<RequireAuth />}>
+            <Route path="add" element={<AddMarketForm />} />
+            <Route path="edit/:id" element={<EditMarketForm />} />
+          </Route>
         </Route>
         <Route path="restaurants" element={<Restaurants />}>
           <Route index element={<RestaurantsGrid />} />
           <Route path=":id" element={<RestaurantDetails />} />
-          <Route path="add" element={<AddRestaurantForm />} />
-          <Route path="edit/:id" element={<EditRestaurantForm />} />
+          <Route element={<RequireAuth />}>
+            <Route path="add" element={<AddRestaurantForm />} />
+            <Route path="edit/:id" element={<EditRestaurantForm />} />
+          </Route>
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
