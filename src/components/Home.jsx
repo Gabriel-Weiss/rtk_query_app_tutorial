@@ -3,11 +3,9 @@ import "./css/Home.css";
 
 const Home = () => {
   return (
-    <div>
+    <div className="mainDiv">
       Content
-      <p>
-        <i>To be added</i>
-      </p>
+      <p className="mainPar">To be added</p>
     </div>
   );
 };

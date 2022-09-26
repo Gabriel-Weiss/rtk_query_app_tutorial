@@ -17,7 +17,6 @@ div.header_container {
   color: rgba(153, 51, 255, 0.879);
 }
 
-.logout-btn,
 .list_item {
   padding: 14px 25px;
   text-align: center;
@@ -26,7 +25,6 @@ div.header_container {
   cursor: pointer;
 }
 
-.logout-btn,
 .list_item:hover {
   background-color: var(--mainColorLight);
   border-radius: 3px;
@@ -41,11 +39,4 @@ div.header_container {
 .header_search {
   display: flex;
   align-items: center;
-}
-
-.logout-btn {
-  border: 0.5px solid rgb(153, 51, 255);
-  background-color: transparent;
-  font-size: medium;
-  font-family: inherit;
 }

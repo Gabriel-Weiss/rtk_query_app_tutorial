@@ -1,13 +1,12 @@
-
 export const handlePriceLevel = (level) => {
   switch (level) {
     case 1:
-      return 'low';
+      return "low";
     case 2:
-      return 'medium';
+      return "medium";
     case 3:
-      return 'high';
+      return "high";
     default:
-      return 'no level';
+      return "no level";
   }
-}
+};

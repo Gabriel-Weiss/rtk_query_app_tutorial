@@ -1,14 +1,15 @@
 import React from "react";
 import "./css/GridCard.css";
 import { Link } from "react-router-dom";
-import { useDeleteMarketMutation } from "../redux/markets/marketsApiSlice";
-import { handlePriceLevel } from "../utils/functions";
-import { selectUser } from "../redux/auth/authSlice";
+import { useDeleteMarketMutation } from "../../redux/markets/marketsApiSlice";
+import { handlePriceLevel } from "../../utils/functions";
+import { selectUser } from "../../redux/auth/authSlice";
 import { useSelector } from "react-redux";
 
 const MarketsCard = ({ market }) => {
   const [deleteMarket] = useDeleteMarketMutation();
   const user = useSelector(selectUser);
+  const isAdmin = user?.username === "admin";
 
   const handleDeleteMarket = async (id) => {
     await deleteMarket(id).unwrap();
@@ -31,7 +32,7 @@ const MarketsCard = ({ market }) => {
               : "Rating: no rating"}
           </p>
         </Link>
-        {user && (
+        {isAdmin && (
           <div className="card-body card-footer">
             <button onClick={() => handleDeleteMarket(market.id)}>
               Delete

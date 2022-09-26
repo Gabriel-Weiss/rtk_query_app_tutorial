@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./css/Grid.css";
-import Spinner from "../components/Spinner";
-import { MdSearch } from "react-icons/md";
-import RestaurantsCard from "./RestaurantsCard";
-import { useGetRestaurantsQuery } from "../redux/restaurants/restaurantsApiSlice";
+import Spinner from "../../components/Spinner";
+import { useGetMarketsQuery } from "../../redux/markets/marketsApiSlice";
+import MarketsCard from "./MarketsCard";
 import { Link } from "react-router-dom";
-import { selectUser } from "../redux/auth/authSlice";
+import { selectUser } from "../../redux/auth/authSlice";
 import { useSelector } from "react-redux";
 
-export default function RestaurantsGrid() {
+const MarketsGrid = () => {
   const user = useSelector(selectUser);
-  const { data = [], isLoading } = useGetRestaurantsQuery();
+  const isAdmin = user?.username === "admin";
+
+  const { data = [], isLoading } = useGetMarketsQuery();
   const [search, setSearch] = useState("");
 
   const inputHandler = (e) => {
@@ -37,23 +38,22 @@ export default function RestaurantsGrid() {
             value={search}
             onChange={inputHandler}
           />
-          <i className="search_icon" aria-hidden="true">
-            <MdSearch />
-          </i>
         </div>
         <div className="add-item input-item">
-          {user && (
-            <Link className="add-itme-link" to="/restaurants/add">
-              Add Restaurant
+          {isAdmin && (
+            <Link className="add-itme-link" to="/markets/add">
+              Add Market
             </Link>
           )}
         </div>
       </div>
       <div className="container">
-        {filteredData.map((restaurant) => (
-          <RestaurantsCard key={restaurant.id} restaurant={restaurant} />
+        {filteredData.map((market) => (
+          <MarketsCard key={market.id} market={market} />
         ))}
       </div>
     </main>
   );
-}
+};
+
+export default MarketsGrid;

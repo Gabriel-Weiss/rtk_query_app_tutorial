@@ -2,11 +2,11 @@ import React from "react";
 import "./css/AddForm.css";
 import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { useAddRestaurantMutation } from "../redux/restaurants/restaurantsApiSlice";
+import { useAddRestaurantMutation } from "../../redux/restaurants/restaurantsApiSlice";
 import { useNavigate } from "react-router-dom";
 
 const AddRestaurantForm = () => {
-  let navigateTo = useNavigate();
+  const navigateTo = useNavigate();
   const [addRestaurant] = useAddRestaurantMutation();
 
   return (
@@ -38,7 +38,7 @@ const AddRestaurantForm = () => {
         <Form data-testid="formikForm" className="loginFormInputs">
           <label htmlFor="name">Restaurant Name</label>
           <Field id="name" name="name" type="text" data-testid="name" />
-          <ErrorMessage className="error-message" name="name" />
+          <ErrorMessage className="error-message" name="name" component="div" />
           <label htmlFor="price_level">Price Level</label>
           <Field
             as="select"
@@ -52,7 +52,11 @@ const AddRestaurantForm = () => {
             <option value="2">Medium</option>
             <option value="3">High</option>
           </Field>
-          <ErrorMessage className="error-message" name="price_level" />
+          <ErrorMessage
+            className="error-message"
+            name="price_level"
+            component="div"
+          />
           <label htmlFor="avg_delivery_time" step={10}>
             Average Delivery Time
           </label>
@@ -62,7 +66,11 @@ const AddRestaurantForm = () => {
             type="number"
             data-testid="avg_delivery_time"
           />
-          <ErrorMessage className="error-message" name="avg_delivery_time" />
+          <ErrorMessage
+            className="error-message"
+            name="avg_delivery_time"
+            component="div"
+          />
 
           <button
             className="add-btn"

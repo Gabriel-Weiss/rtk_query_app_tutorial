@@ -1,44 +1,48 @@
 import React from "react";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import "./css/LoginForm.css";
+import { useNavigate, useParams } from "react-router-dom";
+import "./css/AddForm.css";
 import * as Yup from "yup";
-import { useNavigate } from "react-router-dom";
-import { useAddMarketMutation } from "../redux/markets/marketsApiSlice";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import {
+  useGetMarketQuery,
+  useUpdateMarketMutation,
+} from "../../redux/markets/marketsApiSlice";
 
-const AddMarketForm = () => {
-  let navigateTo = useNavigate();
-  const [addMarket] = useAddMarketMutation();
+const EditMarketForm = () => {
+  const { id } = useParams();
+  const navigateTo = useNavigate();
+
+  const { data: market } = useGetMarketQuery(id);
+  const [editMarket] = useUpdateMarketMutation(id);
 
   return (
     <section className="loginFormSection">
       <h1>Add Market</h1>
       <Formik
-        initialValues={{
-          name: "",
-          price_level: "",
-          avg_delivery_time: "",
-        }}
+        initialValues={market}
         validationSchema={Yup.object({
           name: Yup.string().required("* Numele localului este obligatoriu"),
           price_level: Yup.number().required("* Cimpul este obligatoriu"),
           avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
         })}
-        onSubmit={async (values, { resetForm }) => {
+        onSubmit={async (values) => {
           values.price_level = parseInt(values.price_level);
-          await addMarket(values)
+          await editMarket(values)
             .unwrap()
             .then((payload) => {
-              resetForm({ values: "" });
               console.log("fulfilled", payload);
-              navigateTo(`/markets`);
+              navigateTo(`/markets/${values.id}`);
             })
-            .catch((error) => console.error("rejected", error.message));
+            .catch((error) => {
+              console.error("rejected", error.message);
+              alert("Nu s-a putut salva intrarea");
+            });
         }}
       >
         <Form data-testid="formikForm" className="loginFormInputs">
           <label htmlFor="name">Market Name</label>
           <Field id="name" name="name" type="text" data-testid="name" />
-          <ErrorMessage className="error-message" name="name" />
+          <ErrorMessage className="error-message" name="name" component="div" />
           <label htmlFor="price_level">Price Level</label>
           <Field
             as="select"
@@ -52,17 +56,23 @@ const AddMarketForm = () => {
             <option value="2">Medium</option>
             <option value="3">High</option>
           </Field>
-          <ErrorMessage className="error-message" name="price_level" />
-          <label htmlFor="avg_delivery_time" step={10}>
-            Average Delivery Time
-          </label>
+          <ErrorMessage
+            className="error-message"
+            name="price_level"
+            component="div"
+          />
+          <label htmlFor="avg_delivery_time">Average Delivery Time</label>
           <Field
             id="avg_delivery_time"
             name="avg_delivery_time"
             type="number"
             data-testid="avg_delivery_time"
           />
-          <ErrorMessage className="error-message" name="avg_delivery_time" />
+          <ErrorMessage
+            className="error-message"
+            name="avg_delivery_time"
+            component="div"
+          />
 
           <button data-testid="addMarketButton" type="submit">
             Salveaza
@@ -73,4 +83,4 @@ const AddMarketForm = () => {
   );
 };
 
-export default AddMarketForm;
+export default EditMarketForm;

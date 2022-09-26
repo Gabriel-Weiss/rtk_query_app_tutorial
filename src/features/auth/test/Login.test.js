@@ -1,4 +1,4 @@
-import { renderWithProviders, waitFor, screen } from "../../test-utils";
+import { renderWithProviders, waitFor, screen } from "../../../setupTests";
 import userEvent from "@testing-library/user-event";
 import Login from "../Login";
 

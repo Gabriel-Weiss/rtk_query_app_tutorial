@@ -1,12 +1,14 @@
 import React from "react";
 import "./css/Header.css";
 import { MdOutlineNoFood } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut, selectUser } from "../redux/auth/authSlice";
+import AuthButton from "./AuthButton";
 
 const Header = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector(selectUser);
   const handleLogOut = () => {
     dispatch(logOut());
@@ -36,13 +38,12 @@ const Header = () => {
           Contact
         </Link>
         {user ? (
-          <button className="list_item logout-btn" onClick={handleLogOut}>
-            Logout
-          </button>
+          <AuthButton handleClick={handleLogOut} text={"Logout"} />
         ) : (
-          <Link className="list_item" to={"/login"}>
-            Login
-          </Link>
+          <AuthButton
+            handleClick={() => navigate("/login")}
+            text={"Login/Register"}
+          />
         )}
       </ul>
     </div>

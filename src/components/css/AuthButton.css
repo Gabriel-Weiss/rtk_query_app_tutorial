@@ -1,0 +1,17 @@
+.addBtn {
+  position: relative;
+  width: fit-content;
+  background: transparent;
+  color: #6643be;
+  font-size: 1em;
+  padding: 14px 25px;
+  transition: 0.5s;
+  border: none;
+}
+
+.addBtn:hover {
+  background: rgb(153, 51, 255);
+  color: var(--textColor);
+  box-shadow: 0 0 35px #6643be;
+  border-radius: 3px;
+}

@@ -1,19 +1,20 @@
 import "./App.css";
 import { Routes, Route, BrowserRouter, Outlet } from "react-router-dom";
 
-import MarketsGrid from "./features/MarketsGrid";
-import RestaurantsGrid from "./features/RestaurantsGrid";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import RestaurantDetails from "./features/RestaurantDetails";
 import NotFound from "./components/NotFound";
-import MarketDetails from "./features/MarketDetails";
-import AddRestaurantForm from "./features/AddRestaurantForm";
-import EditRestaurantForm from "./features/EditRestaurantForm";
-import AddMarketForm from "./features/AddMarketForm";
-import EditMarketForm from "./features/EditMarketForm";
-import Login from "./features/Login";
-import RequireAuth from "./features/RequireAuth";
+import MarketsGrid from "./features/markets/MarketsGrid";
+import MarketDetails from "./features/markets/MarketDetails";
+import AddMarketForm from "./features/markets/AddMarketForm";
+import EditMarketForm from "./features/markets/EditMarketForm";
+import RestaurantsGrid from "./features/restaurants/RestaurantsGrid";
+import RestaurantDetails from "./features/restaurants/RestaurantDetails";
+import AddRestaurantForm from "./features/restaurants/AddRestaurantForm";
+import EditRestaurantForm from "./features/restaurants/EditRestaurantForm";
+import Login from "./features/auth/Login";
+import RequireAuth from "./features/auth/RequireAuth";
+import RegisterUser from "./features/auth/RegisterUser";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<RegisterUser />} />
         <Route path="markets" element={<Markets />}>
           <Route index element={<MarketsGrid />} />
           <Route path=":id" element={<MarketDetails />} />
