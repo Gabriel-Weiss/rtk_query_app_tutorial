@@ -25202,7 +25202,7 @@
       "password": "1234",
       "username": "admin",
       "email": "admin@mail.com",
-      "phone": "1-770-736-8031 x56442"
+      "phone": "1-770-736-8031"
     },
     {
       "id": 2,
@@ -25210,7 +25210,7 @@
       "password": "bret",
       "username": "bret",
       "email": "Sincere@april.biz",
-      "phone": "1-770-736-8031 x56442",
+      "phone": "1-770-736-8032",
       "company": "Romaguera-Crona"
     }
   ]
