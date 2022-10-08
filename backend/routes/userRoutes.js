@@ -6,12 +6,14 @@ const {
   updateUserHandler,
   deleteUserHandler,
 } = require("../controllers/userController");
+const verifyJWT = require("../middleware/verifyJWT");
+
+// router.use(verifyJWT);
 
 router
-  .route("/")
-  .get(getUsersHandler)
-  .post(createUserHandler)
-  .patch(updateUserHandler)
-  .delete(deleteUserHandler);
+  .get("/", getUsersHandler)
+  .post("/", createUserHandler)
+  .patch("/:id", updateUserHandler)
+  .delete("/:id", deleteUserHandler);
 
 module.exports = router;

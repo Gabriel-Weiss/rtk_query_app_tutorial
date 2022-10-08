@@ -49,7 +49,7 @@ const MarketsGrid = () => {
       </div>
       <div className="container">
         {filteredData.map((market) => (
-          <MarketsCard key={market.id} market={market} />
+          <MarketsCard key={market._id} market={market} />
         ))}
       </div>
     </main>

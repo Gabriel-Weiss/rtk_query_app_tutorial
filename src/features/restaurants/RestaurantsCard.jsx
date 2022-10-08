@@ -18,7 +18,7 @@ const RestaurantsCard = ({ restaurant }) => {
   return (
     <div className="grid-card">
       <div className="container-item">
-        <Link className="container-list" to={`/restaurants/${restaurant.id}`}>
+        <Link className="container-list" to={`/restaurants/${restaurant._id}`}>
           <h3 className="card-body card-title">{restaurant.name}</h3>
           <p className="card-body card-text">{restaurant.format_cuisines}</p>
           <p className="card-body card-text">
@@ -32,7 +32,7 @@ const RestaurantsCard = ({ restaurant }) => {
         </Link>
         {isAdmin && (
           <div className="card-body card-footer">
-            <button onClick={() => handleDeleteResturant(restaurant.id)}>
+            <button onClick={() => handleDeleteResturant(restaurant._id)}>
               Delete
             </button>
           </div>

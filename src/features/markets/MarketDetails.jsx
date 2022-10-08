@@ -61,7 +61,7 @@ const MarketDetails = () => {
             <div
               className="edit-icon"
               style={{ display: !isAdmin && "none" }}
-              onClick={() => navigateTo(`/markets/edit/${market.id}`)}
+              onClick={() => navigateTo(`/markets/edit/${market._id}`)}
             >
               <RiPencilLine />
             </div>
@@ -80,7 +80,7 @@ const MarketDetails = () => {
                 initialValues={{
                   title: "",
                   price: "",
-                  marketId: market.id,
+                  marketId: market._id,
                   description: "",
                   category: "",
                 }}
@@ -137,7 +137,7 @@ const MarketDetails = () => {
           <div className="products-list">
             {productsInMarket.length ? (
               productsInMarket.map((product) => (
-                <p key={product.id}>
+                <p key={product._id}>
                   {product.title.substring(0, 20)}... - {product.price} lei
                 </p>
               ))

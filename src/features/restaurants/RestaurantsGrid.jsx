@@ -49,7 +49,7 @@ export default function RestaurantsGrid() {
       </div>
       <div className="container">
         {filteredData.map((restaurant) => (
-          <RestaurantsCard key={restaurant.id} restaurant={restaurant} />
+          <RestaurantsCard key={restaurant._id} restaurant={restaurant} />
         ))}
       </div>
     </main>

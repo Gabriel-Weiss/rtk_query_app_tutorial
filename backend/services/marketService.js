@@ -12,12 +12,12 @@ const findMarketById = async (id) => {
   return await Market.findById(id).exec();
 };
 
-const updateMarket = async (market, update) => {
-  return await Market.updateOne(market, update).exec();
+const updateMarket = async (id, market) => {
+  return await Market.findByIdAndUpdate(id, market).exec();
 };
 
-const deleteMarket = async (id) => {
-  return await Market.findByIdAndDelete(id).exec();
+const deleteMarket = async (market) => {
+  return await market.deleteOne();
 };
 
 module.exports = {

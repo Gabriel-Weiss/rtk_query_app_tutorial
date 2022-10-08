@@ -31,7 +31,7 @@ const EditRetaurantForm = () => {
             .unwrap()
             .then((payload) => {
               console.log("fulfilled", payload);
-              navigateTo(`/restaurants/${values.id}`);
+              navigateTo(`/restaurants/${values._id}`);
             })
             .catch((error) => {
               console.error("rejected", error.message);

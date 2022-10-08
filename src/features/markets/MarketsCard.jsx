@@ -18,7 +18,7 @@ const MarketsCard = ({ market }) => {
   return (
     <div className="grid-card">
       <div className="container-item">
-        <Link className="container-list" to={`/markets/${market.id}`}>
+        <Link className="container-list" to={`/markets/${market._id}`}>
           <h3 className="card-body card-title">{market.name}</h3>
           <p className="card-body card-text">
             Price level: {handlePriceLevel(market.price_level)}
@@ -34,7 +34,7 @@ const MarketsCard = ({ market }) => {
         </Link>
         {isAdmin && (
           <div className="card-body card-footer">
-            <button onClick={() => handleDeleteMarket(market.id)}>
+            <button onClick={() => handleDeleteMarket(market._id)}>
               Delete
             </button>
           </div>

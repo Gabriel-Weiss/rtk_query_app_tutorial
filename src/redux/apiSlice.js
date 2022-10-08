@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import { logOut, setCredentials } from "./auth/authSlice";
 
 // const authBaseQuery = fetchBaseQuery({
-//   baseUrl: "http://localhost:3001",
+//   baseUrl: process.env.REACT_APP_BASE_URL,
 //   credentials: "include",
 //   prepareHeaders: (headers, { getState }) => {
 //     const token = getState().auth.token;
@@ -28,6 +28,6 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const apiSlice = createApi({
   tagTypes: ["Restaurants", "Markets", "Foods", "Products", "Users"],
   // baseQuery: authBaseQueryWithReauth,
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001" }),
+  baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
   endpoints: () => ({}),
 });

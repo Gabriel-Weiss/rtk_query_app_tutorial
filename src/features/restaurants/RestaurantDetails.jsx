@@ -62,7 +62,7 @@ const RestaurantDetails = () => {
             <div
               className="edit-icon"
               style={{ display: !isAdmin && "none" }}
-              onClick={() => navigateTo(`/restaurants/edit/${restaurant.id}`)}
+              onClick={() => navigateTo(`/restaurants/edit/${restaurant._id}`)}
             >
               <RiPencilLine />
             </div>
@@ -84,7 +84,7 @@ const RestaurantDetails = () => {
                 initialValues={{
                   name: "",
                   price: "",
-                  restaurantId: restaurant.id,
+                  restaurantId: restaurant._id,
                   quantity: "",
                   category: "",
                 }}
@@ -149,7 +149,7 @@ const RestaurantDetails = () => {
           <div className="products-list">
             {foodsInRestaurant.length ? (
               foodsInRestaurant.map((food) => (
-                <p key={food.id}>
+                <p key={food._id}>
                   {food.name}, {food.quantity} gr : {food.price} lei
                 </p>
               ))

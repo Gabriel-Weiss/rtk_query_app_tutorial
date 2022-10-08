@@ -12,12 +12,12 @@ const findRestaurantById = async (id) => {
   return await Restaurant.findById(id).exec();
 };
 
-const updateRestaurant = async (restaurant, update) => {
-  return await Restaurant.updateOne(restaurant, update).exec();
+const updateRestaurant = async (id, restaurant) => {
+  return await Restaurant.findByIdAndUpdate(id, restaurant).exec();
 };
 
-const deleteRestaurant = async (id) => {
-  return await Restaurant.findByIdAndDelete(id).exec();
+const deleteRestaurant = async (restaurant) => {
+  return await restaurant.deleteOne();
 };
 
 module.exports = {

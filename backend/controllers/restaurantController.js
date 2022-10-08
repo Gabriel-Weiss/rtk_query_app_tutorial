@@ -19,6 +19,27 @@ const getRestaurantsHandler = asyncHandler(async (req, res) => {
   return res.json(restaurants);
 });
 
+//  @description Get all restaurants
+//  @route GET /restaurants
+//  @access Public
+const getRestaurantHandler = asyncHandler(async (req, res) => {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res
+      .status(400)
+      .json({ message: "Id parameter must be a valid mongo object id" });
+  }
+
+  const restaurant = await findRestaurantById(id);
+
+  if (!restaurant) {
+    return res.status(400).json({ message: "Restaurant not found." });
+  }
+
+  return res.json(restaurant);
+});
+
 //  @description Create a new restaurant
 //  @route POST /restaurants
 //  @access Private
@@ -50,9 +71,10 @@ const createRestaurantHandler = asyncHandler(async (req, res) => {
 //  @route PATCH /restaurants
 //  @access Private
 const updateRestaurantHandler = asyncHandler(async (req, res) => {
-  const { id, name, price_level, avg_delivery_time } = req.body;
+  const { name, price_level, avg_delivery_time } = req.body;
+  const id = req.params.id;
 
-  if (!id || !name || !price_level || !avg_delivery_time) {
+  if (!name || !price_level || !avg_delivery_time) {
     return res.status(400).json({ message: "All fields must be provided." });
   }
 
@@ -74,7 +96,7 @@ const updateRestaurantHandler = asyncHandler(async (req, res) => {
   restaurant.price_level = price_level;
   restaurant.avg_delivery_time = avg_delivery_time;
 
-  const updatedRestaurant = await restaurant.save();
+  const updatedRestaurant = await updateRestaurant(id, restaurant);
 
   res.json({
     message: `Restaurant ${updatedRestaurant.name} updated successfully`,
@@ -85,11 +107,7 @@ const updateRestaurantHandler = asyncHandler(async (req, res) => {
 //  @route DELETE /Restaurants
 //  @access Private
 const deleteRestaurantHandler = asyncHandler(async (req, res) => {
-  const { id } = req.body;
-
-  if (!id) {
-    return res.status(400).json({ message: "Id parameter required" });
-  }
+  const id = req.params.id;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res
@@ -103,7 +121,7 @@ const deleteRestaurantHandler = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: "Restaurant not found" });
   }
 
-  const deletedRestaurant = await restaurant.deleteOne();
+  const deletedRestaurant = await deleteRestaurant(restaurant);
 
   res.json({
     message: `Restaurant ${deletedRestaurant.name} deleted successfully`,
@@ -112,6 +130,7 @@ const deleteRestaurantHandler = asyncHandler(async (req, res) => {
 
 module.exports = {
   getRestaurantsHandler,
+  getRestaurantHandler,
   createRestaurantHandler,
   updateRestaurantHandler,
   deleteRestaurantHandler,

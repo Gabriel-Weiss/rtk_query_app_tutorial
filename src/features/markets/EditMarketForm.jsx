@@ -31,7 +31,7 @@ const EditMarketForm = () => {
             .unwrap()
             .then((payload) => {
               console.log("fulfilled", payload);
-              navigateTo(`/markets/${values.id}`);
+              navigateTo(`/markets/${values._id}`);
             })
             .catch((error) => {
               console.error("rejected", error.message);

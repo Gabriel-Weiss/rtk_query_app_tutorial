@@ -32,13 +32,16 @@ const Login = () => {
         })}
         onSubmit={async (values, { resetForm }) => {
           const { username, password } = values;
-          if (checkUser(username, password)) {
-            resetForm({ values: "" });
-            dispatch(setCredentials({ username, password }));
-            navigateTo("/");
-          } else {
-            alert("User credentials are not correct");
-          }
+          dispatch(setCredentials({ username, password }));
+          resetForm({ values: "" });
+          navigateTo("/");
+          // if (checkUser(username, password)) {
+          //   resetForm({ values: "" });
+          //   dispatch(setCredentials({ username, password }));
+          //   navigateTo("/");
+          // } else {
+          //   alert("User credentials are not correct");
+          // }
         }}
       >
         <Form className="loginFormInputs">

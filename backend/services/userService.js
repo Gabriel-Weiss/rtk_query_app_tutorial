@@ -17,12 +17,12 @@ const findUserById = async (id) => {
   return await User.findById(id).exec();
 };
 
-const updateUser = async (username, update) => {
-  return await User.updateOne(username, update).exec();
+const updateUser = async (id, user) => {
+  return await User.findByIdAndUpdate(id, user).exec();
 };
 
 const deleteUser = async (username) => {
-  return await User.deleteOne(username).exec();
+  return await username.deleteOne();
 };
 
 module.exports = {

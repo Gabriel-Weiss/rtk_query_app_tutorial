@@ -23,7 +23,7 @@ const getUsersHandler = asyncHandler(async (req, res) => {
 
 //  @description Create a new user
 //  @route POST /users
-//  @access Private
+//  @access Public
 const createUserHandler = asyncHandler(async (req, res) => {
   const { name, password, username, email, phone } = req.body;
 
@@ -62,10 +62,11 @@ const createUserHandler = asyncHandler(async (req, res) => {
 //  @route PATCH /users
 //  @access Private
 const updateUserHandler = asyncHandler(async (req, res) => {
-  const { id, name, password, username, email, phone } = req.body;
+  const { name, password, username, email, phone } = req.body;
+  const id = req.params.id;
 
-  if (!id || !name || !username || !email || !phone) {
-    return res.status(400).json({ message: "All fields must be provided." });
+  if (!name || !username || !email || !phone) {
+    return res.status(400).json({ message: "Fields must be provided." });
   }
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -83,7 +84,7 @@ const updateUserHandler = asyncHandler(async (req, res) => {
   const duplicate = await findUserByUsername(username);
 
   if (duplicate && duplicate?._id.toString() !== id) {
-    return res.status(409).json({ message: "Duplicate user." });
+    return res.status(409).json({ message: "Duplicate username." });
   }
 
   user.username = username;
@@ -95,7 +96,7 @@ const updateUserHandler = asyncHandler(async (req, res) => {
     user.password = await bcrypt.hash(password, 10);
   }
 
-  const updatedUser = await user.save();
+  const updatedUser = await updateUser(id, user);
 
   res.json({ message: `User ${updatedUser.username} updated successfully` });
 });
@@ -104,11 +105,7 @@ const updateUserHandler = asyncHandler(async (req, res) => {
 //  @route DELETE /users
 //  @access Private
 const deleteUserHandler = asyncHandler(async (req, res) => {
-  const { id } = req.body;
-
-  if (!id) {
-    return res.status(400).json({ message: "Id parameter required" });
-  }
+  const id = req.params.id;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res
@@ -122,7 +119,7 @@ const deleteUserHandler = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: "User not found" });
   }
 
-  const deletedUser = await user.deleteOne();
+  const deletedUser = await deleteUser(user);
 
   res.json({ message: `User ${deletedUser.username} deleted successfully` });
 });

@@ -7,13 +7,6 @@ const PORT = process.env.PORT || 3500;
 connectDatabase();
 const app = createApp();
 
-mongoose.connection.once("open", () => {
-  console.log("Connection to database established");
-  app.listen(PORT, () => {
-    console.log(`listening on port ${PORT}`);
-  });
-});
-
-mongoose.connection.on("error", (err) => {
-  console.log(err);
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
 });
