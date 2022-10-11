@@ -4,14 +4,11 @@ import Spinner from "../../components/Spinner";
 import { useGetMarketsQuery } from "../../redux/markets/marketsApiSlice";
 import MarketsCard from "./MarketsCard";
 import { Link } from "react-router-dom";
-import { selectUser } from "../../redux/auth/authSlice";
-import { useSelector } from "react-redux";
+import useAuthentication from "../../hooks/useAuthentication";
 
 const MarketsGrid = () => {
-  const user = useSelector(selectUser);
-  const isAdmin = user?.username === "admin";
-
   const { data = [], isLoading } = useGetMarketsQuery();
+  const { isAdmin } = useAuthentication();
   const [search, setSearch] = useState("");
 
   const inputHandler = (e) => {
@@ -39,13 +36,13 @@ const MarketsGrid = () => {
             onChange={inputHandler}
           />
         </div>
-        <div className="add-item input-item">
-          {isAdmin && (
+        {isAdmin && (
+          <div className="add-item input-item">
             <Link className="add-itme-link" to="/markets/add">
               Add Market
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       <div className="container">
         {filteredData.map((market) => (

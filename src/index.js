@@ -5,9 +5,19 @@ import App from "./App";
 
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
-import { authApiSlice } from "./redux/auth/authApiSlice";
+import { usersApiSlice } from "./redux/users/usersApiSlice";
 
-store.dispatch(authApiSlice.endpoints.getUsers.initiate());
+store.dispatch(
+  usersApiSlice.util.prefetch("getUsers", "UsersList", { force: true })
+);
+store.dispatch(
+  usersApiSlice.util.prefetch("getRestaurants", "RestaurantsList", {
+    force: true,
+  })
+);
+store.dispatch(
+  usersApiSlice.util.prefetch("getMarkets", "MarketsList", { force: true })
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

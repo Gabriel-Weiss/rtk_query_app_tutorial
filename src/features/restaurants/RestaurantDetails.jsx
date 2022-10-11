@@ -13,17 +13,19 @@ import {
   useAddFoodMutation,
   useGetFoodsQuery,
 } from "../../redux/foods/foodsApiSlice";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../redux/auth/authSlice";
+import useAuthentication from "../../hooks/useAuthentication";
 
 const RestaurantDetails = () => {
   const { id } = useParams();
   const navigateTo = useNavigate();
   const { data: restaurant, isFetching, isSuccess } = useGetRestaurantQuery(id);
-  const { data: foods = [] } = useGetFoodsQuery();
   const [addFood] = useAddFoodMutation();
-  const user = useSelector(selectUser);
-  const isAdmin = user?.username === "admin";
+  const { isAdmin } = useAuthentication();
+  const { foods = [] } = useGetFoodsQuery(undefined, {
+    selectFromResult: ({ data }) => ({
+      foods: data?.find((restaurantId) => restaurantId === id),
+    }),
+  });
 
   const productsDiv = {
     display: "flex",
@@ -75,76 +77,77 @@ const RestaurantDetails = () => {
           </div>
         </article>
         <div className="products-container">
-          <div
-            className="add-product-form"
-            style={{ display: !isAdmin && "none" }}
-          >
-            <aside>
-              <Formik
-                initialValues={{
-                  name: "",
-                  price: "",
-                  restaurantId: restaurant._id,
-                  quantity: "",
-                  category: "",
-                }}
-                validationSchema={Yup.object({
-                  name: Yup.string().required("Required"),
-                  price: Yup.number().required("Required"),
-                })}
-                onSubmit={async (values, { resetForm }) => {
-                  const { name, price, restaurantId, quantity, category } =
-                    values;
-                  await addFood({
-                    name,
-                    price,
-                    restaurantId,
-                    quantity,
-                    category,
-                  })
-                    .unwrap()
-                    .then((payload) => {
-                      resetForm({ values: "" });
-                      console.log("fulfilled", payload);
+          {isAdmin && (
+            <div className="add-product-form">
+              <aside>
+                <Formik
+                  initialValues={{
+                    name: "",
+                    price: "",
+                    restaurantId: restaurant._id,
+                    quantity: "",
+                    category: "",
+                  }}
+                  validationSchema={Yup.object({
+                    name: Yup.string().required("Required"),
+                    price: Yup.number().required("Required"),
+                  })}
+                  onSubmit={async (values, { resetForm }) => {
+                    const { name, price, restaurantId, quantity, category } =
+                      values;
+                    await addFood({
+                      name,
+                      price,
+                      restaurantId,
+                      quantity,
+                      category,
                     })
-                    .catch((error) => console.error("rejected", error.message));
-                }}
-              >
-                <Form className="add-product-inputs">
-                  <label htmlFor="name">Name</label>
-                  <Field name="name" type="text" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="name"
-                    component="div"
-                  />
-                  <label htmlFor="price">Price</label>
-                  <Field name="price" type="number" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="price"
-                    component="div"
-                  />
-                  <label htmlFor="quantity">Quantity</label>
-                  <Field name="quantity" type="number" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="quantity"
-                    component="div"
-                  />
-                  <label htmlFor="category">Category</label>
-                  <Field name="category" type="text" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="category"
-                    component="div"
-                  />
+                      .unwrap()
+                      .then((payload) => {
+                        resetForm({ values: "" });
+                        console.log("fulfilled", payload);
+                      })
+                      .catch((error) =>
+                        console.error("rejected", error.message)
+                      );
+                  }}
+                >
+                  <Form className="add-product-inputs">
+                    <label htmlFor="name">Name</label>
+                    <Field name="name" type="text" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="name"
+                      component="div"
+                    />
+                    <label htmlFor="price">Price</label>
+                    <Field name="price" type="number" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="price"
+                      component="div"
+                    />
+                    <label htmlFor="quantity">Quantity</label>
+                    <Field name="quantity" type="number" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="quantity"
+                      component="div"
+                    />
+                    <label htmlFor="category">Category</label>
+                    <Field name="category" type="text" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="category"
+                      component="div"
+                    />
 
-                  <button type="submit">Submit</button>
-                </Form>
-              </Formik>
-            </aside>
-          </div>
+                    <button type="submit">Submit</button>
+                  </Form>
+                </Formik>
+              </aside>
+            </div>
+          )}
 
           <div className="products-list">
             {foodsInRestaurant.length ? (

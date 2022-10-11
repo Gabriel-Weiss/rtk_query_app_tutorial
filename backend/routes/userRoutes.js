@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {
   getUsersHandler,
+  getUserHandler,
   createUserHandler,
   updateUserHandler,
   deleteUserHandler,
@@ -12,6 +13,7 @@ const verifyJWT = require("../middleware/verifyJWT");
 
 router
   .get("/", getUsersHandler)
+  .get("/:id", getUserHandler)
   .post("/", createUserHandler)
   .patch("/:id", updateUserHandler)
   .delete("/:id", deleteUserHandler);

@@ -12,17 +12,21 @@ import {
   useAddProductMutation,
   useGetProductsQuery,
 } from "../../redux/products/productsApiSlice";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../redux/auth/authSlice";
+import useAuthentication from "../../hooks/useAuthentication";
 
 const MarketDetails = () => {
   const { id } = useParams();
   const navigateTo = useNavigate();
   const { data: market, isFetching, isSuccess } = useGetMarketQuery(id);
-  const { data: products = [] } = useGetProductsQuery();
+  const { isAdmin } = useAuthentication();
   const [addProduct] = useAddProductMutation();
-  const user = useSelector(selectUser);
-  const isAdmin = user?.username === "admin";
+  const { products = [] } = useGetProductsQuery(undefined, {
+    selectFromResult: ({ data }) => ({
+      products: data?.filter((product) => {
+        return product.marketId === id;
+      }),
+    }),
+  });
 
   const productsDiv = {
     display: "flex",
@@ -35,10 +39,6 @@ const MarketDetails = () => {
     fontSize: "22px",
     fontStyle: "italic",
   };
-
-  const productsInMarket = useMemo(() => {
-    return products.filter((product) => product.marketId === Number(id));
-  }, [products, id]);
 
   let content;
   if (isFetching) {
@@ -71,74 +71,75 @@ const MarketDetails = () => {
           </div>
         </article>
         <div className="products-container">
-          <div
-            className="add-product-form"
-            style={{ display: !isAdmin && "none" }}
-          >
-            <aside>
-              <Formik
-                initialValues={{
-                  title: "",
-                  price: "",
-                  marketId: market._id,
-                  description: "",
-                  category: "",
-                }}
-                validationSchema={Yup.object({
-                  title: Yup.string().required("Required"),
-                  price: Yup.number().required("Required"),
-                })}
-                onSubmit={async (values, { resetForm }) => {
-                  await addProduct(values)
-                    .unwrap()
-                    .then((payload) => {
-                      resetForm({ values: "" });
-                      console.log("fulfilled", payload);
-                    })
-                    .catch((error) => console.error("rejected", error.message));
-                }}
-              >
-                <Form className="add-product-inputs">
-                  <label htmlFor="title">Title</label>
-                  <Field name="title" type="text" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="title"
-                    component="div"
-                  />
-                  <label htmlFor="price">Price</label>
-                  <Field name="price" type="number" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="price"
-                    component="div"
-                  />
-                  <label htmlFor="description">Description</label>
-                  <Field as="textarea" name="description" type="number" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="description"
-                    component="div"
-                  />
-                  <label htmlFor="category">Category</label>
-                  <Field name="category" type="text" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="category"
-                    component="div"
-                  />
+          {isAdmin && (
+            <div className="add-product-form">
+              <aside>
+                <Formik
+                  initialValues={{
+                    title: "",
+                    price: "",
+                    marketId: market._id,
+                    description: "",
+                    category: "",
+                  }}
+                  validationSchema={Yup.object({
+                    title: Yup.string().required("Required"),
+                    price: Yup.number().required("Required"),
+                  })}
+                  onSubmit={async (values, { resetForm }) => {
+                    await addProduct(values)
+                      .unwrap()
+                      .then((payload) => {
+                        resetForm({ values: "" });
+                        console.log("fulfilled", payload);
+                      })
+                      .catch((error) =>
+                        console.error("rejected", error.message)
+                      );
+                  }}
+                >
+                  <Form className="add-product-inputs">
+                    <label htmlFor="title">Title</label>
+                    <Field name="title" type="text" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="title"
+                      component="div"
+                    />
+                    <label htmlFor="price">Price</label>
+                    <Field name="price" type="number" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="price"
+                      component="div"
+                    />
+                    <label htmlFor="description">Description</label>
+                    <Field as="textarea" name="description" type="number" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="description"
+                      component="div"
+                    />
+                    <label htmlFor="category">Category</label>
+                    <Field name="category" type="text" />
+                    <ErrorMessage
+                      className="error-message"
+                      name="category"
+                      component="div"
+                    />
 
-                  <button type="submit">Submit</button>
-                </Form>
-              </Formik>
-            </aside>
-          </div>
+                    <button type="submit">Submit</button>
+                  </Form>
+                </Formik>
+              </aside>
+            </div>
+          )}
 
           <div className="products-list">
-            {productsInMarket.length ? (
-              productsInMarket.map((product) => (
+            {products.length ? (
+              products.map((product) => (
                 <p key={product._id}>
-                  {product.title.substring(0, 20)}... - {product.price} lei
+                  {product.title} - {product.price} lei
                 </p>
               ))
             ) : (

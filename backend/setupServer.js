@@ -13,7 +13,9 @@ const createApp = () => {
   app.use("/auth", require("./routes/authRoutes"));
   app.use("/users", require("./routes/userRoutes"));
   app.use("/markets", require("./routes/marketRoutes"));
+  app.use("/products", require("./routes/productRoutes"));
   app.use("/restaurants", require("./routes/restaurantRoutes"));
+  app.use("/foods", require("./routes/foodRoutes"));
 
   app.use(errorHandler);
 

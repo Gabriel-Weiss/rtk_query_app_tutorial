@@ -3,13 +3,11 @@ import "./css/GridCard.css";
 import { Link } from "react-router-dom";
 import { useDeleteRestaurantMutation } from "../../redux/restaurants/restaurantsApiSlice";
 import { handlePriceLevel } from "../../utils/functions";
-import { selectUser } from "../../redux/auth/authSlice";
-import { useSelector } from "react-redux";
+import useAuthentication from "../../hooks/useAuthentication";
 
 const RestaurantsCard = ({ restaurant }) => {
   const [deleteRestaurant] = useDeleteRestaurantMutation();
-  const user = useSelector(selectUser);
-  const isAdmin = user?.username === "admin";
+  const { isAdmin } = useAuthentication();
 
   const handleDeleteResturant = async (id) => {
     await deleteRestaurant(id).unwrap();

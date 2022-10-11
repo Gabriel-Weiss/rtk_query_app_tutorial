@@ -4,18 +4,17 @@ import * as Yup from "yup";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useNavigate } from "react-router-dom";
 import {
+  useAddUserMutation,
   useGetUsersQuery,
-  useSignUpMutation,
-} from "../../redux/auth/authApiSlice";
+} from "../../redux/users/usersApiSlice";
+import { useState } from "react";
 
 const RegisterUser = () => {
   const navigateTo = useNavigate();
-  const [addUser] = useSignUpMutation();
-  const { data: users } = useGetUsersQuery();
-
-  let passwords = users.map((user) => user.password);
-  let usernames = users.map((user) => user.username);
-  let emails = users.map((user) => user.email);
+  const [addUser] = useAddUserMutation();
+  const { data } = useGetUsersQuery();
+  const [usernames, setUsernames] = useState([]);
+  const [emails, setEmails] = useState([]);
 
   return (
     <section className="loginFormSection">
@@ -31,15 +30,13 @@ const RegisterUser = () => {
         }}
         validationSchema={Yup.object({
           name: Yup.string().required("* Numele este obligatoriu"),
-          password: Yup.string()
-            .notOneOf(passwords, "This password is already in use")
-            .required("* Parola este obligatorie"),
+          password: Yup.string().required("* Parola este obligatorie"),
           username: Yup.string()
-            .notOneOf(usernames, `This username is already in use`)
-            .required("* Nickname-ul este obligatoriu"),
+            // .notOneOf(usernames, `This username is already in use`)
+            .required("* Username-ul este obligatoriu"),
           email: Yup.string()
             .email("Invalid email address")
-            .notOneOf(emails, "This email address is already in use")
+            // .notOneOf(emails, "This email address is already in use")
             .required("Required"),
           phone: Yup.string().required("* Telefonul este obligatoriu"),
         })}
@@ -57,7 +54,13 @@ const RegisterUser = () => {
         {({ isSubmitting }) => (
           <Form data-testid="formikForm" className="loginFormInputs">
             <label htmlFor="name">Your Name</label>
-            <Field id="name" name="name" type="text" data-testid="fullName" />
+            <Field
+              id="name"
+              name="name"
+              type="text"
+              autoComplete="off"
+              data-testid="fullName"
+            />
             <ErrorMessage
               className="error-message"
               name="name"
@@ -69,6 +72,7 @@ const RegisterUser = () => {
               id="password"
               name="password"
               type="password"
+              autoComplete="off"
               data-testid="userPsw"
             />
             <ErrorMessage
@@ -82,6 +86,7 @@ const RegisterUser = () => {
               id="username"
               name="username"
               type="text"
+              autoComplete="off"
               data-testid="userName"
             />
             <ErrorMessage
@@ -95,6 +100,7 @@ const RegisterUser = () => {
               id="email"
               name="email"
               type="email"
+              autoComplete="off"
               data-testid="userEmail"
             />
             <ErrorMessage
@@ -108,6 +114,7 @@ const RegisterUser = () => {
               id="phone"
               name="phone"
               type="text"
+              autoComplete="off"
               data-testid="userPhone"
             />
             <ErrorMessage
@@ -121,6 +128,7 @@ const RegisterUser = () => {
               id="company"
               name="company"
               type="text"
+              autoComplete="off"
               data-testid="userCompany"
             />
             <ErrorMessage

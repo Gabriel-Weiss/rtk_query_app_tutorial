@@ -18,7 +18,29 @@ const getUsersHandler = asyncHandler(async (req, res) => {
   if (!users?.length) {
     return res.status(400).json({ message: "Users not found" });
   }
+
   return res.json(users);
+});
+
+//  @description Get a user
+//  @route GET /users/:id
+//  @access Private
+const getUserHandler = asyncHandler(async (req, res) => {
+  const id = req.params.id;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    return res
+      .status(400)
+      .json({ message: "Id parameter must be a valid mongo object id" });
+  }
+
+  const user = await findUserById(id);
+
+  if (!user) {
+    return res.status(400).json({ message: "User not found" });
+  }
+
+  return res.json(user);
 });
 
 //  @description Create a new user
@@ -126,6 +148,7 @@ const deleteUserHandler = asyncHandler(async (req, res) => {
 
 module.exports = {
   getUsersHandler,
+  getUserHandler,
   createUserHandler,
   updateUserHandler,
   deleteUserHandler,

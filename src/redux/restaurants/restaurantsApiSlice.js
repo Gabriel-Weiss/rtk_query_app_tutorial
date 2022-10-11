@@ -26,12 +26,12 @@ export const restaurantsApiSlice = apiSlice.injectEndpoints({
     }),
     updateRestaurant: build.mutation({
       query: (restaurant) => ({
-        url: `restaurants/${restaurant.id}`,
+        url: `restaurants/${restaurant._id}`,
         method: "PATCH",
         body: restaurant,
       }),
       invalidatesTags: (result, error, arg) => [
-        { type: "Restaurants", id: arg.id },
+        { type: "Restaurants", id: arg._id },
       ],
     }),
     deleteRestaurant: build.mutation({

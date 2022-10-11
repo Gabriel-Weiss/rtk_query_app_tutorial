@@ -27,13 +27,13 @@ export const foodsApiSlice = apiSlice.injectEndpoints({
     }),
     updateFood: builder.mutation({
       query: (food) => ({
-        url: `foods/${food.id}`,
+        url: `foods/${food._id}`,
         method: "PATCH",
         body: {
           ...food,
         },
       }),
-      invalidatesTags: (result, error, arg) => [{ type: "Foods", id: arg.id }],
+      invalidatesTags: (result, error, arg) => [{ type: "Foods", id: arg._id }],
     }),
     deleteFood: builder.mutation({
       query: (id) => ({

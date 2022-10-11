@@ -1,12 +1,9 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
-import { selectUser } from "../../redux/auth/authSlice";
+import useAuthentication from "../../hooks/useAuthentication";
 
 const RequireAuth = () => {
-  const user = useSelector(selectUser);
-  const isAdmin = user?.username === "admin";
-
+  const { isAdmin } = useAuthentication();
   const location = useLocation();
 
   return isAdmin ? (

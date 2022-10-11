@@ -4,14 +4,11 @@ import Spinner from "../../components/Spinner";
 import RestaurantsCard from "./RestaurantsCard";
 import { useGetRestaurantsQuery } from "../../redux/restaurants/restaurantsApiSlice";
 import { Link } from "react-router-dom";
-import { selectUser } from "../../redux/auth/authSlice";
-import { useSelector } from "react-redux";
+import useAuthentication from "../../hooks/useAuthentication";
 
 export default function RestaurantsGrid() {
-  const user = useSelector(selectUser);
-  const isAdmin = user?.username === "admin";
-
   const { data = [], isLoading } = useGetRestaurantsQuery();
+  const { isAdmin } = useAuthentication();
   const [search, setSearch] = useState("");
 
   const inputHandler = (e) => {
@@ -39,13 +36,13 @@ export default function RestaurantsGrid() {
             onChange={inputHandler}
           />
         </div>
-        <div className="add-item input-item">
-          {isAdmin && (
+        {isAdmin && (
+          <div className="add-item input-item">
             <Link className="add-itme-link" to="/restaurants/add">
               Add Restaurant
             </Link>
-          )}
-        </div>
+          </div>
+        )}
       </div>
       <div className="container">
         {filteredData.map((restaurant) => (

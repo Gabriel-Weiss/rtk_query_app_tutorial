@@ -2,17 +2,14 @@ import React from "react";
 import "./css/Header.css";
 import { MdOutlineNoFood } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { logOut, selectUser } from "../redux/auth/authSlice";
 import AuthButton from "./AuthButton";
+import { useLogoutMutation } from "../redux/auth/authApiSlice";
+import useAuthentication from "../hooks/useAuthentication";
 
 const Header = () => {
-  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const user = useSelector(selectUser);
-  const handleLogOut = () => {
-    dispatch(logOut());
-  };
+  const [logout] = useLogoutMutation();
+  const { isVisitor } = useAuthentication();
 
   return (
     <div className="header_container">
@@ -37,8 +34,8 @@ const Header = () => {
         <Link className="list_item" to={"/"}>
           Contact
         </Link>
-        {user ? (
-          <AuthButton handleClick={handleLogOut} text={"Logout"} />
+        {!isVisitor ? (
+          <AuthButton handleClick={logout} text={"Logout"} />
         ) : (
           <AuthButton
             handleClick={() => navigate("/login")}

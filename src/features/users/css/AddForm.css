@@ -1,0 +1,82 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  margin: 5% 10%;
+  color: var(--mainColor);
+}
+
+.input-group {
+  color: var(--secondaryColor);
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 5px 10px;
+  width: 300px;
+}
+
+label {
+  display: block;
+  border: 1px solid #999;
+  padding: 0 2px;
+  border-radius: 5px;
+  width: max-content;
+  position: relative;
+  top: 7px;
+  left: 5px;
+  background-color: #fff;
+}
+
+input {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 33px;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+
+select {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 33px;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+
+textarea {
+  background: #fff;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 13px;
+  height: 33px;
+  padding: 0 0 0 15px;
+  width: 100%;
+}
+
+.error-message {
+  color: #cc0033;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
+.add-btn {
+  font-size: 15px;
+  border-radius: 5px;
+  border-width: 1px;
+  width: 300px;
+  height: 35px;
+  margin-top: 10px;
+  color: var(--secondaryColor);
+  background-color: var(--mainLightColor);
+}
+
+.add-btn:hover {
+  background-color: var(--mainColorLight);
+}

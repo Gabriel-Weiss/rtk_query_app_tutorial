@@ -31,14 +31,14 @@ export const productsApiSlice = apiSlice.injectEndpoints({
     }),
     updateProduct: builder.mutation({
       query: (product) => ({
-        url: `products/${product.id}`,
+        url: `products/${product._id}`,
         method: "PATCH",
         body: {
           ...product,
         },
       }),
       invalidatesTags: (result, error, arg) => [
-        { type: "Products", id: arg.id },
+        { type: "Products", id: arg._id },
       ],
     }),
     deleteProduct: builder.mutation({

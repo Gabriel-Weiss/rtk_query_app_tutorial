@@ -29,7 +29,7 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
     }),
     updateMarket: builder.mutation({
       query: (market) => ({
-        url: `markets/${market.id}`,
+        url: `markets/${market._id}`,
         method: "PATCH",
         body: {
           ...market,
@@ -37,7 +37,7 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
         },
       }),
       invalidatesTags: (result, error, arg) => [
-        { type: "Markets", id: arg.id },
+        { type: "Markets", id: arg._id },
       ],
     }),
     deleteMarket: builder.mutation({
