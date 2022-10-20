@@ -1,8 +1,10 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Spinner from "../../components/Spinner";
 import "./css/DetailsCard.css";
 import "./css/AddForm.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useGetMarketQuery } from "../../redux/markets/marketsApiSlice";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -13,13 +15,21 @@ import {
   useGetProductsQuery,
 } from "../../redux/products/productsApiSlice";
 import useAuthentication from "../../hooks/useAuthentication";
+import ProductsGrid from "../products/ProductsGrid";
+import NoItems from "../../components/NoItems";
 
 const MarketDetails = () => {
   const { id } = useParams();
   const navigateTo = useNavigate();
-  const { data: market, isFetching, isSuccess } = useGetMarketQuery(id);
-  const { isAdmin } = useAuthentication();
+  const {
+    data: market,
+    isFetching,
+    isSuccess,
+    isError,
+    error,
+  } = useGetMarketQuery(id);
   const [addProduct] = useAddProductMutation();
+  const { isAdmin } = useAuthentication();
   const { products = [] } = useGetProductsQuery(undefined, {
     selectFromResult: ({ data }) => ({
       products: data?.filter((product) => {
@@ -27,24 +37,20 @@ const MarketDetails = () => {
       }),
     }),
   });
-
-  const productsDiv = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+  const notifySuccessProductAdd = () => {
+    toast.success("New product added!!!");
   };
 
-  const productsP = {
-    marginTop: "30%",
-    fontSize: "22px",
-    fontStyle: "italic",
+  const notifyErrorProductAdd = () => {
+    toast.error("Failed to add new product!!!");
   };
 
   let content;
-  if (isFetching) {
-    content = <Spinner />;
-  } else if (isSuccess) {
-    content = (
+
+  isFetching && (content = <Spinner />);
+  isError && (content = <p>{error}</p>);
+  isSuccess &&
+    (content = (
       <section>
         <article className="content-border">
           <div className="item-content">
@@ -72,87 +78,96 @@ const MarketDetails = () => {
         </article>
         <div className="products-container">
           {isAdmin && (
-            <div className="add-product-form">
-              <aside>
-                <Formik
-                  initialValues={{
-                    title: "",
-                    price: "",
-                    marketId: market._id,
-                    description: "",
-                    category: "",
-                  }}
-                  validationSchema={Yup.object({
-                    title: Yup.string().required("Required"),
-                    price: Yup.number().required("Required"),
-                  })}
-                  onSubmit={async (values, { resetForm }) => {
-                    await addProduct(values)
-                      .unwrap()
-                      .then((payload) => {
-                        resetForm({ values: "" });
-                        console.log("fulfilled", payload);
-                      })
-                      .catch((error) =>
-                        console.error("rejected", error.message)
+            <div
+              className="add-product-form"
+              style={{ display: !isAdmin ? "none" : "" }}
+            >
+              <Formik
+                initialValues={{
+                  name: "",
+                  price: "",
+                  marketId: market._id,
+                  description: "",
+                  category: "",
+                }}
+                validationSchema={Yup.object({
+                  name: Yup.string().required("Required"),
+                  price: Yup.number().required("Required"),
+                })}
+                onSubmit={async (values, { resetForm }) => {
+                  const { name, price, marketId, description, category } =
+                    values;
+                  await addProduct({
+                    name,
+                    price,
+                    marketId,
+                    description,
+                    category,
+                  })
+                    .unwrap()
+                    .then((payload) => {
+                      toast.success(
+                        `Product ${payload.name} added successfully!!!`
                       );
-                  }}
-                >
-                  <Form className="add-product-inputs">
-                    <label htmlFor="title">Title</label>
-                    <Field name="title" type="text" />
-                    <ErrorMessage
-                      className="error-message"
-                      name="title"
-                      component="div"
-                    />
-                    <label htmlFor="price">Price</label>
-                    <Field name="price" type="number" />
-                    <ErrorMessage
-                      className="error-message"
-                      name="price"
-                      component="div"
-                    />
-                    <label htmlFor="description">Description</label>
-                    <Field as="textarea" name="description" type="number" />
-                    <ErrorMessage
-                      className="error-message"
-                      name="description"
-                      component="div"
-                    />
-                    <label htmlFor="category">Category</label>
-                    <Field name="category" type="text" />
-                    <ErrorMessage
-                      className="error-message"
-                      name="category"
-                      component="div"
-                    />
+                      resetForm({ values: "" });
+                      console.log(payload);
+                    })
+                    .catch((error) => {
+                      toast.error("Failed to add new product!!!");
+                      console.error("rejected", error.message);
+                    });
+                }}
+              >
+                <Form className="add-product-inputs">
+                  <label htmlFor="name">Name</label>
+                  <Field name="name" type="text" />
+                  <ErrorMessage
+                    className="error-message"
+                    name="name"
+                    component="div"
+                  />
+                  <label htmlFor="price">Price</label>
+                  <Field name="price" type="number" />
+                  <ErrorMessage
+                    className="error-message"
+                    name="price"
+                    component="div"
+                  />
+                  <label htmlFor="description">Description</label>
+                  <Field as="textarea" name="description" type="number" />
+                  <ErrorMessage
+                    className="error-message"
+                    name="description"
+                    component="div"
+                  />
+                  <label htmlFor="category">Category</label>
+                  <Field name="category" type="text" />
+                  <ErrorMessage
+                    className="error-message"
+                    name="category"
+                    component="div"
+                  />
 
-                    <button type="submit">Submit</button>
-                  </Form>
-                </Formik>
-              </aside>
+                  <button type="submit">Submit</button>
+                </Form>
+              </Formik>
             </div>
           )}
 
           <div className="products-list">
             {products.length ? (
               products.map((product) => (
-                <p key={product._id}>
-                  {product.title} - {product.price} lei
-                </p>
+                <ProductsGrid key={product._id} product={product} />
               ))
             ) : (
-              <div style={productsDiv}>
-                <p style={productsP}>No products found</p>
-              </div>
+              <NoItems />
             )}
           </div>
         </div>
       </section>
-    );
-  }
-  return <div>{content}</div>;
+    ));
+
+  return content;
 };
 
 export default MarketDetails;

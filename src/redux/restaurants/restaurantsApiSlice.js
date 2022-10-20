@@ -20,7 +20,7 @@ export const restaurantsApiSlice = apiSlice.injectEndpoints({
       query: (restaurant) => ({
         url: "restaurants",
         method: "POST",
-        body: restaurant,
+        body: { ...restaurant },
       }),
       invalidatesTags: ["Restaurants"],
     }),
@@ -28,7 +28,7 @@ export const restaurantsApiSlice = apiSlice.injectEndpoints({
       query: (restaurant) => ({
         url: `restaurants/${restaurant._id}`,
         method: "PATCH",
-        body: restaurant,
+        body: { ...restaurant },
       }),
       invalidatesTags: (result, error, arg) => [
         { type: "Restaurants", id: arg._id },

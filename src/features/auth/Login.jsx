@@ -6,17 +6,11 @@ import { useDispatch } from "react-redux";
 import { setCredentials } from "../../redux/auth/authSlice";
 import { Link, useNavigate } from "react-router-dom";
 import { useLoginMutation } from "../../redux/auth/authApiSlice";
-import usePersist from "../../hooks/usePersist";
 
 const Login = () => {
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
   const [login] = useLoginMutation();
-  const [persist, setPersist] = usePersist();
-
-  const handleToggle = () => {
-    setPersist((prev) => !prev);
-  };
 
   return (
     <section className="loginFormSection">
@@ -39,7 +33,7 @@ const Login = () => {
             }).unwrap();
             dispatch(setCredentials(accessToken));
             resetForm({ values: "" });
-            navigateTo("/");
+            navigateTo(-1);
           } catch (error) {
             if (!error.status) {
               console.log("No server response");
@@ -87,28 +81,6 @@ const Login = () => {
           >
             Submit
           </button>
-          <label
-            htmlFor="persist_checkbox"
-            className="checkbox-label"
-            style={{
-              display: "flex",
-              width: "150px",
-              height: "auto",
-              margin: "0 0 15px 0",
-              padding: "0 10px 0 10px",
-              border: "none",
-            }}
-          >
-            <input
-              id="persist_checkbox"
-              className="from_checkbox"
-              type="checkbox"
-              onChange={handleToggle}
-              checked={persist}
-              style={{ marginRight: "0" }}
-            />
-            Remember me
-          </label>
           <Link to="/register">Not registered. Sign up now !!!</Link>
         </Form>
       </Formik>

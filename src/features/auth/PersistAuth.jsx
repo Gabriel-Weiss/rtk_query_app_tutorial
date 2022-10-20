@@ -17,14 +17,15 @@ const PersistAuth = () => {
   useEffect(() => {
     if (effectRef.current === true || process.env.NODE_ENV !== "development") {
       const verifyRefreshToken = async () => {
-        // console.log("Verifying refresh token");
         try {
-          await refresh();
+          const { data } = await refresh();
+          console.log("Verifying refresh token: " + data);
           setSuccess(true);
         } catch (error) {
           console.log(error.message);
         }
       };
+
       if (!token && persist) {
         verifyRefreshToken();
       }
@@ -38,17 +39,17 @@ const PersistAuth = () => {
   let content;
 
   if (!persist) {
-    // console.log("No persistence");
+    console.log("No persistence");
     content = <Outlet />;
   } else if (isLoading) {
-    console.log("Loading content");
+    console.log("Persist checked. Loading content");
     content = <Spinner />;
   } else if (isError) {
     console.log("Error loading content");
     content = (
       <p>
         {error?.data?.message}
-        <Link to="/login">Please login again</Link>
+        <Link to="/login"> Please login again </Link>
       </p>
     );
   } else if (isSuccess && success) {

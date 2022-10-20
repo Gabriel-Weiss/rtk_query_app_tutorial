@@ -4,7 +4,6 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getMarkets: builder.query({
       query: () => "markets",
-      transformResponse: (response) => response.sort((a, b) => b.id - a.id),
       providesTags: (result = [], error, arg) => [
         "Markets",
         ...result.map(({ id }) => ({ type: "Markets", id })),
@@ -22,7 +21,6 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
         method: "POST",
         body: {
           ...market,
-          modified: new Date().toLocaleString(),
         },
       }),
       invalidatesTags: ["Markets"],
@@ -33,7 +31,6 @@ export const marketsApiSlice = apiSlice.injectEndpoints({
         method: "PATCH",
         body: {
           ...market,
-          modified: new Date().toLocaleString(),
         },
       }),
       invalidatesTags: (result, error, arg) => [

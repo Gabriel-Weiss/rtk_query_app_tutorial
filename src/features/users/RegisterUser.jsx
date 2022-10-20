@@ -5,16 +5,16 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { useNavigate } from "react-router-dom";
 import {
   useAddUserMutation,
-  useGetUsersQuery,
+  // useGetUsersQuery,
 } from "../../redux/users/usersApiSlice";
-import { useState } from "react";
+// import { useState } from "react";
 
 const RegisterUser = () => {
   const navigateTo = useNavigate();
   const [addUser] = useAddUserMutation();
-  const { data } = useGetUsersQuery();
-  const [usernames, setUsernames] = useState([]);
-  const [emails, setEmails] = useState([]);
+  // const { data } = useGetUsersQuery();
+  // const [usernames, setUsernames] = useState([]);
+  // const [emails, setEmails] = useState([]);
 
   return (
     <section className="loginFormSection">

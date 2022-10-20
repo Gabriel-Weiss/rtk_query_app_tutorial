@@ -1,14 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  token: process.env.REACT_APP_VISITOR_TOKEN,
+};
+
 const authSlice = createSlice({
   name: "auth",
-  initialState: { token: process.env.REACT_APP_VISITOR_TOKEN },
+  initialState,
   reducers: {
     setCredentials: (state, action) => {
       state.token = action.payload;
     },
     logOut: (state, action) => {
-      state.token = process.env.REACT_APP_VISITOR_TOKEN;
+      state.token = initialState.token;
     },
   },
 });

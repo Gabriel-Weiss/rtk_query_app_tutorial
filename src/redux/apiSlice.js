@@ -28,7 +28,8 @@ const authBaseQueryWithRefresh = async (args, api, extraOptions) => {
       result = await authBaseQuery(args, api, extraOptions);
     } else {
       if (refreshToken?.error?.status === 403) {
-        refreshToken.error.data.message = "Credentials are invalid or expired.";
+        refreshToken.error.data.message =
+          "Credentials are invalid or expired. ";
       }
       return refreshToken;
     }

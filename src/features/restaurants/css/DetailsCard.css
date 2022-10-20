@@ -47,23 +47,20 @@ section {
   padding: 5px;
 }
 
+.products-container {
+  display: flex;
+}
+
 .add-product-form {
-  height: 100%;
-  width: 30%;
-  position: absolute;
-  overflow-x: hidden;
+  flex-grow: 1;
 }
 
 .products-list {
-  height: 100%;
-  width: 70%;
-  position: absolute;
-  margin-left: 30%;
-  padding-left: 10px;
+  flex-grow: 3;
 }
 
 .add-product-inputs > button {
   margin-top: 20px;
   height: 35px;
-  width: 110%;
+  width: 100%;
 }
