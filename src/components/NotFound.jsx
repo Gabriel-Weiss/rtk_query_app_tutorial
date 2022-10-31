@@ -1,20 +1,27 @@
 import React from "react";
-import "./css/NotFound.css";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
 const NotFound = () => {
   return (
-    <div className="mainContainer">
-      <div className="secondaryContainer">NotFound !!!</div>
+    <Container maxWidth="sm" sx={{ mt: 3 }}>
+      <Typography
+        variant="h2"
+        color="secondary.main"
+        sx={{ fontWeight: "bold" }}
+      >
+        NotFound !!!
+      </Typography>
       <hr className="contentSeparator" />
-      <div className="innerContentContainer">
-        <p className="mainParagraph">
-          <i>This page does not exists.</i>
-        </p>
-        <p className="secondaryParagraph">
-          <i>Please return to previous page.</i>
-        </p>
-      </div>
-    </div>
+      <Container>
+        <Typography variant="h4" color="secondary.light" fontStyle="oblique">
+          This page does not exists.
+        </Typography>
+        <Typography variant="h4" color="secondary.light" fontStyle="oblique">
+          Please return to previous page.
+        </Typography>
+      </Container>
+    </Container>
   );
 };
 

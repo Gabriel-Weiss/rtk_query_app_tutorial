@@ -1,26 +1,26 @@
 import React from "react";
-import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
-import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
-import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
-import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import { useDispatch, useSelector } from "react-redux";
 import {
   addToCart,
   decreaseCartQty,
   removeFromCart,
   clearCart,
 } from "../../redux/cart/cartSlice";
+import Table from "@mui/material/Table";
+import Paper from "@mui/material/Paper";
+import Button from "@mui/material/Button";
+import TableRow from "@mui/material/TableRow";
 import { useNavigate } from "react-router-dom";
+import Container from "@mui/material/Container";
+import TableHead from "@mui/material/TableHead";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import IconButton from "@mui/material/IconButton";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { useDispatch, useSelector } from "react-redux";
+import TableContainer from "@mui/material/TableContainer";
+import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 
 const Cart = () => {
   const TAX_RATE = 0.07;
@@ -90,17 +90,23 @@ const Cart = () => {
       )));
 
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="md" sx={{ mt: 3 }}>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 500 }} aria-label="spanning table">
           <TableHead>
             <TableRow>
-              <TableCell align="center" colSpan={3}>
+              <TableCell
+                align="center"
+                colSpan={3}
+                sx={{ color: "secondary.main" }}
+              >
                 Detalii
               </TableCell>
-              <TableCell align="center">Costuri</TableCell>
+              <TableCell align="center" sx={{ color: "secondary.main" }}>
+                Costuri
+              </TableCell>
             </TableRow>
-            <TableRow sx={{ bgcolor: "#cfe8fc" }}>
+            <TableRow sx={{ bgcolor: "secondary.light" }}>
               <TableCell align="center" colSpan={2}>
                 Desc
               </TableCell>

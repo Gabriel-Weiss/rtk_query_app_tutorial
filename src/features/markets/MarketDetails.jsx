@@ -1,26 +1,37 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import Spinner from "../../components/Spinner";
-import "./css/DetailsCard.css";
-import "./css/AddForm.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { useGetMarketQuery } from "../../redux/markets/marketsApiSlice";
-import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { RiPencilLine } from "react-icons/ri";
-import { IoCaretBackCircleOutline } from "react-icons/io5";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import { Formik, Form } from "formik";
+import { toast } from "react-toastify";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
+import Rating from "@mui/material/Rating";
+import "react-toastify/dist/ReactToastify.css";
+import NoItems from "../../components/NoItems";
+import Spinner from "../../components/Spinner";
+import CardMedia from "@mui/material/CardMedia";
+import EditIcon from "@mui/icons-material/Edit";
+import logo from "../../static/images/logo.png";
+import Typography from "@mui/material/Typography";
+import IconButton from "@mui/material/IconButton";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import { useNavigate, useParams } from "react-router-dom";
+import InputComponent from "../../components/InputComponent";
+import useAuthentication from "../../hooks/useAuthentication";
+import TextareaComponent from "../../components/TextareaComponent";
+import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
+
 import {
   useAddProductMutation,
   useGetProductsQuery,
 } from "../../redux/products/productsApiSlice";
-import useAuthentication from "../../hooks/useAuthentication";
 import ProductsGrid from "../products/ProductsGrid";
-import NoItems from "../../components/NoItems";
+import { useGetMarketQuery } from "../../redux/markets/marketsApiSlice";
 
 const MarketDetails = () => {
   const { id } = useParams();
-  const navigateTo = useNavigate();
+  const navigate = useNavigate();
   const {
     data: market,
     isFetching,
@@ -37,134 +48,154 @@ const MarketDetails = () => {
       }),
     }),
   });
-  const notifySuccessProductAdd = () => {
-    toast.success("New product added!!!");
-  };
-
-  const notifyErrorProductAdd = () => {
-    toast.error("Failed to add new product!!!");
-  };
 
   let content;
-
   isFetching && (content = <Spinner />);
-  isError && (content = <p>{error}</p>);
+  isError &&
+    (content = (
+      <Box alignSelf="center" mt={5}>
+        {error}
+      </Box>
+    ));
   isSuccess &&
     (content = (
-      <section>
-        <article className="content-border">
-          <div className="item-content">
-            <h2>{market.name}</h2>
-            <h2>
-              {market.ratings
-                ? "Rating: " + market.ratings.average
-                : "Rating: no rating"}
-            </h2>
-            <h2>Products: {market.format_cuisines}</h2>
-            <h2>Average delivery time: {market.avg_delivery_time}</h2>
-          </div>
-          <div className="options-btn">
-            <div
-              className="edit-icon"
-              style={{ display: !isAdmin && "none" }}
-              onClick={() => navigateTo(`/markets/edit/${market._id}`)}
-            >
-              <RiPencilLine />
-            </div>
-            <div className="back-icon" onClick={() => navigateTo("/markets")}>
-              <IoCaretBackCircleOutline />
-            </div>
-          </div>
-        </article>
-        <div className="products-container">
-          {isAdmin && (
-            <div
-              className="add-product-form"
-              style={{ display: !isAdmin ? "none" : "" }}
-            >
-              <Formik
-                initialValues={{
-                  name: "",
-                  price: "",
-                  marketId: market._id,
-                  description: "",
-                  category: "",
-                }}
-                validationSchema={Yup.object({
-                  name: Yup.string().required("Required"),
-                  price: Yup.number().required("Required"),
-                })}
-                onSubmit={async (values, { resetForm }) => {
-                  const { name, price, marketId, description, category } =
-                    values;
-                  await addProduct({
-                    name,
-                    price,
-                    marketId,
-                    description,
-                    category,
-                  })
-                    .unwrap()
-                    .then((payload) => {
+      <Box p={2} display="flex" flexDirection="column">
+        <Card>
+          <Box display="flex" flexDirection="row">
+            <Box flexGrow={0.3} m={2}>
+              {!isAdmin ? (
+                <CardMedia component="img" image={logo} alt="Logo" />
+              ) : (
+                <Formik
+                  initialValues={{
+                    name: "",
+                    price: "",
+                    marketId: market._id,
+                    description: "",
+                    category: "",
+                  }}
+                  validationSchema={Yup.object({
+                    name: Yup.string().required("Required"),
+                    price: Yup.number().required("Required"),
+                  })}
+                  onSubmit={async (values, { resetForm, setSubmitting }) => {
+                    try {
+                      await addProduct(values).unwrap();
+                      resetForm();
+                      setSubmitting(false);
                       toast.success(
-                        `Product ${payload.name} added successfully!!!`
+                        `Item ${values.name} added successfully!!!`
                       );
-                      resetForm({ values: "" });
-                      console.log(payload);
-                    })
-                    .catch((error) => {
+                    } catch (error) {
                       toast.error("Failed to add new product!!!");
                       console.error("rejected", error.message);
-                    });
-                }}
+                    }
+                  }}
+                >
+                  {({ isValid, isSubmitting }) => (
+                    <Form>
+                      <Box display="flex" flexDirection="column">
+                        <InputComponent label="Name" name="name" type="text" />
+                        <InputComponent
+                          label="Price"
+                          name="price"
+                          type="number"
+                        />
+                        <TextareaComponent
+                          label="Description"
+                          name="description"
+                          type="text"
+                        />
+                        <InputComponent
+                          label="Category"
+                          name="category"
+                          type="text"
+                        />
+                        <ButtonGroup
+                          sx={{ mt: "20px" }}
+                          fullWidth
+                          size="medium"
+                          disableElevation
+                          variant="outlined"
+                          orientation="horizontal"
+                          aria-label="Add products options buttons"
+                        >
+                          <Button type="reset" color="warning">
+                            Reset
+                          </Button>
+                          <Button
+                            fullWidth
+                            size="medium"
+                            disableElevation
+                            color="secondary"
+                            variant="outlined"
+                            disabled={!isValid || isSubmitting}
+                            aria-label="Add product button"
+                            data-testid="AddProductButton"
+                            type="submit"
+                          >
+                            Salveaza
+                          </Button>
+                        </ButtonGroup>
+                      </Box>
+                    </Form>
+                  )}
+                </Formik>
+              )}
+            </Box>
+            <Box flexGrow={1} m={2}>
+              <Typography variant="h3">{market.name}</Typography>
+              <Typography>
+                Average delivery time: {market.avg_delivery_time}
+              </Typography>
+              <Typography>Products: {market.format_cuisines}</Typography>
+              {market.ratings ? (
+                <Stack direction="row">
+                  <Typography color="secondary" component="legend">
+                    Ratings:
+                  </Typography>
+                  <Rating value={market.ratings.average} readOnly />
+                </Stack>
+              ) : (
+                <Typography color="secondary" component="legend">
+                  Ratings: no rating
+                </Typography>
+              )}
+            </Box>
+            <Box
+              m={1}
+              display="flex"
+              flexDirection="column"
+              justifyContent="space-between"
+            >
+              <IconButton
+                sx={{ border: "solid 3px", margin: "2px" }}
+                style={{ display: !isAdmin && "none" }}
+                color="secondary"
+                onClick={() => navigate(`/markets/edit/${market._id}`)}
               >
-                <Form className="add-product-inputs">
-                  <label htmlFor="name">Name</label>
-                  <Field name="name" type="text" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="name"
-                    component="div"
-                  />
-                  <label htmlFor="price">Price</label>
-                  <Field name="price" type="number" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="price"
-                    component="div"
-                  />
-                  <label htmlFor="description">Description</label>
-                  <Field as="textarea" name="description" type="number" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="description"
-                    component="div"
-                  />
-                  <label htmlFor="category">Category</label>
-                  <Field name="category" type="text" />
-                  <ErrorMessage
-                    className="error-message"
-                    name="category"
-                    component="div"
-                  />
-
-                  <button type="submit">Submit</button>
-                </Form>
-              </Formik>
-            </div>
+                <EditIcon />
+              </IconButton>
+              <IconButton
+                sx={{ border: "solid 3px", margin: "2px" }}
+                color="primary"
+                onClick={() => navigate("/markets")}
+              >
+                <ArrowLeftOutlinedIcon />
+              </IconButton>
+            </Box>
+          </Box>
+        </Card>
+        <Box flexGrow={2}>
+          {products.length ? (
+            products.map((product) => (
+              <ProductsGrid key={product._id} product={product} />
+            ))
+          ) : (
+            <NoItems />
           )}
-
-          <div className="products-list">
-            {products.length ? (
-              products.map((product) => (
-                <ProductsGrid key={product._id} product={product} />
-              ))
-            ) : (
-              <NoItems />
-            )}
-          </div>
-        </div>
-      </section>
+        </Box>
+      </Box>
     ));
 
   return content;

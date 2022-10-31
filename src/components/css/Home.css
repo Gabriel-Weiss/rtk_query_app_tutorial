@@ -1,9 +1,0 @@
-.mainDiv {
-  display: flex;
-  color: var(--secondaryColor);
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  align-content: space-around;
-}

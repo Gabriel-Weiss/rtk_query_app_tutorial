@@ -1,83 +1,122 @@
 import React from "react";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import "./css/LoginForm.css";
 import * as Yup from "yup";
+import Box from "@mui/material/Box";
+import { Formik, Form } from "formik";
+import { toast } from "react-toastify";
+import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
+import Typography from "@mui/material/Typography";
+import ButtonGroup from "@mui/material/ButtonGroup";
+import InputComponent from "../../components/InputComponent";
+import SelectComponent from "../../components/SelectComponent";
+import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
+import SaveAltOutlinedIcon from "@mui/icons-material/SaveAltOutlined";
 import { useAddMarketMutation } from "../../redux/markets/marketsApiSlice";
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 
 const AddMarketForm = () => {
-  const navigateTo = useNavigate();
+  const navigate = useNavigate();
   const [addMarket] = useAddMarketMutation();
 
-  return (
-    <section className="loginFormSection">
-      <h1>Add Market</h1>
-      <Formik
-        initialValues={{
-          name: "",
-          price_level: "",
-          avg_delivery_time: "",
-        }}
-        validationSchema={Yup.object({
-          name: Yup.string().required("* Numele localului este obligatoriu"),
-          price_level: Yup.number().required("* Cimpul este obligatoriu"),
-          avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
-        })}
-        onSubmit={async (values, { resetForm }) => {
-          values.price_level = parseInt(values.price_level);
-          await addMarket(values)
-            .unwrap()
-            .then((payload) => {
-              resetForm({ values: "" });
-              console.log("fulfilled", payload);
-              navigateTo(`/markets`);
-            })
-            .catch((error) => console.error("rejected", error.message));
-        }}
-      >
-        <Form data-testid="formikForm" className="loginFormInputs">
-          <label htmlFor="name">Market Name</label>
-          <Field id="name" name="name" type="text" data-testid="name" />
-          <ErrorMessage className="error-message" name="name" component="div" />
-          <label htmlFor="price_level">Price Level</label>
-          <Field
-            as="select"
-            id="price_level"
-            type="number"
-            name="price_level"
-            data-testid="price_level"
-          >
-            <option value="">Select level</option>
-            <option value="1">Low</option>
-            <option value="2">Medium</option>
-            <option value="3">High</option>
-          </Field>
-          <ErrorMessage
-            className="error-message"
-            name="price_level"
-            component="div"
-          />
-          <label htmlFor="avg_delivery_time" step={10}>
-            Average Delivery Time
-          </label>
-          <Field
-            id="avg_delivery_time"
-            name="avg_delivery_time"
-            type="number"
-            data-testid="avg_delivery_time"
-          />
-          <ErrorMessage
-            className="error-message"
-            name="avg_delivery_time"
-            component="div"
-          />
+  const initialValues = {
+    name: "",
+    price_level: "",
+    avg_delivery_time: "",
+  };
+  const validationSchema = Yup.object({
+    name: Yup.string().required("* Numele localului este obligatoriu"),
+    price_level: Yup.number().required("* Cimpul este obligatoriu"),
+    avg_delivery_time: Yup.number().required("* Cimpul este obligatoriu"),
+  });
+  const onSubmit = async (values, { resetForm, setSubmitting }) => {
+    values.price_level = parseInt(values.price_level);
+    try {
+      await addMarket(values).unwrap();
+      resetForm();
+      setSubmitting(false);
+      navigate(`/markets`);
+      toast.success(`Restaurant ${values.name} added successfully!!!`);
+    } catch (error) {
+      toast.error("rejected", error.message);
+      console.error("rejected", error.message);
+    }
+  };
 
-          <button data-testid="addMarketButton" type="submit">
-            Salveaza
-          </button>
-        </Form>
+  return (
+    <Box width={500} alignSelf="center" mt={5}>
+      <Typography variant="h3" align="center">
+        Add Restaurant
+      </Typography>
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={onSubmit}
+      >
+        {({ isValid, isSubmitting }) => (
+          <Form data-testid="formikForm">
+            <InputComponent
+              id="name"
+              label="Name"
+              name="name"
+              type="text"
+              autoComplete="off"
+              data-testid="fullName"
+            />
+            <SelectComponent
+              label="Price level"
+              type="number"
+              name="price_level"
+              data-testid="price_level"
+            />
+            <InputComponent
+              label="Delivery time"
+              name="avg_delivery_time"
+              type="number"
+              data-testid="avg_delivery_time"
+            />
+            <ButtonGroup
+              sx={{ mt: "20px" }}
+              fullWidth
+              size="medium"
+              disableElevation
+              variant="outlined"
+              orientation="horizontal"
+              aria-label="Add market page options buttons"
+            >
+              <Button
+                type="reset"
+                color="warning"
+                startIcon={<ClearOutlinedIcon />}
+              >
+                Reset
+              </Button>
+              <Button
+                fullWidth
+                size="medium"
+                disableElevation
+                color="secondary"
+                variant="outlined"
+                startIcon={<SaveAltOutlinedIcon />}
+                disabled={!isValid || isSubmitting}
+                aria-label="Add market button"
+                data-testid="AddMarketButton"
+                type="submit"
+              >
+                Salveaza
+              </Button>
+              <Button
+                type="button"
+                onClick={() => navigate(-1)}
+                color="primary"
+                startIcon={<KeyboardBackspaceOutlinedIcon />}
+              >
+                Back
+              </Button>
+            </ButtonGroup>
+          </Form>
+        )}
       </Formik>
-    </section>
+    </Box>
   );
 };
 

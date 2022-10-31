@@ -1,9 +1,10 @@
 import "./index.css";
 import App from "./App";
 import React from "react";
-import store, { persistor } from "./redux/store";
+import Box from "@mui/material/Box";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom/client";
+import store, { persistor } from "./redux/store";
 import { usersApiSlice } from "./redux/users/usersApiSlice";
 import { PersistGate } from "redux-persist/integration/react";
 import { getCartQuantity, getCartSum } from "./redux/cart/cartSlice";
@@ -27,7 +28,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <App />
+        <Box display="flex" flexDirection={"column"}>
+          <App />
+        </Box>
       </PersistGate>
     </Provider>
   </React.StrictMode>

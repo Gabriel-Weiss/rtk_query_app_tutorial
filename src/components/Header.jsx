@@ -1,14 +1,19 @@
 import React from "react";
-import "./css/Header.css";
-import { MdOutlineNoFood } from "react-icons/md";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Box from "@mui/material/Box";
 import Badge from "@mui/material/Badge";
-import { Link, useNavigate } from "react-router-dom";
-import AuthButton from "./AuthButton";
+import AppBar from "@mui/material/AppBar";
+import Button from "@mui/material/Button";
+import Toolbar from "@mui/material/Toolbar";
+import { useNavigate } from "react-router-dom";
+import ButtonComponent from "./ButtonComponent";
+import { MdOutlineNoFood } from "react-icons/md";
+import IconButton from "@mui/material/IconButton";
+import ButtonGroup from "@mui/material/ButtonGroup";
 import { useDispatch, useSelector } from "react-redux";
-import { useLogoutMutation } from "../redux/auth/authApiSlice";
-import useAuthentication from "../hooks/useAuthentication";
 import { getCartQuantity } from "../redux/cart/cartSlice";
+import useAuthentication from "../hooks/useAuthentication";
+import { useLogoutMutation } from "../redux/auth/authApiSlice";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -18,48 +23,83 @@ const Header = () => {
   const { quantity } = useSelector((state) => state.cart);
 
   return (
-    <div className="header_container">
-      <div className="list-item-right">
-        <div className="header_icon">
-          <MdOutlineNoFood />
-        </div>
-        <Link className="list_item" to={`/restaurants`}>
-          Restaurante
-        </Link>
-        <Link className="list_item" to={`/markets`}>
-          Magazine
-        </Link>
-      </div>
-      <ul className="header_nav">
-        <Link className="list_item" to={"/"}>
-          Home
-        </Link>
-        <Link className="list_item" to={"/"}>
-          News
-        </Link>
-        <Link
-          className="list_item"
-          to={"/cart"}
-          style={{ padding: "6px 25px 14px 25px" }}
+    <AppBar color="inherit" position="relative">
+      <Toolbar
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
         >
-          {dispatch(getCartQuantity()) ? (
-            <Badge color="secondary" badgeContent={quantity} max={999}>
-              <ShoppingCartIcon />
-            </Badge>
+          <IconButton color="secondary">
+            <MdOutlineNoFood fontSize="xx-large" />
+          </IconButton>
+          <ButtonGroup
+            color="secondary"
+            disableElevation
+            variant="contained"
+            aria-label="toggel between restaurants and markets"
+          >
+            <Button variant="text" onClick={() => navigate("/restaurants")}>
+              Restaurante
+            </Button>
+            <Button variant="text" onClick={() => navigate("/markets")}>
+              Magazine
+            </Button>
+          </ButtonGroup>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexWrap: "wrap",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <ButtonGroup
+            color="secondary"
+            disableElevation
+            variant="contained"
+            aria-label="toggel between restaurants and markets"
+          >
+            <Button variant="text" onClick={() => navigate("/")}>
+              Home
+            </Button>
+            <Button variant="text" onClick={() => navigate("/")}>
+              News
+            </Button>
+            <Button variant="text" onClick={() => navigate("/cart")}>
+              {dispatch(getCartQuantity()) ? (
+                <Badge color="secondary" badgeContent={quantity} max={999}>
+                  <ShoppingCartIcon />
+                </Badge>
+              ) : (
+                <ShoppingCartIcon />
+              )}
+            </Button>
+          </ButtonGroup>
+          {!isVisitor ? (
+            <ButtonComponent handleClick={logout} text={"Logout"} />
           ) : (
-            <ShoppingCartIcon />
+            <ButtonComponent
+              handleClick={() => navigate("/login")}
+              text={"Login/Register"}
+            />
           )}
-        </Link>
-        {!isVisitor ? (
-          <AuthButton handleClick={logout} text={"Logout"} />
-        ) : (
-          <AuthButton
-            handleClick={() => navigate("/login")}
-            text={"Login/Register"}
-          />
-        )}
-      </ul>
-    </div>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 
