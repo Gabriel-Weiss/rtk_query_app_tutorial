@@ -10,6 +10,7 @@ const createApp = () => {
   app.use(express.json());
   app.use(cookieParser());
   app.use(cors(corsOptions));
+  app.use("/stripe", require("./routes/stripeRoutes"));
   app.use("/auth", require("./routes/authRoutes"));
   app.use("/users", require("./routes/userRoutes"));
   app.use("/markets", require("./routes/marketRoutes"));

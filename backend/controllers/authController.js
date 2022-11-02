@@ -26,15 +26,20 @@ const login = asyncHandler(async (req, res) => {
   }
 
   const accessToken = jwt.sign(
-    { username: userFound.username },
+    {
+      userId: userFound._id,
+      username: userFound.username,
+      roles: userFound.roles,
+    },
     process.env.ACCESS_TOKEN,
     { expiresIn: "15m" }
   );
 
   const refreshToken = jwt.sign(
     { username: userFound.username },
+
     process.env.REFRESH_TOKEN,
-    { expiresIn: "1h" }
+    { expiresIn: "1d" }
   );
 
   res.cookie("jwt", refreshToken, {
@@ -54,7 +59,7 @@ const refresh = (req, res) => {
   const cookies = req.cookies;
 
   if (!cookies?.jwt) {
-    return res.sendStatus(401);
+    return res.status(401).json({ message: "No cookie in request header" });
   }
 
   const refreshToken = cookies.jwt;
@@ -64,16 +69,23 @@ const refresh = (req, res) => {
     process.env.REFRESH_TOKEN,
     asyncHandler(async (err, decoded) => {
       if (err) {
-        return res.status(403).json({ message: "Access forbidden" });
+        return res.status(403).json({ message: "Refresh token not corect" });
       }
 
       const userFound = await findUserByUsername(decoded.username);
       if (!userFound) {
-        return res.status(401).json({ message: "User not found" });
+        return res
+          .status(401)
+          .json({ message: "User not found in decoded token" });
       }
 
       const accessToken = jwt.sign(
-        { username: userFound.username },
+        {
+          userId: userFound._id,
+          username: userFound.username,
+          roles: userFound.roles,
+        },
+
         process.env.ACCESS_TOKEN,
         { expiresIn: "15m" }
       );

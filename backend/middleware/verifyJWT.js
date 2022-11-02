@@ -11,9 +11,11 @@ const verifyJWT = (req, res, next) => {
 
   jwt.verify(token, process.env.ACCESS_TOKEN, (err, decoded) => {
     if (err) {
-      return res.status(403).json({ message: "Access denied" });
+      return res.status(403).json({ message: "Access token not corect" });
     }
-    req.user = decoded.username;
+    req.userId = decoded.userId;
+    req.username = decoded.username;
+    req.roles = decoded.roles;
     next();
   });
 };

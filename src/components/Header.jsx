@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
 import { useNavigate } from "react-router-dom";
 import ButtonComponent from "./ButtonComponent";
-import { MdOutlineNoFood } from "react-icons/md";
 import IconButton from "@mui/material/IconButton";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,6 +13,7 @@ import { getCartQuantity } from "../redux/cart/cartSlice";
 import useAuthentication from "../hooks/useAuthentication";
 import { useLogoutMutation } from "../redux/auth/authApiSlice";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import NoFoodOutlinedIcon from "@mui/icons-material/NoFoodOutlined";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ const Header = () => {
           }}
         >
           <IconButton color="secondary">
-            <MdOutlineNoFood fontSize="xx-large" />
+            <NoFoodOutlinedIcon fontSize="large" />
           </IconButton>
           <ButtonGroup
             color="secondary"

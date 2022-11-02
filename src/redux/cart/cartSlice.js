@@ -51,8 +51,6 @@ const cartSlice = createSlice({
     },
     clearCart(state, action) {
       state.cart = [];
-
-      toast.info("Cart cleared successfully!!!");
     },
     getCartQuantity(state, action) {
       state.quantity = state.cart

@@ -1,4 +1,3 @@
-import "./App.css";
 import { Routes, Route, BrowserRouter, Outlet } from "react-router-dom";
 
 import Home from "./components/Home";
@@ -17,6 +16,7 @@ import RestaurantsGrid from "./features/restaurants/RestaurantsGrid";
 import RestaurantDetails from "./features/restaurants/RestaurantDetails";
 import AddRestaurantForm from "./features/restaurants/AddRestaurantForm";
 import EditRestaurantForm from "./features/restaurants/EditRestaurantForm";
+import StripeContainer from "./features/payments/stripe/StripeContainer";
 
 function App() {
   return (
@@ -28,6 +28,7 @@ function App() {
         <Route path="/register" element={<RegisterUser />} />
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/payment/stripe" element={<StripeContainer />} />
         <Route path="markets" element={<Markets />}>
           <Route index element={<MarketsGrid />} />
           <Route path=":id" element={<MarketDetails />} />

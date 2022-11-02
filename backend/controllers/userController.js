@@ -47,7 +47,7 @@ const getUserHandler = asyncHandler(async (req, res) => {
 //  @route POST /users
 //  @access Public
 const createUserHandler = asyncHandler(async (req, res) => {
-  const { name, password, username, email, phone } = req.body;
+  const { name, password, username, email, phone, roles } = req.body;
 
   if (!username || !password || !email || !phone || !name) {
     return res.status(400).json({ message: "All fields must be provided." });
@@ -60,13 +60,11 @@ const createUserHandler = asyncHandler(async (req, res) => {
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
-  const userObject = {
-    username,
-    password: hashedPassword,
-    name,
-    email,
-    phone,
-  };
+  const userObject =
+    !Array.isArray(roles) || !roles.length
+      ? { username, password: hashedPassword, name, email, phone }
+      : { username, password: hashedPassword, name, email, phone, roles };
+
   const created = await createUser(userObject);
 
   if (created) {
@@ -84,10 +82,17 @@ const createUserHandler = asyncHandler(async (req, res) => {
 //  @route PATCH /users
 //  @access Private
 const updateUserHandler = asyncHandler(async (req, res) => {
-  const { name, password, username, email, phone } = req.body;
+  const { name, password, username, email, phone, roles } = req.body;
   const id = req.params.id;
 
-  if (!name || !username || !email || !phone) {
+  if (
+    !name ||
+    !username ||
+    !email ||
+    !phone ||
+    !Array.isArray(roles) ||
+    !roles.length
+  ) {
     return res.status(400).json({ message: "Fields must be provided." });
   }
 
@@ -113,6 +118,7 @@ const updateUserHandler = asyncHandler(async (req, res) => {
   user.email = email;
   user.phone = phone;
   user.name = name;
+  user.roles = roles;
 
   if (password) {
     user.password = await bcrypt.hash(password, 10);

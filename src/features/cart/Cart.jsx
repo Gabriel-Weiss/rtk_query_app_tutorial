@@ -5,6 +5,7 @@ import {
   removeFromCart,
   clearCart,
 } from "../../redux/cart/cartSlice";
+import { toast } from "react-toastify";
 import Table from "@mui/material/Table";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
@@ -21,6 +22,7 @@ import TableContainer from "@mui/material/TableContainer";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
+import StripeContainer from "../payments/stripe/StripeContainer";
 
 const Cart = () => {
   const TAX_RATE = 0.07;
@@ -32,6 +34,7 @@ const Cart = () => {
   const handleIncreaseCartQty = (item) => dispatch(addToCart(item));
   const handleDecreseCartQty = (item) => dispatch(decreaseCartQty(item));
   const handleClearCart = () => {
+    toast.info("Cart cleared successfully!!!");
     dispatch(clearCart());
     navigate("/");
   };
@@ -90,8 +93,12 @@ const Cart = () => {
       )));
 
   return (
-    <Container maxWidth="md" sx={{ mt: 3 }}>
-      <TableContainer component={Paper}>
+    <Container
+      maxWidth="lg"
+      spacing={10}
+      sx={{ mt: "20px", display: { xs: "block", md: "flex" } }}
+    >
+      <TableContainer component={Paper} sx={{ mr: "5px" }}>
         <Table sx={{ minWidth: 500 }} aria-label="spanning table">
           <TableHead>
             <TableRow>
@@ -106,7 +113,7 @@ const Cart = () => {
                 Costuri
               </TableCell>
             </TableRow>
-            <TableRow sx={{ bgcolor: "secondary.light" }}>
+            <TableRow sx={{ bgcolor: "secondary.main" }}>
               <TableCell align="center" colSpan={2}>
                 Desc
               </TableCell>
@@ -146,6 +153,7 @@ const Cart = () => {
           </TableBody>
         </Table>
       </TableContainer>
+      <StripeContainer amount={invoiceTotal} />
     </Container>
   );
 };
