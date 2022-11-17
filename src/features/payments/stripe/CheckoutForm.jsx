@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { clearCart } from "../../../redux/cart/cartSlice";
 import CircularProgress from "@mui/material/CircularProgress";
 

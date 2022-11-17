@@ -17,21 +17,23 @@ const StripeContainer = (amount) => {
   const options = { clientSecret, appearance };
 
   useEffect(() => {
-    fetch("http://localhost:5000/stripe/config").then(async (res) => {
-      const { publishableKey } = await res.json();
-      setStripePromise(loadStripe(publishableKey));
-    });
+    fetch(`${process.env.REACT_APP_SERVER_API}/stripe/config`).then(
+      async (res) => {
+        const { publishableKey } = await res.json();
+        setStripePromise(loadStripe(publishableKey));
+      }
+    );
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/stripe/payment", {
+    fetch(`${process.env.REACT_APP_SERVER_API}/stripe/payment`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(amount),
     })
       .then((res) => res.json())
       .then((data) => setClientSecret(data.clientSecret));
-  }, []);
+  }, [amount]);
 
   return (
     <Box alignSelf="center" mt={2}>

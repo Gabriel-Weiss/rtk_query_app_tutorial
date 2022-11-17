@@ -3,12 +3,18 @@ import { apiSlice } from "../apiSlice";
 export const stripeApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getPublishableKey: builder.query({
-      query: () => "payment/config",
+      // query: () => "stripe/config",
+      query: () => ({
+        url: "/stripe/config",
+        method: "get",
+        headers: { "Content-Type": "application/json" },
+      }),
     }),
     makePayment: builder.mutation({
       query: (body) => ({
-        url: "payment/stripe",
+        url: "stripe/payment",
         method: "POST",
+        headers: { "Content-Type": "application/json" },
         body,
       }),
     }),

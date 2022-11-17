@@ -3,8 +3,8 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const calculateOrderAmount = (amount) => {
   let sum = 0;
-  if (typeof amount === "number" && Number.isInteger(amount)) {
-    sum = Math.round(amount) * 100;
+  if (Number.isFinite(amount)) {
+    sum = amount.toFixed(2) * 100;
   }
   return sum;
 };
