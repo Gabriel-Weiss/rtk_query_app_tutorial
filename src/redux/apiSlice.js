@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setCredentials } from "./auth/authSlice";
 
 const authBaseQuery = fetchBaseQuery({
-  baseUrl: process.env.REACT_APP_BASE_URL,
+  baseUrl: process.env.REACT_APP_SERVER_API,
   credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = getState().auth.token;
@@ -18,7 +18,7 @@ const authBaseQueryWithRefresh = async (args, api, extraOptions) => {
   if (result?.error?.status === 403) {
     console.log("Requesting refresh token");
     const refreshToken = await authBaseQuery(
-      `${process.env.REACT_APP_BASE_URL}/auth/refresh`,
+      `${process.env.REACT_APP_SERVER_API}/auth/refresh`,
       api,
       extraOptions
     );
@@ -40,6 +40,6 @@ const authBaseQueryWithRefresh = async (args, api, extraOptions) => {
 export const apiSlice = createApi({
   tagTypes: ["Restaurants", "Markets", "Foods", "Products", "Users"],
   baseQuery: authBaseQueryWithRefresh,
-  // baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
+  // baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_SERVER_API }),
   endpoints: () => ({}),
 });
